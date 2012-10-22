@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="moM-of-4rX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--AnimalList - TableView-->
+        <scene sceneID="QME-FB-cUj">
+            <objects>
+                <tableViewController id="MNn-Af-5fA" userLabel="AnimalList - TableView" customClass="AnimalListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Edk-6F-wzy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalListCell" id="d4g-6C-23f">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="UPp-aV-CP8" kind="push" identifier="showAnimalDetailView" id="naU-Yh-fDR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tiere" id="gYa-eV-VBU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMD-D9-zc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="1076"/>
+        </scene>
+        <!--AnimalList-->
+        <scene sceneID="wdN-6E-MJg">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="aQk-X0-mx9" userLabel="AnimalList" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tiere" id="tHZ-5m-6uZ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="odn-Ih-q5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MNn-Af-5fA" kind="relationship" relationship="rootViewController" id="8xC-4y-0UI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMK-5f-8UJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="1076"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="INV-ha-USG">
+            <objects>
+                <viewController id="Zih-NJ-cvm" userLabel="Map" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAw-gU-108">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="Zi5-c7-81k">
+                                <items>
+                                    <navigationItem title="iOS Map" id="qB9-Sh-6DT"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mVx-ec-C5D"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zi5-c7-81k" firstAttribute="top" secondItem="EAw-gU-108" secondAttribute="top" type="default" id="0dr-hR-OAW"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="trailing" secondItem="EAw-gU-108" secondAttribute="trailing" type="default" id="3Za-EO-y9Y"/>
+                            <constraint firstItem="Zi5-c7-81k" firstAttribute="leading" secondItem="EAw-gU-108" secondAttribute="leading" type="default" id="F0L-Vc-5kJ"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="top" secondItem="Zi5-c7-81k" secondAttribute="bottom" type="default" id="HaH-iR-Mjn"/>
+                            <constraint firstItem="Zi5-c7-81k" firstAttribute="trailing" secondItem="EAw-gU-108" secondAttribute="trailing" type="default" id="RnY-Uc-Jkt"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="leading" secondItem="EAw-gU-108" secondAttribute="leading" type="default" id="SR4-0Y-1b3"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="bottom" secondItem="EAw-gU-108" secondAttribute="bottom" type="default" id="wdZ-AM-Xj9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="iOS Map" id="FQ4-Ku-kPK"/>
+                    <connections>
+                        <outlet property="iosMapView" destination="mVx-ec-C5D" id="hQe-lX-kY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dda-tz-mXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="404"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Pud-ys-jVc">
+            <objects>
+                <viewController id="dgX-2x-uQ9" userLabel="Info" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z92-8s-tlt">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jS-gka">
+                                <items>
+                                    <navigationItem title="Info" id="OWZ-b4-LVa"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="noch nicht implementiert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-t4-bWt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wBz-t4-bWt" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" constant="143" id="Ah0-mq-l4g"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="leading" secondItem="Z92-8s-tlt" secondAttribute="leading" type="default" id="S49-yx-hWR"/>
+                            <constraint firstItem="wBz-t4-bWt" firstAttribute="centerX" secondItem="dOA-jS-gka" secondAttribute="centerX" type="default" id="iPi-vP-6TY"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" type="default" id="kZW-AH-QwE"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="trailing" secondItem="Z92-8s-tlt" secondAttribute="trailing" type="default" id="uHf-2R-ILq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="U3W-pN-aBI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mX7-gF-2d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="-249"/>
+        </scene>
+        <!--AnimalDetails-->
+        <scene sceneID="ogP-b6-63w">
+            <objects>
+                <viewController id="UPp-aV-CP8" userLabel="AnimalDetails" customClass="AnimalDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MFf-tQ-oc8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lebensraum: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-g3-JX0">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-UD-IHv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g8b-UD-IHv" firstAttribute="baseline" secondItem="bz6-g3-JX0" secondAttribute="baseline" type="default" id="NxL-dt-0gZ"/>
+                            <constraint firstItem="g8b-UD-IHv" firstAttribute="leading" secondItem="MFf-tQ-oc8" secondAttribute="leading" constant="154" id="RMG-wT-vLF"/>
+                            <constraint firstItem="bz6-g3-JX0" firstAttribute="top" secondItem="MFf-tQ-oc8" secondAttribute="top" constant="31" id="Ub7-Eg-Vmv"/>
+                            <constraint firstItem="bz6-g3-JX0" firstAttribute="leading" secondItem="MFf-tQ-oc8" secondAttribute="leading" constant="35" id="kpm-JG-2Db"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail Tier" id="fli-To-rpz"/>
+                    <connections>
+                        <outlet property="habitatLabel" destination="g8b-UD-IHv" id="Uo0-96-ons"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfe-Fh-DTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="1076"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fOw-Ok-eKU">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="moM-of-4rX" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1O0-4T-ZeH">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dgX-2x-uQ9" kind="relationship" relationship="viewControllers" id="2bf-gb-JG5"/>
+                        <segue destination="Zih-NJ-cvm" kind="relationship" relationship="viewControllers" id="t8I-D5-yDS"/>
+                        <segue destination="aQk-X0-mx9" kind="relationship" relationship="viewControllers" id="nkw-TF-fID"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdH-qp-rUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1435" y="78"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AnimalDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="habitatLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AnimalListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="animalListTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
