@@ -80,11 +80,11 @@
     
     UIView *headerView = [UIView new];
     headerView.backgroundColor = [UIColor greenColor];
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, 22)];
-    dateLabel.textColor = [UIColor blueColor];
-    dateLabel.backgroundColor = [UIColor redColor];
-    dateLabel.text = [self.indexArray objectAtIndex:section];
-    [headerView addSubview:dateLabel];
+    UILabel *letterLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, 22)];
+    letterLabel.textColor = [UIColor blueColor];
+    letterLabel.backgroundColor = [UIColor redColor];
+    letterLabel.text = [self.indexArray objectAtIndex:section];
+    [headerView addSubview:letterLabel];
     return headerView;
 }
 

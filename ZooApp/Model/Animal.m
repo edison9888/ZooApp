@@ -36,6 +36,8 @@ static NSMutableArray *allAnimals;
         animal.habitat = [a objectForKey:@"habitat"];
         animal.latitude = [a objectForKey:@"latitude"];
         animal.longitude = [a objectForKey:@"longitude"];
+        animal.area = [a objectForKey:@"area"];
+        animal.category = [a objectForKey:@"category"];
         animal.icon = [a objectForKey:@"icon"];
         [allAnimals addObject:animal];
     

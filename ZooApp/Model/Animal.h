@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *habitat;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong) NSString *area;
+@property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSString *icon;
 
 + (void) parseJSONToAnimals;

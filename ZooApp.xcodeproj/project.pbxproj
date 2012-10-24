@@ -26,6 +26,11 @@
 		D5B0082016300B4E008EB564 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* Animal.m */; };
 		D5B00832163142A4008EB564 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B00831163142A4008EB564 /* MarkerManager.m */; };
 		D5B0083516314506008EB564 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0083416314506008EB564 /* Location.m */; };
+		D5B0084416356F15008EB564 /* AnimalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0084316356F15008EB564 /* AnimalMapViewController.m */; };
+		D5B00853163590B7008EB564 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B00852163590B6008EB564 /* Icon-72.png */; };
+		D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */; };
+		D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */; };
+		D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0086216383020008EB564 /* AnimalFilterTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,14 @@
 		D5B00831163142A4008EB564 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
 		D5B0083316314506008EB564 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		D5B0083416314506008EB564 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		D5B0084216356F15008EB564 /* AnimalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalMapViewController.h; path = ViewController/AnimalMapViewController.h; sourceTree = "<group>"; };
+		D5B0084316356F15008EB564 /* AnimalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalMapViewController.m; path = ViewController/AnimalMapViewController.m; sourceTree = "<group>"; };
+		D5B00852163590B6008EB564 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterViewController.h; path = ViewController/AnimalFilterViewController.h; sourceTree = "<group>"; };
+		D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterViewController.m; path = ViewController/AnimalFilterViewController.m; sourceTree = "<group>"; };
+		D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimalFilterTableCell.xib; path = ViewController/AnimalFilterTableCell.xib; sourceTree = "<group>"; };
+		D5B0086116383020008EB564 /* AnimalFilterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterTableCell.h; path = ViewController/AnimalFilterTableCell.h; sourceTree = "<group>"; };
+		D5B0086216383020008EB564 /* AnimalFilterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterTableCell.m; path = ViewController/AnimalFilterTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 		D5135B4C162F077700743CC5 /* ZooApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5B00852163590B6008EB564 /* Icon-72.png */,
 				D5135B55162F077700743CC5 /* AppDelegate.h */,
 				D5135B56162F077700743CC5 /* AppDelegate.m */,
 				D5135B66162F0E0000743CC5 /* Storyboard.storyboard */,
@@ -148,12 +162,8 @@
 		D5135B68162FEDBB00743CC5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D5135B69162FEDFC00743CC5 /* MapViewController.h */,
-				D5135B6A162FEDFC00743CC5 /* MapViewController.m */,
-				D5135B6C162FEE0D00743CC5 /* AnimalListViewController.h */,
-				D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */,
-				D5B0081216300370008EB564 /* AnimalDetailViewController.h */,
-				D5B0081316300370008EB564 /* AnimalDetailViewController.m */,
+				D5B0085B16381811008EB564 /* MapTab */,
+				D5B00859163817FE008EB564 /* AnimalTab */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -165,6 +175,33 @@
 				D5B00831163142A4008EB564 /* MarkerManager.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5B00859163817FE008EB564 /* AnimalTab */ = {
+			isa = PBXGroup;
+			children = (
+				D5135B6C162FEE0D00743CC5 /* AnimalListViewController.h */,
+				D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */,
+				D5B0081216300370008EB564 /* AnimalDetailViewController.h */,
+				D5B0081316300370008EB564 /* AnimalDetailViewController.m */,
+				D5B0084216356F15008EB564 /* AnimalMapViewController.h */,
+				D5B0084316356F15008EB564 /* AnimalMapViewController.m */,
+				D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */,
+				D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */,
+				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
+				D5B0086116383020008EB564 /* AnimalFilterTableCell.h */,
+				D5B0086216383020008EB564 /* AnimalFilterTableCell.m */,
+			);
+			name = AnimalTab;
+			sourceTree = "<group>";
+		};
+		D5B0085B16381811008EB564 /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				D5135B69162FEDFC00743CC5 /* MapViewController.h */,
+				D5135B6A162FEDFC00743CC5 /* MapViewController.m */,
+			);
+			name = MapTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +261,8 @@
 				D5135B5D162F077700743CC5 /* Default-568h@2x.png in Resources */,
 				D5135B65162F0DDA00743CC5 /* animalList.json in Resources */,
 				D5135B67162F0E0000743CC5 /* Storyboard.storyboard in Resources */,
+				D5B00853163590B7008EB564 /* Icon-72.png in Resources */,
+				D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +281,9 @@
 				D5B0082016300B4E008EB564 /* Animal.m in Sources */,
 				D5B00832163142A4008EB564 /* MarkerManager.m in Sources */,
 				D5B0083516314506008EB564 /* Location.m in Sources */,
+				D5B0084416356F15008EB564 /* AnimalMapViewController.m in Sources */,
+				D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */,
+				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,6 @@
 
 #import "MarkerManager.h"
 #import "Animal.h"
-#import "Location.h"
 
 
 @implementation MarkerManager
@@ -19,16 +18,30 @@
     [annotations removeAllObjects];
     
     for (Animal *animal in Animal.getAllAnimals) {
-        NSLog(@"hiugdfhg");
+        
         CLLocationCoordinate2D animalCoordinate;
         animalCoordinate.latitude = animal.latitude.doubleValue;
         animalCoordinate.longitude = animal.longitude.doubleValue;
 
-        Location *annotation = [[Location alloc] initWithName:animal.species subtitle:animal.habitat icon:animal.icon color:[UIColor redColor] coordinate:animalCoordinate];
+        Location *annotation = [[Location alloc] initWithName:animal.species subtitle:animal.habitat icon:animal.icon color:[UIColor greenColor] coordinate:animalCoordinate];
+        
         [annotations addObject:annotation];
     }
     
     return annotations;
+}
+
++ (Location*) createMarkerForAnimal: (Animal*) animal {
+    
+    CLLocationCoordinate2D animalCoordinate;
+    animalCoordinate.latitude = animal.latitude.doubleValue;
+    animalCoordinate.longitude = animal.longitude.doubleValue;
+        
+    Location *annotation = [[Location alloc] initWithName:animal.species subtitle:animal.habitat icon:animal.icon color:[UIColor greenColor] coordinate:animalCoordinate];
+    
+    
+    
+    return annotation;
 }
 
 @end

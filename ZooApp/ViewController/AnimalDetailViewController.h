@@ -11,8 +11,11 @@
 
 @interface AnimalDetailViewController : UIViewController
 
+
 @property (strong, nonatomic) Animal *currentAnimal;
 @property (weak, nonatomic) IBOutlet UILabel *habitatLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 
 
 @end

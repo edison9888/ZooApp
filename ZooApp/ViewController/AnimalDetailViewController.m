@@ -7,6 +7,7 @@
 //
 
 #import "AnimalDetailViewController.h"
+#import "AnimalMapViewController.h"
 
 @interface AnimalDetailViewController ()
 
@@ -30,6 +31,8 @@
     
     self.navigationItem.title = self.currentAnimal.species;
     self.habitatLabel.text = self.currentAnimal.habitat;
+    self.areaLabel.text = self.currentAnimal.area;
+    self.categoryLabel.text = self.currentAnimal.category;
     
 }
 
@@ -41,6 +44,20 @@
 
 - (void)viewDidUnload {
     [self setHabitatLabel:nil];
+    [self setCategoryLabel:nil];
+    [self setAreaLabel:nil];
     [super viewDidUnload];
+}
+
+
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showAnimalOnMap"]) {
+        AnimalMapViewController *controller = segue.destinationViewController;
+        controller.currentAnimal = self.currentAnimal;
+        return;
+    }
+    
 }
 @end

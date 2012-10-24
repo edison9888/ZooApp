@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MarkerManager.h"
+#import "AnimalDetailViewController.h"
 
 @interface MapViewController ()
 
@@ -24,23 +25,11 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (void)viewDidLoad {
     
+    [super viewDidLoad];
+
     NSLog(@"MapViewController loaded");
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
- 
-    NSLog(@"MapViewController appeared");
     
     // location to zoom in
     CLLocationCoordinate2D zoomLocation;
@@ -49,16 +38,64 @@
     
     // region to display
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 450, 750);
-  
+    
     // display the region
     [self.iosMapView setRegion:viewRegion animated:YES];
     
-
+    // add annotations
     NSArray *animalMarkers = [MarkerManager createAllAnimalMarkers];
-    NSLog(@"zahl der animalMarkers %d", animalMarkers.count);
+    NSLog(@"Zahl der animalMarkers %d", animalMarkers.count);
     [self.iosMapView addAnnotations:animalMarkers];
+    NSMutableArray* annotations=[[NSMutableArray alloc] init];
+	[annotations addObjectsFromArray:animalMarkers];
+    
+   //[self.iosMapView setShowsUserLocation:YES];
+
+
+   }
+
+- (void)viewWillAppear:(BOOL)animated {
+     
+
+
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation {
+ 
+    MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"AnnotationIdentifier"];
+    
+    pinView.animatesDrop = YES;
+    pinView.canShowCallout = YES;
+    pinView.pinColor = MKPinAnnotationColorPurple;
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton setTitle:annotation.title forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+    pinView.rightCalloutAccessoryView = rightButton;
+    
+    UIImageView *profileIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Icon-72.png"]];
+    pinView.leftCalloutAccessoryView = profileIconView;
     
     
+    return pinView;
+
+}
+
+- (IBAction)showDetails:(id)sender {
+ 
+    NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX");
+    
+ //   AnimalDetailViewController * lvc = [[AnimalDetailViewController alloc] init];
+    //lvc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    //[lvc setDelegate:self];
+    //[self presentModalViewController:lvc animated:YES];
+   // [self.navigationController pushViewController:lvc animated:YES];
 }
 
 @end

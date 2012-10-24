@@ -18,5 +18,6 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
 - (id) initWithName:(NSString*) name subtitle:(NSString*)subtitle icon:(NSString*)icon color:(UIColor*)color coordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithLocation:(CLLocationCoordinate2D)coord;
 
 @end

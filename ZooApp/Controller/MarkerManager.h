@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Animal.h"
+#import "Location.h"
 
 @interface MarkerManager : NSObject
 
 
 + (NSArray*) createAllAnimalMarkers;
++ (Location*) createMarkerForAnimal: (Animal*) animal;
 
 @end
