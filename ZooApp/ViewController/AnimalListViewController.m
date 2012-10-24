@@ -29,6 +29,10 @@
 {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:Colors.sandColor];
+    [self.tableView setSeparatorColor:Colors.darkGreenColor];
+    
+    
     self.alphabetArray = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",nil];
     
     NSMutableArray* array = [NSMutableArray array];
@@ -78,12 +82,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    UIView *headerView = [UIView new];
-    headerView.backgroundColor = [UIColor greenColor];
-    UILabel *letterLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 100, 22)];
-    letterLabel.textColor = [UIColor blueColor];
-    letterLabel.backgroundColor = [UIColor redColor];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 90)];
+    headerView.backgroundColor = Colors.darkGreenColor;
+    UILabel *letterLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 22)];
+    letterLabel.textColor = [UIColor whiteColor];
+    letterLabel.backgroundColor = Colors.darkGreenColor;
     letterLabel.text = [self.indexArray objectAtIndex:section];
+    letterLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
     [headerView addSubview:letterLabel];
     return headerView;
 }

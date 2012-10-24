@@ -13,4 +13,7 @@
 
 @property (nonatomic, strong) NSArray *filterCategories;
 
+@property (nonatomic, strong) NSArray *filterOptions;
+@property (strong, nonatomic) NSMutableDictionary *filterCategoryData;
+
 @end
