@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+   
+    [self.view setBackgroundColor:Colors.sandColor];
     
     self.navigationItem.title = self.currentAnimal.species;
     self.habitatLabel.text = self.currentAnimal.habitat;

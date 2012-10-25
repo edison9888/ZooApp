@@ -8,6 +8,7 @@
 
 #import "MarkerManager.h"
 #import "Animal.h"
+#import "AnimalManager.h"
 
 
 @implementation MarkerManager
@@ -17,7 +18,7 @@
     NSMutableArray *annotations = [NSMutableArray new];
     [annotations removeAllObjects];
     
-    for (Animal *animal in Animal.getAllAnimals) {
+    for (Animal *animal in [[AnimalManager getInstance] getAllAnimals]) {
         
         CLLocationCoordinate2D animalCoordinate;
         animalCoordinate.latitude = animal.latitude.doubleValue;

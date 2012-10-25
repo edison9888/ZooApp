@@ -9,6 +9,7 @@
 #import "AnimalListViewController.h"
 #import "AnimalDetailViewController.h"
 #import "Animal.h"
+#import "AnimalManager.h"
 
 @interface AnimalListViewController ()
 
@@ -28,10 +29,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self.view setBackgroundColor:Colors.sandColor];
     [self.tableView setSeparatorColor:Colors.darkGreenColor];
+ 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     
+    self.currentFilteredList = [[AnimalManager getInstance] getAnimalArrayFromCurrentFilter];
     
     self.alphabetArray = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",nil];
     
@@ -43,7 +48,7 @@
         
         NSMutableArray *allAnimalsForLetter = [NSMutableArray array];
         
-        for (Animal* p in Animal.getAllAnimals) {
+        for (Animal* p in self.currentFilteredList) {
 
             if ([p.species characterAtIndex:0] == [character characterAtIndex:0]) {
                 
@@ -57,8 +62,10 @@
         }
 
     }
-
+   
     self.indexArray = [NSArray arrayWithArray:array];
+    
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,7 +95,8 @@
     letterLabel.textColor = [UIColor whiteColor];
     letterLabel.backgroundColor = Colors.darkGreenColor;
     letterLabel.text = [self.indexArray objectAtIndex:section];
-    letterLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
+    //letterLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
+    letterLabel.font = [UIFont boldSystemFontOfSize:19];
     [headerView addSubview:letterLabel];
     return headerView;
 }
@@ -107,6 +115,13 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
+    
+    [selectionView setBackgroundColor:Colors.waterBlueColor];
+    
+    cell.selectedBackgroundView = selectionView;
+    
     Animal *an = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
     
     
@@ -128,5 +143,7 @@
     }
    
 }
+
+
 
 @end

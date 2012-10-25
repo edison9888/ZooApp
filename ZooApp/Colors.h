@@ -11,6 +11,8 @@
 @interface Colors : NSObject
 
 + (UIColor*) darkGreenColor;
++ (UIColor*) grassGreenColor;
 + (UIColor*) sandColor;
++ (UIColor*) waterBlueColor;
 
 @end

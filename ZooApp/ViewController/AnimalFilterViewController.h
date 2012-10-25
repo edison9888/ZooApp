@@ -11,8 +11,7 @@
 @interface AnimalFilterViewController : UITableViewController
 <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray *filterCategories;
-
+@property (nonatomic, strong) NSMutableArray *filterCategories;
 @property (nonatomic, strong) NSArray *filterOptions;
 @property (strong, nonatomic) NSMutableDictionary *filterCategoryData;
 

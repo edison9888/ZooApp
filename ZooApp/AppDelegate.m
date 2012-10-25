@@ -7,13 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "Animal.h"
+#import "AnimalManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Animal parseJSONToAnimals];
+    //[Animal parseJSONToAnimals];
+    [AnimalManager getInstance];
+    
     return YES;
 }
 

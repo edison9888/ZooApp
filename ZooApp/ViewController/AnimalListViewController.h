@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSArray *alphabetArray;
 @property (strong, nonatomic) NSArray *indexArray;
 @property (strong, nonatomic) NSMutableDictionary *animalsData;
+@property (strong, nonatomic) NSArray *currentFilteredList;
 
++ (void) setCurrentFilteredList;
 
 @end

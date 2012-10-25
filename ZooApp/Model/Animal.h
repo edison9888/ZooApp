@@ -18,7 +18,4 @@
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSString *icon;
 
-+ (void) parseJSONToAnimals;
-+ (NSArray*) getAllAnimals;
-
 @end

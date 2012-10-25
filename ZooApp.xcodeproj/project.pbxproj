@@ -22,6 +22,20 @@
 		D5135B6E162FEE0E00743CC5 /* AnimalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */; };
 		D5135B70162FEEB600743CC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B6F162FEEB600743CC5 /* MapKit.framework */; };
 		D5135B72162FEECD00743CC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B71162FEECD00743CC5 /* CoreLocation.framework */; };
+		D568AA11163931C700270E8B /* africa.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA04163931C700270E8B /* africa.png */; };
+		D568AA12163931C700270E8B /* allAnimals.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA05163931C700270E8B /* allAnimals.png */; };
+		D568AA13163931C700270E8B /* amphibians.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA06163931C700270E8B /* amphibians.png */; };
+		D568AA14163931C700270E8B /* asia.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA07163931C700270E8B /* asia.png */; };
+		D568AA15163931C700270E8B /* birds.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA08163931C700270E8B /* birds.png */; };
+		D568AA16163931C700270E8B /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA09163931C700270E8B /* fish.png */; };
+		D568AA17163931C700270E8B /* foundersGarden.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0A163931C700270E8B /* foundersGarden.png */; };
+		D568AA18163931C700270E8B /* gondwanaland.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0B163931C700270E8B /* gondwanaland.png */; };
+		D568AA19163931C700270E8B /* invertebrates.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0C163931C700270E8B /* invertebrates.png */; };
+		D568AA1A163931C700270E8B /* mammals.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0D163931C700270E8B /* mammals.png */; };
+		D568AA1B163931C700270E8B /* pongoland.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0E163931C700270E8B /* pongoland.png */; };
+		D568AA1C163931C700270E8B /* reptiles.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0F163931C700270E8B /* reptiles.png */; };
+		D568AA1D163931C700270E8B /* southAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA10163931C700270E8B /* southAmerica.png */; };
+		D568AA2416396C6100270E8B /* AnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AnimalManager.m */; };
 		D5AF86151638661900129120 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF86141638661900129120 /* Colors.m */; };
 		D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081316300370008EB564 /* AnimalDetailViewController.m */; };
 		D5B0082016300B4E008EB564 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* Animal.m */; };
@@ -56,6 +70,21 @@
 		D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalListViewController.m; path = ViewController/AnimalListViewController.m; sourceTree = "<group>"; };
 		D5135B6F162FEEB600743CC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5135B71162FEECD00743CC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D568AA04163931C700270E8B /* africa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = africa.png; sourceTree = "<group>"; };
+		D568AA05163931C700270E8B /* allAnimals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allAnimals.png; sourceTree = "<group>"; };
+		D568AA06163931C700270E8B /* amphibians.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amphibians.png; sourceTree = "<group>"; };
+		D568AA07163931C700270E8B /* asia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asia.png; sourceTree = "<group>"; };
+		D568AA08163931C700270E8B /* birds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birds.png; sourceTree = "<group>"; };
+		D568AA09163931C700270E8B /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		D568AA0A163931C700270E8B /* foundersGarden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foundersGarden.png; sourceTree = "<group>"; };
+		D568AA0B163931C700270E8B /* gondwanaland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gondwanaland.png; sourceTree = "<group>"; };
+		D568AA0C163931C700270E8B /* invertebrates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invertebrates.png; sourceTree = "<group>"; };
+		D568AA0D163931C700270E8B /* mammals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mammals.png; sourceTree = "<group>"; };
+		D568AA0E163931C700270E8B /* pongoland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pongoland.png; sourceTree = "<group>"; };
+		D568AA0F163931C700270E8B /* reptiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reptiles.png; sourceTree = "<group>"; };
+		D568AA10163931C700270E8B /* southAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAmerica.png; sourceTree = "<group>"; };
+		D568AA2216396C6100270E8B /* AnimalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalManager.h; sourceTree = "<group>"; };
+		D568AA2316396C6100270E8B /* AnimalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalManager.m; sourceTree = "<group>"; };
 		D5AF86131638661900129120 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		D5AF86141638661900129120 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		D5B0081216300370008EB564 /* AnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalDetailViewController.h; path = ViewController/AnimalDetailViewController.h; sourceTree = "<group>"; };
@@ -96,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D5135B4C162F077700743CC5 /* ZooApp */,
+				D568AA02163931C700270E8B /* Images */,
 				D5135B45162F077700743CC5 /* Frameworks */,
 				D5135B43162F077700743CC5 /* Products */,
 			);
@@ -173,11 +203,42 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		D568AA02163931C700270E8B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
+			);
+			name = Images;
+			path = ZooApp/Images;
+			sourceTree = "<group>";
+		};
+		D568AA03163931C700270E8B /* AnimalFilterListThumbnails */ = {
+			isa = PBXGroup;
+			children = (
+				D568AA04163931C700270E8B /* africa.png */,
+				D568AA05163931C700270E8B /* allAnimals.png */,
+				D568AA06163931C700270E8B /* amphibians.png */,
+				D568AA07163931C700270E8B /* asia.png */,
+				D568AA08163931C700270E8B /* birds.png */,
+				D568AA09163931C700270E8B /* fish.png */,
+				D568AA0A163931C700270E8B /* foundersGarden.png */,
+				D568AA0B163931C700270E8B /* gondwanaland.png */,
+				D568AA0C163931C700270E8B /* invertebrates.png */,
+				D568AA0D163931C700270E8B /* mammals.png */,
+				D568AA0E163931C700270E8B /* pongoland.png */,
+				D568AA0F163931C700270E8B /* reptiles.png */,
+				D568AA10163931C700270E8B /* southAmerica.png */,
+			);
+			path = AnimalFilterListThumbnails;
+			sourceTree = "<group>";
+		};
 		D5B0082F1631427E008EB564 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D5B00830163142A4008EB564 /* MarkerManager.h */,
 				D5B00831163142A4008EB564 /* MarkerManager.m */,
+				D568AA2216396C6100270E8B /* AnimalManager.h */,
+				D568AA2316396C6100270E8B /* AnimalManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +329,19 @@
 				D5135B67162F0E0000743CC5 /* Storyboard.storyboard in Resources */,
 				D5B00853163590B7008EB564 /* Icon-72.png in Resources */,
 				D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */,
+				D568AA11163931C700270E8B /* africa.png in Resources */,
+				D568AA12163931C700270E8B /* allAnimals.png in Resources */,
+				D568AA13163931C700270E8B /* amphibians.png in Resources */,
+				D568AA14163931C700270E8B /* asia.png in Resources */,
+				D568AA15163931C700270E8B /* birds.png in Resources */,
+				D568AA16163931C700270E8B /* fish.png in Resources */,
+				D568AA17163931C700270E8B /* foundersGarden.png in Resources */,
+				D568AA18163931C700270E8B /* gondwanaland.png in Resources */,
+				D568AA19163931C700270E8B /* invertebrates.png in Resources */,
+				D568AA1A163931C700270E8B /* mammals.png in Resources */,
+				D568AA1B163931C700270E8B /* pongoland.png in Resources */,
+				D568AA1C163931C700270E8B /* reptiles.png in Resources */,
+				D568AA1D163931C700270E8B /* southAmerica.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +364,7 @@
 				D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */,
 				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 				D5AF86151638661900129120 /* Colors.m in Sources */,
+				D568AA2416396C6100270E8B /* AnimalManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

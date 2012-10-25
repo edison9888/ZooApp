@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *animalFilterImageView;
 @property (weak, nonatomic) IBOutlet UILabel *animalFilterTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *animalSubtitleLabel;
 
 @end

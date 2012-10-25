@@ -8,12 +8,18 @@
 
 #import "AnimalFilterViewController.h"
 #import "AnimalFilterTableCell.h"
+#import "AnimalListViewController.h"
+#import "AnimalManager.h"
 
 @interface AnimalFilterViewController ()
+
+
 
 @end
 
 @implementation AnimalFilterViewController
+
+    AnimalManager *aM;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +34,8 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    aM = [AnimalManager getInstance];
     
     [self createFilterCategories];
     
@@ -67,79 +75,107 @@
     optionLabel.textColor = [UIColor whiteColor];
     optionLabel.backgroundColor = Colors.darkGreenColor;
     optionLabel.text = [self.filterOptions objectAtIndex:section];
-    optionLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
+    //optionLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
+    optionLabel.font = [UIFont boldSystemFontOfSize:19];
     [headerView addSubview:optionLabel];
     return headerView;
 }
 
 - (void)createFilterCategories {
     
+    self.filterCategories = [NSMutableArray new];
+    
     NSMutableArray *rowAll = [NSMutableArray new];
     [rowAll addObject:@"Alle Tiere"];
-    [rowAll addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowAll addObject:[UIImage imageNamed:@"allAnimals.png"]];
     [rowAll addObject:@"noCategory"];
+    [rowAll addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_ALLANIMALS].count]];
+    [self.filterCategories addObject:rowAll];
     
     NSMutableArray *rowMammal = [NSMutableArray new];
     [rowMammal addObject:@"Säugetiere"];
-    [rowMammal addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowMammal addObject:[UIImage imageNamed:@"mammals.png"]];
     [rowMammal addObject:@"animalCategory"];
-    
+    [rowMammal addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_MAMMALS].count]];
+    [self.filterCategories addObject:rowMammal];
+
     NSMutableArray *rowBirds = [NSMutableArray new];
     [rowBirds addObject:@"Vögel"];
-    [rowBirds addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowBirds addObject:[UIImage imageNamed:@"birds.png"]];
     [rowBirds addObject:@"animalCategory"];
+    [rowBirds addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_BIRDS].count]];
+    [self.filterCategories addObject:rowBirds];
     
     NSMutableArray *rowReptiles = [NSMutableArray new];
     [rowReptiles addObject:@"Reptilien"];
-    [rowReptiles addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowReptiles addObject:[UIImage imageNamed:@"reptiles.png"]];
     [rowReptiles addObject:@"animalCategory"];
+    [rowReptiles addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_REPTILES].count]];
+    [self.filterCategories addObject:rowReptiles];
     
     NSMutableArray *rowAmphibians = [NSMutableArray new];
     [rowAmphibians addObject:@"Amphibien"];
-    [rowAmphibians addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowAmphibians addObject:[UIImage imageNamed:@"amphibians.png"]];
     [rowAmphibians addObject:@"animalCategory"];
+    [rowAmphibians addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_AMPHIBIANS].count]];
+    [self.filterCategories addObject:rowAmphibians];
     
     NSMutableArray *rowInvertebrates = [NSMutableArray new];
     [rowInvertebrates addObject:@"Wirbellose Tiere"];
-    [rowInvertebrates addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowInvertebrates addObject:[UIImage imageNamed:@"invertebrates.png"]];
     [rowInvertebrates addObject:@"animalCategory"];
+    [rowInvertebrates addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_INVERTEBRATES].count]];
+    [self.filterCategories addObject:rowInvertebrates];
     
     NSMutableArray *rowFish = [NSMutableArray new];
     [rowFish addObject:@"Fische"];
-    [rowFish addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowFish addObject:[UIImage imageNamed:@"fish.png"]];
     [rowFish addObject:@"animalCategory"];
+    [rowFish addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_FISH].count]];
+    [self.filterCategories addObject:rowFish];
     
     NSMutableArray *rowFoundersGarden = [NSMutableArray new];
-    [rowFoundersGarden addObject:@"Gründergarten"];
-    [rowFoundersGarden addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowFoundersGarden addObject:@"Gründer-Garten"];
+    [rowFoundersGarden addObject:[UIImage imageNamed:@"foundersGarden.png"]];
     [rowFoundersGarden addObject:@"areaCategory"];
+    [rowFoundersGarden addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_FOUNDERSGARDEN].count]];
+    [self.filterCategories addObject:rowFoundersGarden];
     
     NSMutableArray *rowGondwanaLand = [NSMutableArray new];
     [rowGondwanaLand addObject:@"Gondwanaland"];
-    [rowGondwanaLand addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowGondwanaLand addObject:[UIImage imageNamed:@"gondwanaland.png"]];
     [rowGondwanaLand addObject:@"areaCategory"];
+    [rowGondwanaLand addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_GONDWANALAND].count]];
+    [self.filterCategories addObject:rowGondwanaLand];
     
     NSMutableArray *rowAsia = [NSMutableArray new];
     [rowAsia addObject:@"Asien"];
-    [rowAsia addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowAsia addObject:[UIImage imageNamed:@"asia.png"]];
     [rowAsia addObject:@"areaCategory"];
+    [rowAsia addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_ASIA].count]];
+    [self.filterCategories addObject:rowAsia];
     
     NSMutableArray *rowPongoland = [NSMutableArray new];
     [rowPongoland addObject:@"Pongoland"];
-    [rowPongoland addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowPongoland addObject:[UIImage imageNamed:@"pongoland.png"]];
     [rowPongoland addObject:@"areaCategory"];
+    [rowPongoland addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_PONGOLAND].count]];
+    [self.filterCategories addObject:rowPongoland];
     
     NSMutableArray *rowAfrica = [NSMutableArray new];
     [rowAfrica addObject:@"Afrika"];
-    [rowAfrica addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowAfrica addObject:[UIImage imageNamed:@"africa.png"]];
     [rowAfrica addObject:@"areaCategory"];
+    [rowAfrica addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_AFRICA].count]];
+    [self.filterCategories addObject:rowAfrica];
     
     NSMutableArray *rowSouthAmerica = [NSMutableArray new];
     [rowSouthAmerica addObject:@"Südamerika"];
-    [rowSouthAmerica addObject:[UIImage imageNamed:@"Icon-72.png"]];
+    [rowSouthAmerica addObject:[UIImage imageNamed:@"southAmerica.png"]];
     [rowSouthAmerica addObject:@"areaCategory"];
-    
-    self.filterCategories = [[NSArray alloc] initWithObjects:rowAll, rowMammal, rowBirds, rowReptiles, rowAmphibians, rowInvertebrates,rowFish, rowFoundersGarden, rowGondwanaLand, rowAsia, rowPongoland, rowAfrica, rowSouthAmerica, nil];
+    [rowSouthAmerica addObject:[NSNumber numberWithInt:[aM getArrayWithFilteredAnimals:FILTER_SOUTHAMERICA].count]];
+    [self.filterCategories addObject:rowSouthAmerica];
+
 }
 
 
@@ -171,17 +207,71 @@
         cell = [nib objectAtIndex:0];
     }
     
-    NSArray *ar = [[self.filterCategoryData objectForKey:[self.filterOptions objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
-
+    UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
     
-    cell.animalFilterTitleLabel.text = [ar objectAtIndex:0];
-    cell.animalFilterImageView.image = [ar objectAtIndex:1];
+    [selectionView setBackgroundColor:Colors.waterBlueColor];
+    
+    cell.selectedBackgroundView = selectionView;
+    
+    
+    
+    NSArray *filteredCategory = [[self.filterCategoryData objectForKey:[self.filterOptions objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
+
+    NSString *entry = [NSString new];
+    
+    int numberOfEntries = [[filteredCategory objectAtIndex:3] intValue];
+    
+    if (numberOfEntries == 1) {
+        entry = @"Eintrag";
+    } else {
+        entry = @"Einträge";
+    }
+    
+    
+    cell.animalFilterTitleLabel.text = [filteredCategory objectAtIndex:0];
+    cell.animalFilterImageView.image = [filteredCategory objectAtIndex:1];
+    cell.animalSubtitleLabel.text = [NSString stringWithFormat:@"%d %@", numberOfEntries, entry];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+    NSString *filteredCategory = [[[self.filterCategoryData objectForKey:[self.filterOptions objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row] objectAtIndex:0];
+    
+    if ([filteredCategory isEqualToString:@"Alle Tiere"]) {
+        aM.filterType = FILTER_ALLANIMALS;
+    } else if ([filteredCategory isEqualToString:@"Säugetiere"]) {
+        aM.filterType = FILTER_MAMMALS;
+    } else if ([filteredCategory isEqualToString:@"Vögel"]) {
+        aM.filterType = FILTER_BIRDS;
+    } else if ([filteredCategory isEqualToString:@"Reptilien"]) {
+        aM.filterType = FILTER_REPTILES;
+    } else if ([filteredCategory isEqualToString:@"Amphibien"]) {
+        aM.filterType = FILTER_AMPHIBIANS;
+    } else if ([filteredCategory isEqualToString:@"Wirbellose Tiere"]) {
+        aM.filterType = FILTER_INVERTEBRATES;
+    } else if ([filteredCategory isEqualToString:@"Fische"]) {
+        aM.filterType = FILTER_FISH;
+    } else if ([filteredCategory isEqualToString:@"Gründer-Garten"]) {
+        aM.filterType = FILTER_FOUNDERSGARDEN;
+    } else if ([filteredCategory isEqualToString:@"Gondwanaland"]) {
+        aM.filterType = FILTER_GONDWANALAND;
+    } else if ([filteredCategory isEqualToString:@"Asien"]) {
+        aM.filterType = FILTER_ASIA;
+    } else if ([filteredCategory isEqualToString:@"Pongoland"]) {
+        aM.filterType = FILTER_PONGOLAND;
+    } else if ([filteredCategory isEqualToString:@"Afrika"]) {
+        aM.filterType = FILTER_AFRICA;
+    } else if ([filteredCategory isEqualToString:@"Südamerika"]) {
+        aM.filterType = FILTER_SOUTHAMERICA;
+    } 
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

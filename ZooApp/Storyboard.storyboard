@@ -308,41 +308,6 @@
             <point key="canvasLocation" x="-2270" y="382"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AnimalDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="areaLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="categoryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="habitatLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AnimalFilterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalFilterViewController.h"/>
-        </class>
-        <class className="AnimalListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalListTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AnimalMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showDetails:"/>
-                <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
