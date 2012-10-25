@@ -18,7 +18,7 @@ static AnimalManager *instance = nil;
     if (self) {
         [self parseJSONToAnimals];
         [self categorizeAnimals];
-         self.filterType = FILTER_ALLANIMALS;
+         self.filterTypeForAnimalListViewController = FILTER_ALLANIMALS;
     }
     return self;
 }
@@ -124,7 +124,7 @@ static AnimalManager *instance = nil;
 # pragma mark - filter methods
 
 - (NSArray*) getAnimalArrayFromCurrentFilter {
-    return [self getArrayWithFilteredAnimals:self.filterType];
+    return [self getArrayWithFilteredAnimals:self.filterTypeForAnimalListViewController];
 }
 
 - (NSArray*) getArrayWithFilteredAnimals: (FilterType) filter {
@@ -172,9 +172,5 @@ static AnimalManager *instance = nil;
     }
 }
 
-
-- (NSArray*) getAllAnimals {
-    return self.allAnimals;
-}
 
 @end

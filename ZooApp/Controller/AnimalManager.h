@@ -43,7 +43,7 @@ typedef enum {
 @property (nonatomic, strong) NSMutableArray *allAfricaAnimals;
 @property (nonatomic, strong) NSMutableArray *allSouthAmericaAnimals;
 
-@property (nonatomic) FilterType filterType;
+@property (nonatomic) FilterType filterTypeForAnimalListViewController;
 
 + (AnimalManager*)getInstance;
 
@@ -51,7 +51,6 @@ typedef enum {
 - (void)categorizeAnimals;
 - (NSArray*) getAnimalArrayFromCurrentFilter;
 - (NSArray*) getArrayWithFilteredAnimals: (FilterType) filter;
-- (NSArray*) getAllAnimals;
 
 @end
 

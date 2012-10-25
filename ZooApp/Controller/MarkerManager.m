@@ -18,7 +18,7 @@
     NSMutableArray *annotations = [NSMutableArray new];
     [annotations removeAllObjects];
     
-    for (Animal *animal in [[AnimalManager getInstance] getAllAnimals]) {
+    for (Animal *animal in [AnimalManager getInstance].allAnimals) {
         
         CLLocationCoordinate2D animalCoordinate;
         animalCoordinate.latitude = animal.latitude.doubleValue;
