@@ -9,13 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Animal.h"
 
-@interface AnimalDetailViewController : UIViewController
+@interface AnimalDetailViewController : UIViewController <UIScrollViewDelegate>
 
 
+@property (strong, nonatomic) IBOutlet UIScrollView *detailAnimalScrollView;
 @property (strong, nonatomic) Animal *currentAnimal;
-@property (weak, nonatomic) IBOutlet UILabel *habitatLabel;
-@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *areaLabel;
-
 
 @end

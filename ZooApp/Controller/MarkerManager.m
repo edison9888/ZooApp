@@ -24,7 +24,7 @@
         animalCoordinate.latitude = animal.latitude.doubleValue;
         animalCoordinate.longitude = animal.longitude.doubleValue;
 
-        Location *annotation = [[Location alloc] initWithName:animal.species subtitle:animal.habitat icon:animal.icon color:[UIColor greenColor] coordinate:animalCoordinate];
+        Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.lebensraum icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
         
         [annotations addObject:annotation];
     }
@@ -38,7 +38,7 @@
     animalCoordinate.latitude = animal.latitude.doubleValue;
     animalCoordinate.longitude = animal.longitude.doubleValue;
         
-    Location *annotation = [[Location alloc] initWithName:animal.species subtitle:animal.habitat icon:animal.icon color:[UIColor greenColor] coordinate:animalCoordinate];
+    Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.lebensraum icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
     
     
     

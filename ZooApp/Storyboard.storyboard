@@ -187,58 +187,14 @@
         <scene sceneID="ogP-b6-63w">
             <objects>
                 <viewController id="UPp-aV-CP8" userLabel="AnimalDetails" customClass="AnimalDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="AnimalDetailViewController" id="MFf-tQ-oc8">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8NJ-U3-moi">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lebensraum: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz6-g3-JX0">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-UD-IHv">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Kategorie:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xon-VE-PC7">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-JY-lj2">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Themenwelt:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-uB-Zdz">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABJ-0z-0Ie">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Xon-VE-PC7" firstAttribute="top" secondItem="MFf-tQ-oc8" secondAttribute="top" constant="66" id="1Hv-1t-5r4"/>
-                            <constraint firstItem="Q28-uB-Zdz" firstAttribute="leading" secondItem="Xon-VE-PC7" secondAttribute="leading" type="default" id="DAH-f1-5A8"/>
-                            <constraint firstItem="ABJ-0z-0Ie" firstAttribute="baseline" secondItem="Q28-uB-Zdz" secondAttribute="baseline" type="default" id="H4p-zf-hXd"/>
-                            <constraint firstItem="g8b-UD-IHv" firstAttribute="baseline" secondItem="bz6-g3-JX0" secondAttribute="baseline" type="default" id="NxL-dt-0gZ"/>
-                            <constraint firstItem="g8b-UD-IHv" firstAttribute="leading" secondItem="MFf-tQ-oc8" secondAttribute="leading" constant="154" id="RMG-wT-vLF"/>
-                            <constraint firstItem="Xon-VE-PC7" firstAttribute="leading" secondItem="bz6-g3-JX0" secondAttribute="leading" type="default" id="T6F-cI-pM9"/>
-                            <constraint firstItem="bz6-g3-JX0" firstAttribute="top" secondItem="MFf-tQ-oc8" secondAttribute="top" constant="31" id="Ub7-Eg-Vmv"/>
-                            <constraint firstItem="HRF-JY-lj2" firstAttribute="baseline" secondItem="Xon-VE-PC7" secondAttribute="baseline" type="default" id="fsy-8b-IPe"/>
-                            <constraint firstItem="ABJ-0z-0Ie" firstAttribute="top" secondItem="MFf-tQ-oc8" secondAttribute="top" constant="102" id="kAC-pX-Utg"/>
-                            <constraint firstItem="bz6-g3-JX0" firstAttribute="leading" secondItem="MFf-tQ-oc8" secondAttribute="leading" constant="35" id="kpm-JG-2Db"/>
-                            <constraint firstItem="ABJ-0z-0Ie" firstAttribute="leading" secondItem="HRF-JY-lj2" secondAttribute="leading" type="default" id="qWR-RE-95K"/>
-                            <constraint firstItem="HRF-JY-lj2" firstAttribute="leading" secondItem="g8b-UD-IHv" secondAttribute="leading" type="default" id="z6a-5U-6Zg"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Detail Tier" id="fli-To-rpz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="UPp-aV-CP8" id="MGI-6w-JT0"/>
+                        </connections>
+                    </scrollView>
+                    <navigationItem key="navigationItem" title="Details" id="fli-To-rpz">
                         <barButtonItem key="rightBarButtonItem" title="Zooplan" id="7G8-T3-TsP">
                             <connections>
                                 <action selector="showAnimalOnMapButtonPressed:" destination="UPp-aV-CP8" id="PPd-vF-bZG"/>
@@ -247,9 +203,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="areaLabel" destination="ABJ-0z-0Ie" id="QuZ-RA-TYJ"/>
-                        <outlet property="categoryLabel" destination="HRF-JY-lj2" id="FuK-Yn-hhD"/>
-                        <outlet property="habitatLabel" destination="g8b-UD-IHv" id="Uo0-96-ons"/>
+                        <outlet property="detailAnimalScrollView" destination="8NJ-U3-moi" id="1JJ-sR-h89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfe-Fh-DTb" userLabel="First Responder" sceneMemberID="firstResponder"/>

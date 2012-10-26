@@ -56,13 +56,23 @@ static AnimalManager *instance = nil;
     for (NSDictionary *a in animalArrayJSON) {
         
         Animal *animal = [Animal new];
-        animal.species = [a objectForKey:@"species"];
-        animal.habitat = [a objectForKey:@"habitat"];
+        
+        animal.name = [a objectForKey:@"name"];
         animal.latitude = [a objectForKey:@"latitude"];
         animal.longitude = [a objectForKey:@"longitude"];
         animal.area = [a objectForKey:@"area"];
         animal.category = [a objectForKey:@"category"];
-        animal.icon = [a objectForKey:@"icon"];
+        animal.verwandschaft = [a objectForKey:@"verwandschaft"];
+        animal.lebensraum = [a objectForKey:@"lebensraum"];
+        animal.hoechstalter = [a objectForKey:@"hoechstalter"];
+        animal.groesse = [a objectForKey:@"groesse"];
+        animal.gewicht = [a objectForKey:@"gewicht"];
+        animal.sozialstruktur = [a objectForKey:@"sozialstruktur"];
+        animal.fortpflanzung = [a objectForKey:@"fortpflanzung"];
+        animal.feinde = [a objectForKey:@"feinde"];
+        animal.nahrung = [a objectForKey:@"nahrung"];
+        animal.bedrohungsstatus = [a objectForKey:@"bedrohungsstatus"];
+        animal.image = [a objectForKey:@"image"];
         [self.allAnimals addObject:animal];
 
     }
@@ -73,21 +83,30 @@ static AnimalManager *instance = nil;
     
     NSLog(@"Animals are being categorized");
     
-    NSArray *keys = [NSArray arrayWithObjects:@"Alle Tiere", @"Säugetiere", @"Vögel", @"Reptilien", @"Amphibien", @"Wirbellose Tiere", @"Fische", @"Gründer-Garten", @"Gondwanaland", @"Asien", @"Pongoland", @"Afrika", @"Südamerika", nil]; // 13 Keys
+    // define a key array and add 13 keys
+    NSArray *keys = [NSArray arrayWithObjects:@"Alle Tiere", @"Säugetiere", @"Vögel", @"Reptilien", @"Amphibien", @"Wirbellose Tiere", @"Fische", @"Gründer-Garten", @"Gondwanaland", @"Asien", @"Pongoland", @"Afrika", @"Südamerika", nil];
     
+    // define an object array which will be corresponding to the keys
     NSMutableArray *objects = [NSMutableArray new];
-    for (int i = 0; i < 13; i++) {
+    
+    // add an array with all animals as the first object, corresponding to the first key "Alle Tiere"
+    [objects addObject:self.allAnimals];
+    
+    // add 12 empty arrays for the objects of the other keys
+    for (int i = 0; i < 12; i++) {
         [objects addObject:[NSMutableArray new]];
     }
     
+    // initialize a new dictionary with keys and objects
     self.filteredAnimalList = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
-
+    
+    // put all animals in their corresponding arrays
     for (Animal *animal in self.allAnimals) {
         
-        [[self.filteredAnimalList objectForKey:@"Alle Tiere"] addObject:animal];
         [[self.filteredAnimalList objectForKey:animal.category] addObject:animal];
         [[self.filteredAnimalList objectForKey:animal.area] addObject:animal];
-    }    
+    }
+    
 }
 
 # pragma mark - filter methods

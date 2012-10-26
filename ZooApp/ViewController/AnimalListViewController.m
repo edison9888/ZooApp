@@ -57,7 +57,7 @@ static NSString *filterKey;
         
         for (Animal* p in self.currentFilteredList) {
 
-            if ([p.species characterAtIndex:0] == [character characterAtIndex:0]) {
+            if ([p.name characterAtIndex:0] == [character characterAtIndex:0]) {
                 
                 if (![array containsObject:character])
                     [array addObject:character];
@@ -135,7 +135,7 @@ static NSString *filterKey;
     Animal *an = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
     
     
-    cell.textLabel.text = an.species;
+    cell.textLabel.text = an.name;
    
     return cell;
 }
