@@ -15,4 +15,7 @@
 @property (nonatomic, strong) NSArray *filterOptions;
 @property (strong, nonatomic) NSMutableDictionary *filterCategoryData;
 
+- (void)createFilterCategories;
+- (NSMutableArray*) createFilterCategoryWithTitleKey:(NSString*)tK imageName:(NSString*)iN category:(NSString*)c;
+
 @end

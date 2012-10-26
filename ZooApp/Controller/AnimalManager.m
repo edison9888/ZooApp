@@ -18,7 +18,6 @@ static AnimalManager *instance = nil;
     if (self) {
         [self parseJSONToAnimals];
         [self categorizeAnimals];
-         self.filterTypeForAnimalListViewController = FILTER_ALLANIMALS;
     }
     return self;
 }
@@ -73,103 +72,29 @@ static AnimalManager *instance = nil;
 - (void)categorizeAnimals {
     
     NSLog(@"Animals are being categorized");
-        
-    self.allMammals = [NSMutableArray new];
-    self.allBirds = [NSMutableArray new];
-    self.allReptiles = [NSMutableArray new];
-    self.allAmphibians = [NSMutableArray new];
-    self.allInvertebrates = [NSMutableArray new];
-    self.allFish = [NSMutableArray new];
     
-    self.allFoundersGardenAnimals = [NSMutableArray new];
-    self.allGondwanalandAnimals = [NSMutableArray new];
-    self.allAsiaAnimals = [NSMutableArray new];
-    self.allPongolandAnimals = [NSMutableArray new];
-    self.allAfricaAnimals = [NSMutableArray new];
-    self.allSouthAmericaAnimals = [NSMutableArray new];
+    NSArray *keys = [NSArray arrayWithObjects:@"Alle Tiere", @"Säugetiere", @"Vögel", @"Reptilien", @"Amphibien", @"Wirbellose Tiere", @"Fische", @"Gründer-Garten", @"Gondwanaland", @"Asien", @"Pongoland", @"Afrika", @"Südamerika", nil]; // 13 Keys
     
-    for (Animal *animal in self.allAnimals) {
-        
-        if ([animal.category isEqualToString:@"Säugetiere"]) {
-            [self.allMammals addObject:animal];
-        } else if ([animal.category isEqualToString:@"Vögel"]) {
-            [self.allBirds addObject:animal];
-        } else if ([animal.category isEqualToString:@"Reptilien"]) {
-            [self.allReptiles addObject:animal];
-        } else if ([animal.category isEqualToString:@"Amphibien"]) {
-            [self.allAmphibians addObject:animal];
-        } else if ([animal.category isEqualToString:@"Wirbellose Tiere"]) {
-            [self.allInvertebrates addObject:animal];
-        } else if ([animal.category isEqualToString:@"Fische"]) {
-            [self.allFish addObject:animal];
-        }
-        
-        if ([animal.area isEqualToString:@"Gründer-Garten"]) {
-            [self.allFoundersGardenAnimals addObject:animal];
-        } else if ([animal.area isEqualToString:@"Gondwanaland"]) {
-            [self.allGondwanalandAnimals addObject:animal];
-        } else if ([animal.area isEqualToString:@"Asien"]) {
-            [self.allAsiaAnimals addObject:animal];
-        } else if ([animal.area isEqualToString:@"Pongoland"]) {
-            [self.allPongolandAnimals addObject:animal];
-        } else if ([animal.area isEqualToString:@"Afrika"]) {
-            [self.allAfricaAnimals addObject:animal];
-        } else if ([animal.area isEqualToString:@"Südamerika"]) {
-            [self.allSouthAmericaAnimals addObject:animal];
-        }
+    NSMutableArray *objects = [NSMutableArray new];
+    for (int i = 0; i < 13; i++) {
+        [objects addObject:[NSMutableArray new]];
     }
     
+    self.filteredAnimalList = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+
+    for (Animal *animal in self.allAnimals) {
+        
+        [[self.filteredAnimalList objectForKey:@"Alle Tiere"] addObject:animal];
+        [[self.filteredAnimalList objectForKey:animal.category] addObject:animal];
+        [[self.filteredAnimalList objectForKey:animal.area] addObject:animal];
+    }    
 }
 
 # pragma mark - filter methods
 
-- (NSArray*) getAnimalArrayFromCurrentFilter {
-    return [self getArrayWithFilteredAnimals:self.filterTypeForAnimalListViewController];
-}
-
-- (NSArray*) getArrayWithFilteredAnimals: (FilterType) filter {
+- (NSArray*) getAnimalArrayForFilterKey: (NSString*) filterKey {
     
-    switch (filter) {
-        case FILTER_MAMMALS:
-            return self.allMammals;
-            break;
-        case FILTER_BIRDS:
-            return self.allBirds;
-            break;
-        case FILTER_REPTILES:
-            return self.allReptiles;
-            break;
-        case FILTER_AMPHIBIANS:
-            return self.allAmphibians;
-            break;
-        case FILTER_INVERTEBRATES:
-            return self.allInvertebrates;
-            break;
-        case FILTER_FISH:
-            return self.allFish;
-            break;
-        case FILTER_FOUNDERSGARDEN:
-            return self.allFoundersGardenAnimals;
-            break;
-        case FILTER_GONDWANALAND:
-            return self.allGondwanalandAnimals;
-            break;
-        case FILTER_ASIA:
-            return self.allAsiaAnimals;
-            break;
-        case FILTER_PONGOLAND:
-            return self.allPongolandAnimals;
-            break;
-        case FILTER_AFRICA:
-            return self.allAfricaAnimals;
-            break;
-        case FILTER_SOUTHAMERICA:
-            return self.allSouthAmericaAnimals;
-            break;
-        default: //ALLANIMALS OR NIL
-            return self.allAnimals;
-            break;
-    }
+    return [self.filteredAnimalList objectForKey:filterKey];
 }
 
 

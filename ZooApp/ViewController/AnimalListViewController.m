@@ -11,9 +11,13 @@
 #import "Animal.h"
 #import "AnimalManager.h"
 
+
+
 @interface AnimalListViewController ()
 
 @end
+
+static NSString *filterKey;
 
 @implementation AnimalListViewController 
 
@@ -22,6 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        filterKey = [NSString new];
     }
     return self;
 }
@@ -31,12 +36,14 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:Colors.sandColor];
     [self.tableView setSeparatorColor:Colors.darkGreenColor];
+    filterKey = @"Alle Tiere";
  
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    self.currentFilteredList = [[AnimalManager getInstance] getAnimalArrayFromCurrentFilter];
+    self.navigationItem.title = filterKey;
+    self.currentFilteredList = [[AnimalManager getInstance] getAnimalArrayForFilterKey:filterKey];
     
     self.alphabetArray = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",nil];
     
@@ -79,6 +86,9 @@
     [super viewDidUnload];
 }
 
++ (void)setFilterKey: (NSString*) filKey {
+    filterKey = filKey;
+}
 
 #pragma mark - table methods
 
