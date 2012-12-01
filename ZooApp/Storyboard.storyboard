@@ -187,13 +187,6 @@
         <scene sceneID="ogP-b6-63w">
             <objects>
                 <viewController id="UPp-aV-CP8" userLabel="AnimalDetails" customClass="AnimalDetailViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8NJ-U3-moi">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <connections>
-                            <outlet property="delegate" destination="UPp-aV-CP8" id="MGI-6w-JT0"/>
-                        </connections>
-                    </scrollView>
                     <navigationItem key="navigationItem" title="Details" id="fli-To-rpz">
                         <barButtonItem key="rightBarButtonItem" title="Zooplan" id="7G8-T3-TsP">
                             <connections>
@@ -202,9 +195,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="detailAnimalScrollView" destination="8NJ-U3-moi" id="1JJ-sR-h89"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfe-Fh-DTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,6 +252,39 @@
             <point key="canvasLocation" x="-2270" y="382"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AnimalDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailAnimalScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="AnimalFilterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalFilterViewController.h"/>
+        </class>
+        <class className="AnimalListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="animalListTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="AnimalMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="animalMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showDetails:"/>
+                <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -15,7 +15,7 @@
         "feinde":"neben Tigern und hundeartigen Raubtieren hauptsächlich der Mensch durch Bejagung und Lebensraumzerstörung",
         "nahrung":"Hirsche, Wildschweine und kleinere Wirbeltiere",
         "bedrohungsstatus":"vom Aussterben bedroht",
-        "image":"eisbaer.jpg"
+        "image":"amurleopard.png"
     },
     {
         "name":"Roter Flamingo",
@@ -33,7 +33,7 @@
         "feinde":"kein Angabe",
         "nahrung":"winzige Wasserschnecken und Krebse, Insektenlarven, Algen und Fischbrut",
         "bedrohungsstatus":"nicht gefährdet",
-        "image":"eisbaer.jpg"
+        "image":"roterFlamingo.png"
     },
     {
         "name":"Grüner Hundskopfschlinger",
@@ -69,7 +69,7 @@
         "feinde":"neben Schlangen der Gattung Leimadophis der Mensch durch illegalen Handel",
         "nahrung":"hauptsächlich verschiedene Ameisenarten, daneben auch andere Insekten und Spinnen",
         "bedrohungsstatus":"nicht gefährdet",
-        "image":"eisbaer.jpg"
+        "image":"azurblauerPfeilgiftfrosch.png"
     },
     {
         "name":"Diademseeigel",
@@ -87,7 +87,79 @@
         "feinde":"größere Drückerfische und Kugelfische",
         "nahrung":"Algen, die von harten Untergründen abgeweidet werden",
         "bedrohungsstatus":"nicht beurteilt",
-        "image":"eisbaer.jpg"
+        "image":"diademSeeigel.png"
+    },
+    {
+        "name":"Rothschildgiraffe",
+        "latitude":"52.516158",
+        "longitude":"13.418972",
+        "area":"Afrika",
+        "category":"Säugetiere",
+        "verwandschaft":"Ordnung: Paarhufer; Familie: Giraffen",
+        "lebensraum":"trockene Baum- und Buschsavannen in Ost- und Südafrika",
+        "hoechstalter":"über 35 Jahre",
+        "groesse":"Scheitelhöhe: Männchen bis zu 5,80 m; Weibchen bis zu 4,50 m",
+        "gewicht":"Männchen: bis zu 1,8 t; Weibchen: bis zu 1,2 t",
+        "sozialstruktur":"lockere Gruppen ohne feste Reviere; Bullen teils Einzelgänger",
+        "fortpflanzung":"Tragzeit: 14-15 Monate, ein Jungtier",
+        "feinde":"neben dem Mensch nur der Löwe",
+        "nahrung":"Blätter, Knospen, Zweige (auch stark dornige) und Rinde",
+        "bedrohungsstatus":"stark gefährdet",
+        "image":"rotschildgiraffe.png"
+    },
+    {
+        "name":"Zweifinger-Faultier",
+        "latitude":"52.518158",
+        "longitude":"13.418972",
+        "area":"Gondwanaland",
+        "category":"Säugetiere",
+        "verwandschaft":"Ordnung: Behaarte Nebengelenktiere; Familie: Zweifingerfaultiere",
+        "lebensraum":"tropische Regenwälder, Waldränder und Gewässerufer im nördlichen  Südamerika",
+        "hoechstalter":"über 38 Jahre",
+        "groesse":"Körperlänge: bis 85 cm",
+        "gewicht":"6-9 kg",
+        "sozialstruktur":"leben einzelgängerisch",
+        "fortpflanzung":"Tragzeit: 180-240 Tage, ein Jungtier",
+        "feinde":"Jaguare, Riesenschlangen, Greifvögel und der Mensch durch Lebensraumzerstörung und Bejagung",
+        "nahrung":"Blätter, Triebe, Blüten, Früchte, Wurzelknollen und Kleintiere",
+        "bedrohungsstatus":"nicht gefährdet",
+        "image":"zweifingerFaultier.png"
+    },
+    {
+        "name":"Bonobo",
+        "latitude":"52.518158",
+        "longitude":"13.412972",
+        "area":"Pongoland",
+        "category":"Säugetiere",
+        "verwandschaft":"Ordnung: Herrentiere; Familie: Menschenaffen und Menschen",
+        "lebensraum":"Tieflandregenwälder und flussnahe Sumpfwälder in der DR Kongo",
+        "hoechstalter":"über 50 Jahre",
+        "groesse":"Körperlänge: 70–85 cm; Standhöhe bis 115 cm",
+        "gewicht":"Männchen: bis 60 kg; Weibchen: bis 38 kg",
+        "sozialstruktur":"gemischtgeschlechtliche Gruppen, Weibchen sind als Koalition ranghöher als einzelne Männchen",
+        "fortpflanzung":"Tragzeit: 227–300 Tage, ein Jungtier",
+        "feinde":"Leoparden und der Mensch durch Lebensraumzerstörung und Bejagung (Bushmeat)",
+        "nahrung":"Früchte, Blätter, Kräuter, Mark, Schoten, Rinde, Blüten, Insekten und kleinere Wirbeltiere",
+        "bedrohungsstatus":"stark gefährdet",
+        "image":"bonobo.png"
+    },
+    {
+        "name":"Asiatischer Elefant",
+        "latitude":"52.518158",
+        "longitude":"13.412172",
+        "area":"Asien",
+        "category":"Säugetiere",
+        "verwandschaft":"Ordnung: Rüsseltiere; Familie: Elefanten",
+        "lebensraum":"Regen-, Sumpf- und Bergwälder, Bambusdickichte, Buschland und Grasdschungel in Südostasien",
+        "hoechstalter":"über 50 Jahre",
+        "groesse":"Körperlänge: bis zu 6,5 m; Schulterhöhe: 2,4-3,35 m",
+        "gewicht":"bis zu 5 t",
+        "sozialstruktur":"Weibchen und Jungtiere leben in Herden, meist 8–30 Tiere; junge Bullen bilden Junggesellengruppen; ältere Bullen leben einzelgängerisch",
+        "fortpflanzung":"Tragzeit: 18-22 Monate, ein Jungtier",
+        "feinde":"neben dem Mensch nur der Tiger",
+        "nahrung":"Gräser, Blätter, Rinde, Weichholz, Bambusschösslinge, Wurzeln und Früchte",
+        "bedrohungsstatus":"stark gefährdet",
+        "image":"asiatischerElefant.png"
     },
     {
         "name":"Netzmuräne",
@@ -105,6 +177,6 @@
         "feinde":"neben Schlangen der Gattung Leimadophis der Mensch durch illegalen Handel",
         "nahrung":"Weichtiere, Krebse und Fische",
         "bedrohungsstatus":"nicht beurteilt",
-        "image":"eisbaer.jpg"
+        "image":"netzmuraene.png"
     }]
 }

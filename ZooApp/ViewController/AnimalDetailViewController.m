@@ -35,7 +35,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
    
-    [self.view setBackgroundColor:Colors.sandColor];
+//    [self.view setBackgroundColor:Colors.sandColor];
+
+    // Set the background
+    UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+    imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [self.view addSubview:imageView];
+
     
   //  self.navigationItem.title = @"";
     
@@ -52,6 +58,7 @@
     
     UILabel *headline = [[UILabel alloc] initWithFrame:CGRectMake(10, startY, LABELWIDTH, HEADLINE_HEIGHT)];
     headline.text = self.currentAnimal.name;
+    headline.textColor = [UIColor whiteColor];
    // headline.textColor = Colors.darkGreenColor;
     headline.font = [UIFont boldSystemFontOfSize:19];
     headline.backgroundColor = [UIColor clearColor];
@@ -60,58 +67,63 @@
     
     startY += HEADLINE_HEIGHT+GAP_BETWEEN_ENTRIES;
     
+    self.detailAnimalScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, startY, 320, 230)];
+    //self.detailAnimalScrollView.backgroundColor = [UIColor redColor];
+    
+    startY = 0;
+    
     UIView *verwandschaftView = [self createViewForEntryWithHeadline:@"Verwandschaft" entry:self.currentAnimal.verwandschaft startY:startY];
-    [self.view addSubview:verwandschaftView];
+    [self.detailAnimalScrollView addSubview:verwandschaftView];
     
     startY += verwandschaftView.frame.size.height+GAP_BETWEEN_ENTRIES;
 
     UIView *lebensraumView = [self createViewForEntryWithHeadline:@"Lebensraum" entry:self.currentAnimal.lebensraum startY:startY];
-    [self.view addSubview:lebensraumView];
+    [self.detailAnimalScrollView addSubview:lebensraumView];
     
     startY += lebensraumView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *hoechstalterView = [self createViewForEntryWithHeadline:@"Höchstalter" entry:self.currentAnimal.hoechstalter startY:startY];
-    [self.view addSubview:hoechstalterView];
+    [self.detailAnimalScrollView addSubview:hoechstalterView];
 
     startY += hoechstalterView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *groesseView = [self createViewForEntryWithHeadline:@"Größe" entry:self.currentAnimal.groesse startY:startY];
-    [self.view addSubview:groesseView];
+    [self.detailAnimalScrollView addSubview:groesseView];
 
     startY += groesseView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *gewichtView = [self createViewForEntryWithHeadline:@"Gewicht" entry:self.currentAnimal.gewicht startY:startY];
-    [self.view addSubview:gewichtView];
+    [self.detailAnimalScrollView addSubview:gewichtView];
 
     startY += gewichtView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *sozialstrukturView = [self createViewForEntryWithHeadline:@"Sozialstruktur" entry:self.currentAnimal.sozialstruktur startY:startY];
-    [self.view addSubview:sozialstrukturView];
+    [self.detailAnimalScrollView addSubview:sozialstrukturView];
 
     startY += sozialstrukturView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *fortpflanzungView = [self createViewForEntryWithHeadline:@"Fortpflanzung" entry:self.currentAnimal.fortpflanzung startY:startY];
-    [self.view addSubview:fortpflanzungView];
+    [self.detailAnimalScrollView addSubview:fortpflanzungView];
 
     startY += fortpflanzungView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *feindeView = [self createViewForEntryWithHeadline:@"Feinde" entry:self.currentAnimal.feinde startY:startY];
-    [self.view addSubview:feindeView];
+    [self.detailAnimalScrollView addSubview:feindeView];
 
     startY += feindeView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *nahrungView = [self createViewForEntryWithHeadline:@"Nahrung" entry:self.currentAnimal.nahrung startY:startY];
-    [self.view addSubview:nahrungView];
+    [self.detailAnimalScrollView addSubview:nahrungView];
     
     startY += nahrungView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     UIView *bedrohungsstatusView = [self createViewForEntryWithHeadline:@"Bedrohungsstatus" entry:self.currentAnimal.bedrohungsstatus startY:startY];
-    [self.view addSubview:bedrohungsstatusView];
+    [self.detailAnimalScrollView addSubview:bedrohungsstatusView];
    
     startY += bedrohungsstatusView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
     self.detailAnimalScrollView.contentSize = CGSizeMake(self.view.bounds.size.width, startY);
-
+    [self.view addSubview:self.detailAnimalScrollView];
     
 }
 
@@ -121,13 +133,14 @@
     
     UILabel *headlineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, LABELWIDTH, HEADING_LABEL_HEIGHT)];
     headlineLabel.text = headline;
-  //  headlineLabel.textColor = Colors.darkGreenColor;
+    headlineLabel.textColor = [UIColor whiteColor];
     headlineLabel.font = [UIFont boldSystemFontOfSize:18];
     headlineLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *entryLabel = [UILabel new];
     entryLabel.numberOfLines = 2000;
     entryLabel.text = entry;
+    entryLabel.textColor = [UIColor whiteColor];
     entryLabel.font = [UIFont systemFontOfSize:18];
    // entryLabel.textColor = Colors.darkGreenColor;
     entryLabel.backgroundColor = [UIColor clearColor];

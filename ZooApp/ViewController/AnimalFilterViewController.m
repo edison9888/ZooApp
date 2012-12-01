@@ -97,6 +97,7 @@
     [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Gründer-Garten" imageName:@"foundersGarden.png" category:@"areaCategory"]];
     [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Gondwanaland" imageName:@"gondwanaland.png" category:@"areaCategory"]];
     [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Asien" imageName:@"asia.png" category:@"areaCategory"]];
+    [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Pongoland" imageName:@"pongoland.png" category:@"areaCategory"]];
     [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Afrika" imageName:@"africa.png" category:@"areaCategory"]];
     [self.filterCategories addObject:[self createFilterCategoryWithTitleKey:@"Südamerika" imageName:@"southAmerica.png" category:@"areaCategory"]];
 }

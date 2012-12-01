@@ -22,6 +22,16 @@
 		D5135B6E162FEE0E00743CC5 /* AnimalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */; };
 		D5135B70162FEEB600743CC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B6F162FEEB600743CC5 /* MapKit.framework */; };
 		D5135B72162FEECD00743CC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B71162FEECD00743CC5 /* CoreLocation.framework */; };
+		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
+		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
+		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
+		D55D27FE163AEEDC00B715DB /* gruenerHundskopfschlinger.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F8163AEEDC00B715DB /* gruenerHundskopfschlinger.png */; };
+		D55D27FF163AEEDC00B715DB /* netzmuraene.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F9163AEEDC00B715DB /* netzmuraene.png */; };
+		D55D2800163AEEDC00B715DB /* roterFlamingo.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27FA163AEEDC00B715DB /* roterFlamingo.png */; };
+		D55D2803163AF30E00B715DB /* rotschildgiraffe.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D2802163AF30E00B715DB /* rotschildgiraffe.png */; };
+		D55D2805163AF8D500B715DB /* asiatischerElefant.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D2804163AF8D500B715DB /* asiatischerElefant.png */; };
+		D55D2807163AF8DA00B715DB /* bonobo.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D2806163AF8DA00B715DB /* bonobo.png */; };
+		D55D2809163AF8E300B715DB /* zweifingerFaultier.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D2808163AF8E300B715DB /* zweifingerFaultier.png */; };
 		D568AA11163931C700270E8B /* africa.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA04163931C700270E8B /* africa.png */; };
 		D568AA12163931C700270E8B /* allAnimals.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA05163931C700270E8B /* allAnimals.png */; };
 		D568AA13163931C700270E8B /* amphibians.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA06163931C700270E8B /* amphibians.png */; };
@@ -36,7 +46,8 @@
 		D568AA1C163931C700270E8B /* reptiles.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0F163931C700270E8B /* reptiles.png */; };
 		D568AA1D163931C700270E8B /* southAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA10163931C700270E8B /* southAmerica.png */; };
 		D568AA2416396C6100270E8B /* AnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AnimalManager.m */; };
-		D568AA36163AE21300270E8B /* gruenerHundskopfschlinger.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA35163AE21300270E8B /* gruenerHundskopfschlinger.png */; };
+		D5A10288166AA87300558BF7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5A10286166AA87300558BF7 /* background.jpg */; };
+		D5A10289166AA87300558BF7 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5A10287166AA87300558BF7 /* background@2x.jpg */; };
 		D5AF86151638661900129120 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF86141638661900129120 /* Colors.m */; };
 		D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081316300370008EB564 /* AnimalDetailViewController.m */; };
 		D5B0082016300B4E008EB564 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* Animal.m */; };
@@ -71,6 +82,16 @@
 		D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalListViewController.m; path = ViewController/AnimalListViewController.m; sourceTree = "<group>"; };
 		D5135B6F162FEEB600743CC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5135B71162FEECD00743CC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
+		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
+		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
+		D55D27F8163AEEDC00B715DB /* gruenerHundskopfschlinger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gruenerHundskopfschlinger.png; sourceTree = "<group>"; };
+		D55D27F9163AEEDC00B715DB /* netzmuraene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = netzmuraene.png; sourceTree = "<group>"; };
+		D55D27FA163AEEDC00B715DB /* roterFlamingo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roterFlamingo.png; sourceTree = "<group>"; };
+		D55D2802163AF30E00B715DB /* rotschildgiraffe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotschildgiraffe.png; sourceTree = "<group>"; };
+		D55D2804163AF8D500B715DB /* asiatischerElefant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asiatischerElefant.png; sourceTree = "<group>"; };
+		D55D2806163AF8DA00B715DB /* bonobo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonobo.png; sourceTree = "<group>"; };
+		D55D2808163AF8E300B715DB /* zweifingerFaultier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zweifingerFaultier.png; sourceTree = "<group>"; };
 		D568AA04163931C700270E8B /* africa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = africa.png; sourceTree = "<group>"; };
 		D568AA05163931C700270E8B /* allAnimals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allAnimals.png; sourceTree = "<group>"; };
 		D568AA06163931C700270E8B /* amphibians.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amphibians.png; sourceTree = "<group>"; };
@@ -86,7 +107,8 @@
 		D568AA10163931C700270E8B /* southAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAmerica.png; sourceTree = "<group>"; };
 		D568AA2216396C6100270E8B /* AnimalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalManager.h; sourceTree = "<group>"; };
 		D568AA2316396C6100270E8B /* AnimalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalManager.m; sourceTree = "<group>"; };
-		D568AA35163AE21300270E8B /* gruenerHundskopfschlinger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gruenerHundskopfschlinger.png; sourceTree = "<group>"; };
+		D5A10286166AA87300558BF7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		D5A10287166AA87300558BF7 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		D5AF86131638661900129120 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		D5AF86141638661900129120 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		D5B0081216300370008EB564 /* AnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalDetailViewController.h; path = ViewController/AnimalDetailViewController.h; sourceTree = "<group>"; };
@@ -208,6 +230,8 @@
 		D568AA02163931C700270E8B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D5A10286166AA87300558BF7 /* background.jpg */,
+				D5A10287166AA87300558BF7 /* background@2x.jpg */,
 				D568AA2D163ADFDE00270E8B /* Animals */,
 				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
 			);
@@ -238,7 +262,16 @@
 		D568AA2D163ADFDE00270E8B /* Animals */ = {
 			isa = PBXGroup;
 			children = (
-				D568AA35163AE21300270E8B /* gruenerHundskopfschlinger.png */,
+				D55D2808163AF8E300B715DB /* zweifingerFaultier.png */,
+				D55D2806163AF8DA00B715DB /* bonobo.png */,
+				D55D2804163AF8D500B715DB /* asiatischerElefant.png */,
+				D55D2802163AF30E00B715DB /* rotschildgiraffe.png */,
+				D55D27F5163AEEDC00B715DB /* amurleopard.png */,
+				D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */,
+				D55D27F7163AEEDC00B715DB /* diademSeeigel.png */,
+				D55D27F8163AEEDC00B715DB /* gruenerHundskopfschlinger.png */,
+				D55D27F9163AEEDC00B715DB /* netzmuraene.png */,
+				D55D27FA163AEEDC00B715DB /* roterFlamingo.png */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -353,7 +386,18 @@
 				D568AA1B163931C700270E8B /* pongoland.png in Resources */,
 				D568AA1C163931C700270E8B /* reptiles.png in Resources */,
 				D568AA1D163931C700270E8B /* southAmerica.png in Resources */,
-				D568AA36163AE21300270E8B /* gruenerHundskopfschlinger.png in Resources */,
+				D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */,
+				D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */,
+				D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */,
+				D55D27FE163AEEDC00B715DB /* gruenerHundskopfschlinger.png in Resources */,
+				D55D27FF163AEEDC00B715DB /* netzmuraene.png in Resources */,
+				D55D2800163AEEDC00B715DB /* roterFlamingo.png in Resources */,
+				D55D2803163AF30E00B715DB /* rotschildgiraffe.png in Resources */,
+				D55D2805163AF8D500B715DB /* asiatischerElefant.png in Resources */,
+				D55D2807163AF8DA00B715DB /* bonobo.png in Resources */,
+				D55D2809163AF8E300B715DB /* zweifingerFaultier.png in Resources */,
+				D5A10288166AA87300558BF7 /* background.jpg in Resources */,
+				D5A10289166AA87300558BF7 /* background@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
