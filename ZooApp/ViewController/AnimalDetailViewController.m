@@ -40,8 +40,9 @@
     // Set the background
     UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
     imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    [self.view addSubview:imageView];
+    //[self.view addSubview:imageView];
 
+    self.view.backgroundColor = Colors.sandColor;
     
   //  self.navigationItem.title = @"";
     
@@ -58,7 +59,7 @@
     
     UILabel *headline = [[UILabel alloc] initWithFrame:CGRectMake(10, startY, LABELWIDTH, HEADLINE_HEIGHT)];
     headline.text = self.currentAnimal.name;
-    headline.textColor = [UIColor whiteColor];
+    headline.textColor = [UIColor blackColor];
    // headline.textColor = Colors.darkGreenColor;
     headline.font = [UIFont boldSystemFontOfSize:19];
     headline.backgroundColor = [UIColor clearColor];
@@ -133,14 +134,14 @@
     
     UILabel *headlineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, LABELWIDTH, HEADING_LABEL_HEIGHT)];
     headlineLabel.text = headline;
-    headlineLabel.textColor = [UIColor whiteColor];
+    headlineLabel.textColor = [UIColor blackColor];
     headlineLabel.font = [UIFont boldSystemFontOfSize:18];
     headlineLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *entryLabel = [UILabel new];
     entryLabel.numberOfLines = 2000;
     entryLabel.text = entry;
-    entryLabel.textColor = [UIColor whiteColor];
+    entryLabel.textColor = [UIColor blackColor];
     entryLabel.font = [UIFont systemFontOfSize:18];
    // entryLabel.textColor = Colors.darkGreenColor;
     entryLabel.backgroundColor = [UIColor clearColor];

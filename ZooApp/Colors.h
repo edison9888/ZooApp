@@ -14,5 +14,6 @@
 + (UIColor*) grassGreenColor;
 + (UIColor*) sandColor;
 + (UIColor*) waterBlueColor;
++ (UIColor*) woodColor;
 
 @end

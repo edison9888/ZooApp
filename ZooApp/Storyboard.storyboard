@@ -12,20 +12,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalListCell" id="d4g-6C-23f">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <connections>
-                                    <segue destination="UPp-aV-CP8" kind="push" identifier="showAnimalDetailView" id="naU-Yh-fDR"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tiere" id="gYa-eV-VBU">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="h7T-g0-rge">
@@ -93,10 +79,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mVx-ec-C5D" firstAttribute="trailing" secondItem="EAw-gU-108" secondAttribute="trailing" type="default" id="3Za-EO-y9Y"/>
-                            <constraint firstItem="mVx-ec-C5D" firstAttribute="leading" secondItem="EAw-gU-108" secondAttribute="leading" type="default" id="SR4-0Y-1b3"/>
-                            <constraint firstItem="mVx-ec-C5D" firstAttribute="bottom" secondItem="EAw-gU-108" secondAttribute="bottom" type="default" id="XqT-Bm-IeN"/>
-                            <constraint firstItem="mVx-ec-C5D" firstAttribute="top" secondItem="EAw-gU-108" secondAttribute="top" type="default" id="j7m-kA-jRR"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="bottom" secondItem="EAw-gU-108" secondAttribute="bottom" type="default" id="4LM-t0-LZA"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="top" secondItem="EAw-gU-108" secondAttribute="top" type="default" id="B8C-5J-g2f"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="leading" secondItem="EAw-gU-108" secondAttribute="leading" type="default" id="JR9-uL-1gP"/>
+                            <constraint firstItem="mVx-ec-C5D" firstAttribute="trailing" secondItem="EAw-gU-108" secondAttribute="trailing" type="default" id="eaE-rL-6cy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="FQ4-Ku-kPK"/>
@@ -158,6 +144,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jS-gka">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Info" id="OWZ-b4-LVa"/>
                                 </items>
@@ -170,23 +157,110 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wBz-t4-bWt" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" constant="143" id="Ah0-mq-l4g"/>
-                            <constraint firstItem="dOA-jS-gka" firstAttribute="leading" secondItem="Z92-8s-tlt" secondAttribute="leading" type="default" id="S49-yx-hWR"/>
-                            <constraint firstItem="wBz-t4-bWt" firstAttribute="centerX" secondItem="dOA-jS-gka" secondAttribute="centerX" type="default" id="iPi-vP-6TY"/>
-                            <constraint firstItem="dOA-jS-gka" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" type="default" id="kZW-AH-QwE"/>
-                            <constraint firstItem="dOA-jS-gka" firstAttribute="trailing" secondItem="Z92-8s-tlt" secondAttribute="trailing" type="default" id="uHf-2R-ILq"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="trailing" secondItem="Z92-8s-tlt" secondAttribute="trailing" type="default" id="3B8-Ta-CJH"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" type="default" id="Tbi-rr-pW8"/>
+                            <constraint firstItem="wBz-t4-bWt" firstAttribute="top" secondItem="Z92-8s-tlt" secondAttribute="top" constant="143" id="p17-ra-59e"/>
+                            <constraint firstItem="wBz-t4-bWt" firstAttribute="centerX" secondItem="dOA-jS-gka" secondAttribute="centerX" type="default" id="yHm-bd-3FO"/>
+                            <constraint firstItem="dOA-jS-gka" firstAttribute="leading" secondItem="Z92-8s-tlt" secondAttribute="leading" type="default" id="zZJ-VV-B22"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" id="U3W-pN-aBI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mX7-gF-2d3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1551" y="-280"/>
+            <point key="canvasLocation" x="-1728" y="-299"/>
+        </scene>
+        <!--AGAnimalDetailViewController-->
+        <scene sceneID="S06-Ut-Zbz">
+            <objects>
+                <viewController storyboardIdentifier="AGAnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wgb-un-Vc1" userLabel="AGAnimalDetailViewController" customClass="AGAnimalDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bow-Xc-t2X">
+                        <rect key="frame" x="0.0" y="20" width="320" height="1548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLK-d6-Btw">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zhw-YI-86s">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Yst-zh-6Km"/>
+                                            <constraint firstAttribute="width" constant="166" id="zyq-Ue-ey9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="G31-yJ-Uhs">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="RZu-KZ-bXJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-s9-ULE">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="vd5-wZ-j7w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="ws9-3a-gmm">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Jb7-DS-rx3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmg-dB-kF1">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="op0-QM-1WF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-6i-u6n">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="KCs-nG-QTJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="africa.png" translatesAutoresizingMaskIntoConstraints="NO" id="7YF-wi-Qhx">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="LYu-8w-Hwe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7YF-wi-Qhx" secondAttribute="bottom" constant="1014" id="0Vn-fz-vWx"/>
+                                    <constraint firstItem="G31-yJ-Uhs" firstAttribute="trailing" secondItem="Zhw-YI-86s" secondAttribute="trailing" type="default" id="2H6-Lc-KTr"/>
+                                    <constraint firstItem="f8K-6i-u6n" firstAttribute="trailing" secondItem="7YF-wi-Qhx" secondAttribute="trailing" type="default" id="6H1-iz-EzP"/>
+                                    <constraint firstItem="7YF-wi-Qhx" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="1334" id="8e7-Y6-reg"/>
+                                    <constraint firstItem="7YF-wi-Qhx" firstAttribute="leading" secondItem="f8K-6i-u6n" secondAttribute="leading" type="default" id="AaX-6k-QHU"/>
+                                    <constraint firstItem="Zhw-YI-86s" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="20" symbolic="YES" type="default" id="C2K-1J-1HR"/>
+                                    <constraint firstItem="f8K-6i-u6n" firstAttribute="trailing" secondItem="dmg-dB-kF1" secondAttribute="trailing" type="default" id="D0L-yY-2ce"/>
+                                    <constraint firstItem="dmg-dB-kF1" firstAttribute="trailing" secondItem="ws9-3a-gmm" secondAttribute="trailing" type="default" id="ENe-Te-zrD"/>
+                                    <constraint firstItem="ydq-s9-ULE" firstAttribute="trailing" secondItem="G31-yJ-Uhs" secondAttribute="trailing" type="default" id="Fdh-hV-24H"/>
+                                    <constraint firstItem="G31-yJ-Uhs" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="242" id="Hab-fs-4Bt"/>
+                                    <constraint firstItem="ydq-s9-ULE" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="464" id="Mja-I3-Xdc"/>
+                                    <constraint firstItem="ws9-3a-gmm" firstAttribute="centerX" secondItem="qLK-d6-Btw" secondAttribute="centerX" type="default" id="PBO-YH-x58"/>
+                                    <constraint firstItem="ws9-3a-gmm" firstAttribute="leading" secondItem="dmg-dB-kF1" secondAttribute="leading" type="default" id="PW1-hj-0zF"/>
+                                    <constraint firstItem="f8K-6i-u6n" firstAttribute="top" secondItem="dmg-dB-kF1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TRk-Ka-OQa"/>
+                                    <constraint firstItem="ws9-3a-gmm" firstAttribute="leading" secondItem="ydq-s9-ULE" secondAttribute="leading" type="default" id="YBC-hW-jqL"/>
+                                    <constraint firstItem="dmg-dB-kF1" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="909" id="ZHE-sW-fT0"/>
+                                    <constraint firstItem="G31-yJ-Uhs" firstAttribute="leading" secondItem="Zhw-YI-86s" secondAttribute="leading" type="default" id="bWy-Cy-pKv"/>
+                                    <constraint firstItem="ws9-3a-gmm" firstAttribute="top" secondItem="qLK-d6-Btw" secondAttribute="top" constant="687" id="ftQ-Uf-mNq"/>
+                                    <constraint firstItem="G31-yJ-Uhs" firstAttribute="leading" secondItem="ydq-s9-ULE" secondAttribute="leading" type="default" id="gGZ-KE-pPv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zhw-YI-86s" secondAttribute="trailing" constant="77" id="pXP-Ra-mf5"/>
+                                    <constraint firstItem="dmg-dB-kF1" firstAttribute="leading" secondItem="f8K-6i-u6n" secondAttribute="leading" type="default" id="tQr-LU-y6m"/>
+                                    <constraint firstItem="ydq-s9-ULE" firstAttribute="trailing" secondItem="ws9-3a-gmm" secondAttribute="trailing" type="default" id="wTa-1V-iv6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qLK-d6-Btw" secondAttribute="bottom" constant="-1000" id="Ac7-VQ-OeR"/>
+                            <constraint firstItem="qLK-d6-Btw" firstAttribute="leading" secondItem="Bow-Xc-t2X" secondAttribute="leading" type="default" id="Age-5w-tTi"/>
+                            <constraint firstItem="qLK-d6-Btw" firstAttribute="trailing" secondItem="Bow-Xc-t2X" secondAttribute="trailing" type="default" id="Xjm-Yf-bFD"/>
+                            <constraint firstItem="qLK-d6-Btw" firstAttribute="top" secondItem="Bow-Xc-t2X" secondAttribute="top" type="default" id="uNm-ST-nJf"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmw-JD-a7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1490" y="1766"/>
         </scene>
         <!--AnimalDetails-->
         <scene sceneID="ogP-b6-63w">
             <objects>
-                <viewController id="UPp-aV-CP8" userLabel="AnimalDetails" customClass="AnimalDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UPp-aV-CP8" userLabel="AnimalDetails" customClass="AnimalDetailViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Details" id="fli-To-rpz">
                         <barButtonItem key="rightBarButtonItem" title="Zooplan" id="7G8-T3-TsP">
                             <connections>
@@ -205,7 +279,7 @@
             <objects>
                 <viewController id="Uxz-aj-Dre" customClass="AnimalMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XsV-zl-BHv">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-ET-s4v">
@@ -216,10 +290,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zMe-ET-s4v" firstAttribute="bottom" secondItem="XsV-zl-BHv" secondAttribute="bottom" type="default" id="UbZ-X1-Z90"/>
-                            <constraint firstItem="zMe-ET-s4v" firstAttribute="trailing" secondItem="XsV-zl-BHv" secondAttribute="trailing" type="default" id="hIo-4f-7I2"/>
-                            <constraint firstItem="zMe-ET-s4v" firstAttribute="top" secondItem="XsV-zl-BHv" secondAttribute="top" type="default" id="tez-xp-9gY"/>
-                            <constraint firstItem="zMe-ET-s4v" firstAttribute="leading" secondItem="XsV-zl-BHv" secondAttribute="leading" type="default" id="uxM-Rg-eQN"/>
+                            <constraint firstItem="zMe-ET-s4v" firstAttribute="leading" secondItem="XsV-zl-BHv" secondAttribute="leading" type="default" id="5tc-0r-gTb"/>
+                            <constraint firstItem="zMe-ET-s4v" firstAttribute="bottom" secondItem="XsV-zl-BHv" secondAttribute="bottom" type="default" id="8dj-qW-0Fl"/>
+                            <constraint firstItem="zMe-ET-s4v" firstAttribute="top" secondItem="XsV-zl-BHv" secondAttribute="top" type="default" id="Ddo-IX-7jy"/>
+                            <constraint firstItem="zMe-ET-s4v" firstAttribute="trailing" secondItem="XsV-zl-BHv" secondAttribute="trailing" type="default" id="XJ1-Xu-5gO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c7T-9S-ojM"/>
@@ -252,7 +326,13 @@
             <point key="canvasLocation" x="-2270" y="382"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="africa.png" width="80" height="80"/>
+    </resources>
     <classes>
+        <class className="AGAnimalDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalDetailViewController.h"/>
+        </class>
         <class className="AnimalDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalDetailViewController.h"/>
             <relationships>
@@ -277,7 +357,6 @@
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
-                <relationship kind="action" name="showDetails:"/>
                 <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

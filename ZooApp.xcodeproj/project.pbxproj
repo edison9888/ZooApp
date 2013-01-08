@@ -46,8 +46,7 @@
 		D568AA1C163931C700270E8B /* reptiles.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0F163931C700270E8B /* reptiles.png */; };
 		D568AA1D163931C700270E8B /* southAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA10163931C700270E8B /* southAmerica.png */; };
 		D568AA2416396C6100270E8B /* AnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AnimalManager.m */; };
-		D5A10288166AA87300558BF7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5A10286166AA87300558BF7 /* background.jpg */; };
-		D5A10289166AA87300558BF7 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5A10287166AA87300558BF7 /* background@2x.jpg */; };
+		D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */; };
 		D5AF86151638661900129120 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF86141638661900129120 /* Colors.m */; };
 		D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081316300370008EB564 /* AnimalDetailViewController.m */; };
 		D5B0082016300B4E008EB564 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* Animal.m */; };
@@ -58,6 +57,20 @@
 		D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */; };
 		D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */; };
 		D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0086216383020008EB564 /* AnimalFilterTableCell.m */; };
+		D5DDE862169B1E8C0009048B /* AnimalListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DDE861169B1E8C0009048B /* AnimalListTableCell.m */; };
+		D5DDE864169B1F3F0009048B /* AnimalListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE863169B1F3F0009048B /* AnimalListTableCell.xib */; };
+		D5DDE875169B35100009048B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE867169B35100009048B /* background.jpg */; };
+		D5DDE876169B35100009048B /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE868169B35100009048B /* background@2x.jpg */; };
+		D5DDE877169B35100009048B /* latte1halb.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE869169B35100009048B /* latte1halb.png */; };
+		D5DDE878169B35100009048B /* latte1halb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE86A169B35100009048B /* latte1halb@2x.png */; };
+		D5DDE879169B35100009048B /* latte2halb.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE86B169B35100009048B /* latte2halb.png */; };
+		D5DDE87A169B35100009048B /* latte2halb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE86C169B35100009048B /* latte2halb@2x.png */; };
+		D5DDE87B169B35100009048B /* latte3halb.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE86D169B35100009048B /* latte3halb.png */; };
+		D5DDE87C169B35100009048B /* latte3halb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE86E169B35100009048B /* latte3halb@2x.png */; };
+		D5DDE885169B36F70009048B /* latte0halb.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE883169B36F70009048B /* latte0halb.png */; };
+		D5DDE886169B36F70009048B /* latte0halb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE884169B36F70009048B /* latte0halb@2x.png */; };
+		D5DDE889169B37B80009048B /* latte4halb.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE887169B37B80009048B /* latte4halb.png */; };
+		D5DDE88A169B37B80009048B /* latte4halb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE888169B37B80009048B /* latte4halb@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,8 +120,8 @@
 		D568AA10163931C700270E8B /* southAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAmerica.png; sourceTree = "<group>"; };
 		D568AA2216396C6100270E8B /* AnimalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalManager.h; sourceTree = "<group>"; };
 		D568AA2316396C6100270E8B /* AnimalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalManager.m; sourceTree = "<group>"; };
-		D5A10286166AA87300558BF7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		D5A10287166AA87300558BF7 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		D571C758169CAE9700C63A04 /* AGAnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalDetailViewController.h; path = ViewController/AGAnimalDetailViewController.h; sourceTree = "<group>"; };
+		D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalDetailViewController.m; path = ViewController/AGAnimalDetailViewController.m; sourceTree = "<group>"; };
 		D5AF86131638661900129120 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		D5AF86141638661900129120 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		D5B0081216300370008EB564 /* AnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalDetailViewController.h; path = ViewController/AnimalDetailViewController.h; sourceTree = "<group>"; };
@@ -127,6 +140,21 @@
 		D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimalFilterTableCell.xib; path = ViewController/AnimalFilterTableCell.xib; sourceTree = "<group>"; };
 		D5B0086116383020008EB564 /* AnimalFilterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterTableCell.h; path = ViewController/AnimalFilterTableCell.h; sourceTree = "<group>"; };
 		D5B0086216383020008EB564 /* AnimalFilterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterTableCell.m; path = ViewController/AnimalFilterTableCell.m; sourceTree = "<group>"; };
+		D5DDE860169B1E8C0009048B /* AnimalListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalListTableCell.h; path = ViewController/AnimalListTableCell.h; sourceTree = "<group>"; };
+		D5DDE861169B1E8C0009048B /* AnimalListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalListTableCell.m; path = ViewController/AnimalListTableCell.m; sourceTree = "<group>"; };
+		D5DDE863169B1F3F0009048B /* AnimalListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimalListTableCell.xib; path = ViewController/AnimalListTableCell.xib; sourceTree = "<group>"; };
+		D5DDE867169B35100009048B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		D5DDE868169B35100009048B /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		D5DDE869169B35100009048B /* latte1halb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte1halb.png; sourceTree = "<group>"; };
+		D5DDE86A169B35100009048B /* latte1halb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "latte1halb@2x.png"; sourceTree = "<group>"; };
+		D5DDE86B169B35100009048B /* latte2halb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte2halb.png; sourceTree = "<group>"; };
+		D5DDE86C169B35100009048B /* latte2halb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "latte2halb@2x.png"; sourceTree = "<group>"; };
+		D5DDE86D169B35100009048B /* latte3halb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte3halb.png; sourceTree = "<group>"; };
+		D5DDE86E169B35100009048B /* latte3halb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "latte3halb@2x.png"; sourceTree = "<group>"; };
+		D5DDE883169B36F70009048B /* latte0halb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte0halb.png; sourceTree = "<group>"; };
+		D5DDE884169B36F70009048B /* latte0halb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "latte0halb@2x.png"; sourceTree = "<group>"; };
+		D5DDE887169B37B80009048B /* latte4halb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = latte4halb.png; sourceTree = "<group>"; };
+		D5DDE888169B37B80009048B /* latte4halb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "latte4halb@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,8 +258,7 @@
 		D568AA02163931C700270E8B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D5A10286166AA87300558BF7 /* background.jpg */,
-				D5A10287166AA87300558BF7 /* background@2x.jpg */,
+				D5DDE866169B35100009048B /* Wood */,
 				D568AA2D163ADFDE00270E8B /* Animals */,
 				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
 			);
@@ -276,6 +303,15 @@
 			path = Animals;
 			sourceTree = "<group>";
 		};
+		D571C756169CAE5E00C63A04 /* AnimalDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				D571C758169CAE9700C63A04 /* AGAnimalDetailViewController.h */,
+				D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */,
+			);
+			name = AnimalDetailView;
+			sourceTree = "<group>";
+		};
 		D5B0082F1631427E008EB564 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,15 +326,18 @@
 		D5B00859163817FE008EB564 /* AnimalTab */ = {
 			isa = PBXGroup;
 			children = (
+				D571C756169CAE5E00C63A04 /* AnimalDetailView */,
+				D5DDE865169B22AF0009048B /* nibs */,
 				D5135B6C162FEE0D00743CC5 /* AnimalListViewController.h */,
 				D5135B6D162FEE0E00743CC5 /* AnimalListViewController.m */,
+				D5DDE860169B1E8C0009048B /* AnimalListTableCell.h */,
+				D5DDE861169B1E8C0009048B /* AnimalListTableCell.m */,
 				D5B0081216300370008EB564 /* AnimalDetailViewController.h */,
 				D5B0081316300370008EB564 /* AnimalDetailViewController.m */,
 				D5B0084216356F15008EB564 /* AnimalMapViewController.h */,
 				D5B0084316356F15008EB564 /* AnimalMapViewController.m */,
 				D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */,
 				D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */,
-				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
 				D5B0086116383020008EB564 /* AnimalFilterTableCell.h */,
 				D5B0086216383020008EB564 /* AnimalFilterTableCell.m */,
 			);
@@ -312,6 +351,34 @@
 				D5135B6A162FEDFC00743CC5 /* MapViewController.m */,
 			);
 			name = MapTab;
+			sourceTree = "<group>";
+		};
+		D5DDE865169B22AF0009048B /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				D5DDE863169B1F3F0009048B /* AnimalListTableCell.xib */,
+				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
+			);
+			name = nibs;
+			sourceTree = "<group>";
+		};
+		D5DDE866169B35100009048B /* Wood */ = {
+			isa = PBXGroup;
+			children = (
+				D5DDE867169B35100009048B /* background.jpg */,
+				D5DDE868169B35100009048B /* background@2x.jpg */,
+				D5DDE883169B36F70009048B /* latte0halb.png */,
+				D5DDE884169B36F70009048B /* latte0halb@2x.png */,
+				D5DDE869169B35100009048B /* latte1halb.png */,
+				D5DDE86A169B35100009048B /* latte1halb@2x.png */,
+				D5DDE86B169B35100009048B /* latte2halb.png */,
+				D5DDE86C169B35100009048B /* latte2halb@2x.png */,
+				D5DDE86D169B35100009048B /* latte3halb.png */,
+				D5DDE86E169B35100009048B /* latte3halb@2x.png */,
+				D5DDE887169B37B80009048B /* latte4halb.png */,
+				D5DDE888169B37B80009048B /* latte4halb@2x.png */,
+			);
+			path = Wood;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,8 +463,19 @@
 				D55D2805163AF8D500B715DB /* asiatischerElefant.png in Resources */,
 				D55D2807163AF8DA00B715DB /* bonobo.png in Resources */,
 				D55D2809163AF8E300B715DB /* zweifingerFaultier.png in Resources */,
-				D5A10288166AA87300558BF7 /* background.jpg in Resources */,
-				D5A10289166AA87300558BF7 /* background@2x.jpg in Resources */,
+				D5DDE864169B1F3F0009048B /* AnimalListTableCell.xib in Resources */,
+				D5DDE875169B35100009048B /* background.jpg in Resources */,
+				D5DDE876169B35100009048B /* background@2x.jpg in Resources */,
+				D5DDE877169B35100009048B /* latte1halb.png in Resources */,
+				D5DDE878169B35100009048B /* latte1halb@2x.png in Resources */,
+				D5DDE879169B35100009048B /* latte2halb.png in Resources */,
+				D5DDE87A169B35100009048B /* latte2halb@2x.png in Resources */,
+				D5DDE87B169B35100009048B /* latte3halb.png in Resources */,
+				D5DDE87C169B35100009048B /* latte3halb@2x.png in Resources */,
+				D5DDE885169B36F70009048B /* latte0halb.png in Resources */,
+				D5DDE886169B36F70009048B /* latte0halb@2x.png in Resources */,
+				D5DDE889169B37B80009048B /* latte4halb.png in Resources */,
+				D5DDE88A169B37B80009048B /* latte4halb@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +499,8 @@
 				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 				D5AF86151638661900129120 /* Colors.m in Sources */,
 				D568AA2416396C6100270E8B /* AnimalManager.m in Sources */,
+				D5DDE862169B1E8C0009048B /* AnimalListTableCell.m in Sources */,
+				D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

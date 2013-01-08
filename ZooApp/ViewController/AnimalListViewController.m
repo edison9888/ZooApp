@@ -7,9 +7,10 @@
 //
 
 #import "AnimalListViewController.h"
-#import "AnimalDetailViewController.h"
+#import "AGAnimalDetailViewController.h"
 #import "Animal.h"
 #import "AnimalManager.h"
+#import "AnimalListTableCell.h"
 
 
 
@@ -35,7 +36,7 @@ static NSString *filterKey;
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:Colors.sandColor];
-    [self.tableView setSeparatorColor:Colors.darkGreenColor];
+    [self.tableView setSeparatorColor:Colors.woodColor];
     filterKey = @"Alle Tiere";
  
 }
@@ -99,13 +100,19 @@ static NSString *filterKey;
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 90)];
-    headerView.backgroundColor = Colors.darkGreenColor;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 22)];
+    
+    NSInteger num = arc4random()%5;
+//    NSInteger num = 4;
+    NSString *imageName = [NSString stringWithFormat:@"latte%ihalb.png", num];
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 22)];
+    backgroundImage.image = [UIImage imageNamed:imageName];
+    [headerView addSubview:backgroundImage];
+    
     UILabel *letterLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 22)];
     letterLabel.textColor = [UIColor whiteColor];
-    letterLabel.backgroundColor = Colors.darkGreenColor;
+    letterLabel.backgroundColor = [UIColor clearColor];
     letterLabel.text = [self.indexArray objectAtIndex:section];
-    //letterLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];
     letterLabel.font = [UIFont boldSystemFontOfSize:19];
     [headerView addSubview:letterLabel];
     return headerView;
@@ -118,12 +125,13 @@ static NSString *filterKey;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"AnimalListCell";
+    static NSString *CellIdentifier = @"AnimalListTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     AnimalListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AnimalListTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     UIView *selectionView = [[UIView alloc]initWithFrame:cell.bounds];
@@ -135,25 +143,25 @@ static NSString *filterKey;
     Animal *an = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
     
     
-    cell.textLabel.text = an.name;
+    cell.animalName.text = an.name;
+    cell.animalThumbnail.image = [UIImage imageNamed:an.image];
    
     return cell;
 }
 
-
-#pragma mark - Segues
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showAnimalDetailView"]) {
-        AnimalDetailViewController *controller = segue.destinationViewController;
-        int numberOfSelectedSection = [self.tableView indexPathForSelectedRow].section;
-        int numberOfSelectedRow = [self.tableView indexPathForSelectedRow].row;
-        controller.currentAnimal = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:numberOfSelectedSection]]  objectAtIndex:numberOfSelectedRow];
-        return;
-    }
-   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    AGAnimalDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalDetailViewController"];
+    int numberOfSelectedSection = [self.tableView indexPathForSelectedRow].section;
+    int numberOfSelectedRow = [self.tableView indexPathForSelectedRow].row;
+    //vc.currentAnimal = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:numberOfSelectedSection]]  objectAtIndex:numberOfSelectedRow];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
 
 
 @end

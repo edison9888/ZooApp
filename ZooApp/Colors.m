@@ -26,6 +26,10 @@
     return [UIColor colorWithRed:(105/255.0) green:(171/255.0) blue:(214/255.0) alpha:1];
 }
 
++ (UIColor*) woodColor {
+    return [UIColor colorWithRed:(105/255.0) green:(95/255.0) blue:(94/255.0) alpha:1];
+}
+
 @end
 
 
