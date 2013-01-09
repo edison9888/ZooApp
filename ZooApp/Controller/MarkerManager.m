@@ -7,7 +7,7 @@
 //
 
 #import "MarkerManager.h"
-#import "Animal.h"
+#import "AGAnimal.h"
 #import "AnimalManager.h"
 
 
@@ -18,13 +18,13 @@
     NSMutableArray *annotations = [NSMutableArray new];
     [annotations removeAllObjects];
     
-    for (Animal *animal in [AnimalManager getInstance].allAnimals) {
+    for (AGAnimal *animal in [AnimalManager getInstance].allAnimals) {
         
         CLLocationCoordinate2D animalCoordinate;
         animalCoordinate.latitude = animal.latitude.doubleValue;
         animalCoordinate.longitude = animal.longitude.doubleValue;
 
-        Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.lebensraum icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
+        Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.habitat icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
         
         [annotations addObject:annotation];
     }
@@ -32,13 +32,13 @@
     return annotations;
 }
 
-+ (Location*) createMarkerForAnimal: (Animal*) animal {
++ (Location*) createMarkerForAnimal: (AGAnimal*) animal {
     
     CLLocationCoordinate2D animalCoordinate;
     animalCoordinate.latitude = animal.latitude.doubleValue;
     animalCoordinate.longitude = animal.longitude.doubleValue;
         
-    Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.lebensraum icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
+    Location *annotation = [[Location alloc] initWithName:animal.name subtitle:animal.habitat icon:animal.image color:[UIColor greenColor] coordinate:animalCoordinate];
     
     
     

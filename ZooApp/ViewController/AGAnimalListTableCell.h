@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnimalListTableCell : UITableViewCell
+@interface AGAnimalListTableCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *animalName;
 @property (weak, nonatomic) IBOutlet UIImageView *animalThumbnail;
 

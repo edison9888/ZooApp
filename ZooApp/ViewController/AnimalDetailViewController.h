@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Animal.h"
+#import "AGAnimal.h"
 
 @interface AnimalDetailViewController : UIViewController <UIScrollViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIScrollView *detailAnimalScrollView;
-@property (strong, nonatomic) Animal *currentAnimal;
+@property (strong, nonatomic) AGAnimal *currentAnimal;
 
 @end

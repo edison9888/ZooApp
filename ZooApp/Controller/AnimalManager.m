@@ -55,23 +55,25 @@ static AnimalManager *instance = nil;
     
     for (NSDictionary *a in animalArrayJSON) {
         
-        Animal *animal = [Animal new];
+        AGAnimal *animal = [AGAnimal new];
         
         animal.name = [a objectForKey:@"name"];
         animal.latitude = [a objectForKey:@"latitude"];
         animal.longitude = [a objectForKey:@"longitude"];
         animal.area = [a objectForKey:@"area"];
+        animal.enclosure = [a objectForKey:@"enclosure"];
         animal.category = [a objectForKey:@"category"];
-        animal.verwandschaft = [a objectForKey:@"verwandschaft"];
-        animal.lebensraum = [a objectForKey:@"lebensraum"];
-        animal.hoechstalter = [a objectForKey:@"hoechstalter"];
-        animal.groesse = [a objectForKey:@"groesse"];
-        animal.gewicht = [a objectForKey:@"gewicht"];
-        animal.sozialstruktur = [a objectForKey:@"sozialstruktur"];
-        animal.fortpflanzung = [a objectForKey:@"fortpflanzung"];
-        animal.feinde = [a objectForKey:@"feinde"];
-        animal.nahrung = [a objectForKey:@"nahrung"];
-        animal.bedrohungsstatus = [a objectForKey:@"bedrohungsstatus"];
+        animal.relationship = [a objectForKey:@"relationship"];
+        animal.habitat = [a objectForKey:@"habitat"];
+        animal.maximumAge = [a objectForKey:@"maximumAge"];
+        animal.size = [a objectForKey:@"size"];
+        animal.weight = [a objectForKey:@"weight"];
+        animal.socialStructure = [a objectForKey:@"socialStructure"];
+        animal.propagation = [a objectForKey:@"propagation"];
+        animal.enemies = [a objectForKey:@"enemies"];
+        animal.food = [a objectForKey:@"food"];
+        animal.threadState = [a objectForKey:@"threadState"];
+        animal.funFact = [a objectForKey:@"funFact"];
         animal.image = [a objectForKey:@"image"];
         [self.allAnimals addObject:animal];
 
@@ -101,7 +103,7 @@ static AnimalManager *instance = nil;
     self.filteredAnimalList = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
     
     // put all animals in their corresponding arrays
-    for (Animal *animal in self.allAnimals) {
+    for (AGAnimal *animal in self.allAnimals) {
         
         [[self.filteredAnimalList objectForKey:animal.category] addObject:animal];
         [[self.filteredAnimalList objectForKey:animal.area] addObject:animal];

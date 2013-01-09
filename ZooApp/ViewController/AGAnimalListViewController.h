@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnimalListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AGAnimalListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *animalListTableView;
 @property (nonatomic, strong) NSArray *alphabetArray;

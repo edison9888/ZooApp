@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "Animal.h"
+#import "AGAnimal.h"
 
-@implementation Animal 
+@implementation AGAnimal 
 
 @end

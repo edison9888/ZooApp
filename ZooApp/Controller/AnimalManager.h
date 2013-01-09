@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Animal.h"
+#import "AGAnimal.h"
 
 @interface AnimalManager : NSObject
 

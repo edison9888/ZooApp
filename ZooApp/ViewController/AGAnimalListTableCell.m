@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 de.andreagerlach. All rights reserved.
 //
 
-#import "AnimalListTableCell.h"
+#import "AGAnimalListTableCell.h"
 
-@implementation AnimalListTableCell
+@implementation AGAnimalListTableCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

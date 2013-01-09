@@ -73,52 +73,52 @@
     
     startY = 0;
     
-    UIView *verwandschaftView = [self createViewForEntryWithHeadline:@"Verwandschaft" entry:self.currentAnimal.verwandschaft startY:startY];
+    UIView *verwandschaftView = [self createViewForEntryWithHeadline:@"Verwandschaft" entry:self.currentAnimal.relationship startY:startY];
     [self.detailAnimalScrollView addSubview:verwandschaftView];
     
     startY += verwandschaftView.frame.size.height+GAP_BETWEEN_ENTRIES;
 
-    UIView *lebensraumView = [self createViewForEntryWithHeadline:@"Lebensraum" entry:self.currentAnimal.lebensraum startY:startY];
+    UIView *lebensraumView = [self createViewForEntryWithHeadline:@"Lebensraum" entry:self.currentAnimal.habitat startY:startY];
     [self.detailAnimalScrollView addSubview:lebensraumView];
     
     startY += lebensraumView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *hoechstalterView = [self createViewForEntryWithHeadline:@"Höchstalter" entry:self.currentAnimal.hoechstalter startY:startY];
+    UIView *hoechstalterView = [self createViewForEntryWithHeadline:@"Höchstalter" entry:self.currentAnimal.maximumAge startY:startY];
     [self.detailAnimalScrollView addSubview:hoechstalterView];
 
     startY += hoechstalterView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *groesseView = [self createViewForEntryWithHeadline:@"Größe" entry:self.currentAnimal.groesse startY:startY];
+    UIView *groesseView = [self createViewForEntryWithHeadline:@"Größe" entry:self.currentAnimal.size startY:startY];
     [self.detailAnimalScrollView addSubview:groesseView];
 
     startY += groesseView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *gewichtView = [self createViewForEntryWithHeadline:@"Gewicht" entry:self.currentAnimal.gewicht startY:startY];
+    UIView *gewichtView = [self createViewForEntryWithHeadline:@"Gewicht" entry:self.currentAnimal.weight startY:startY];
     [self.detailAnimalScrollView addSubview:gewichtView];
 
     startY += gewichtView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *sozialstrukturView = [self createViewForEntryWithHeadline:@"Sozialstruktur" entry:self.currentAnimal.sozialstruktur startY:startY];
+    UIView *sozialstrukturView = [self createViewForEntryWithHeadline:@"Sozialstruktur" entry:self.currentAnimal.socialStructure startY:startY];
     [self.detailAnimalScrollView addSubview:sozialstrukturView];
 
     startY += sozialstrukturView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *fortpflanzungView = [self createViewForEntryWithHeadline:@"Fortpflanzung" entry:self.currentAnimal.fortpflanzung startY:startY];
+    UIView *fortpflanzungView = [self createViewForEntryWithHeadline:@"Fortpflanzung" entry:self.currentAnimal.propagation startY:startY];
     [self.detailAnimalScrollView addSubview:fortpflanzungView];
 
     startY += fortpflanzungView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *feindeView = [self createViewForEntryWithHeadline:@"Feinde" entry:self.currentAnimal.feinde startY:startY];
+    UIView *feindeView = [self createViewForEntryWithHeadline:@"Feinde" entry:self.currentAnimal.enemies startY:startY];
     [self.detailAnimalScrollView addSubview:feindeView];
 
     startY += feindeView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *nahrungView = [self createViewForEntryWithHeadline:@"Nahrung" entry:self.currentAnimal.nahrung startY:startY];
+    UIView *nahrungView = [self createViewForEntryWithHeadline:@"Nahrung" entry:self.currentAnimal.food startY:startY];
     [self.detailAnimalScrollView addSubview:nahrungView];
     
     startY += nahrungView.frame.size.height+GAP_BETWEEN_ENTRIES;
     
-    UIView *bedrohungsstatusView = [self createViewForEntryWithHeadline:@"Bedrohungsstatus" entry:self.currentAnimal.bedrohungsstatus startY:startY];
+    UIView *bedrohungsstatusView = [self createViewForEntryWithHeadline:@"Bedrohungsstatus" entry:self.currentAnimal.threadState startY:startY];
     [self.detailAnimalScrollView addSubview:bedrohungsstatusView];
    
     startY += bedrohungsstatusView.frame.size.height+GAP_BETWEEN_ENTRIES;

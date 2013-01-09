@@ -6,21 +6,21 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "AnimalListViewController.h"
+#import "AGAnimalListViewController.h"
 #import "AGAnimalDetailViewController.h"
-#import "Animal.h"
+#import "AGAnimal.h"
 #import "AnimalManager.h"
-#import "AnimalListTableCell.h"
+#import "AGAnimalListTableCell.h"
 
 
 
-@interface AnimalListViewController ()
+@interface AGAnimalListViewController ()
 
 @end
 
 static NSString *filterKey;
 
-@implementation AnimalListViewController 
+@implementation AGAnimalListViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,7 +56,7 @@ static NSString *filterKey;
         
         NSMutableArray *allAnimalsForLetter = [NSMutableArray array];
         
-        for (Animal* p in self.currentFilteredList) {
+        for (AGAnimal* p in self.currentFilteredList) {
 
             if ([p.name characterAtIndex:0] == [character characterAtIndex:0]) {
                 
@@ -125,12 +125,12 @@ static NSString *filterKey;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"AnimalListTableCell";
+    static NSString *CellIdentifier = @"AGAnimalListTableCell";
     
-     AnimalListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     AGAnimalListTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AnimalListTableCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AGAnimalListTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     
@@ -140,7 +140,7 @@ static NSString *filterKey;
     
     cell.selectedBackgroundView = selectionView;
     
-    Animal *an = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
+    AGAnimal *an = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row];
     
     
     cell.animalName.text = an.name;
@@ -158,7 +158,7 @@ static NSString *filterKey;
     AGAnimalDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalDetailViewController"];
     int numberOfSelectedSection = [self.tableView indexPathForSelectedRow].section;
     int numberOfSelectedRow = [self.tableView indexPathForSelectedRow].row;
-    //vc.currentAnimal = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:numberOfSelectedSection]]  objectAtIndex:numberOfSelectedRow];
+    vc.currentAnimal = [[self.animalsData objectForKey:[self.indexArray objectAtIndex:numberOfSelectedSection]]  objectAtIndex:numberOfSelectedRow];
     [self.navigationController pushViewController:vc animated:YES];
 
 }

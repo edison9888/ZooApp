@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "Animal.h"
+#import "AGAnimal.h"
 
 @interface AnimalMapViewController : UIViewController
 
-@property (strong, nonatomic) Animal *currentAnimal;
+@property (strong, nonatomic) AGAnimal *currentAnimal;
 @property (weak, nonatomic) IBOutlet MKMapView *animalMapView;
 
 @end

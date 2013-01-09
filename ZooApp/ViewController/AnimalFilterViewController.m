@@ -8,7 +8,7 @@
 
 #import "AnimalFilterViewController.h"
 #import "AnimalFilterTableCell.h"
-#import "AnimalListViewController.h"
+#import "AGAnimalListViewController.h"
 #import "AnimalManager.h"
 
 @interface AnimalFilterViewController ()
@@ -177,7 +177,7 @@
  
     NSString *filteredCategory = [[[self.filterCategoryData objectForKey:[self.filterOptions objectAtIndex:indexPath.section]]  objectAtIndex:indexPath.row] objectAtIndex:0];
     
-    [AnimalListViewController setFilterKey:filteredCategory];
+    [AGAnimalListViewController setFilterKey:filteredCategory];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

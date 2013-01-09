@@ -10,4 +10,9 @@
 
 @interface AGPoi : NSObject
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong) NSString *area;
+
 @end
