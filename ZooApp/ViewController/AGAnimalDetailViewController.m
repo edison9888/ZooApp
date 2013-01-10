@@ -7,6 +7,7 @@
 //
 
 #import "AGAnimalDetailViewController.h"
+#import "AGAnimalMapViewController.h"
 
 @interface AGAnimalDetailViewController ()
 
@@ -29,7 +30,22 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = Colors.sandColor;
+    self.title = @"Details";
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Zooplan" style:UIBarButtonItemStylePlain target:self action:@selector(showAnimalOnMap)];
+    self.navigationItem.rightBarButtonItem = mapButton;
     
+    self.animalImageView.image = [UIImage imageNamed:self.currentAnimal.image];
+    self.animalNameLabel.text = self.currentAnimal.name;
+    self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure];
+    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.area];
+    self.feedingLabel.text = self.currentAnimal.feedingTime;
+    self.commentaryLabel.text = self.currentAnimal.commentaryTime;
+    
+    self.favAnimal = NO;
+    self.favFeedingTime = NO;
+    self.favCommentaryTime = NO;
+    
+    [self checkFavStatus];
     [self createChalkboardView];
 }
 
@@ -46,6 +62,13 @@
     [self setDirectionLabel:nil];
     [self setChalkboardScrollView:nil];
     [self setChalkboardPageControl:nil];
+    [self setAnimalImageView:nil];
+    [self setAnimalNameLabel:nil];
+    [self setFeedingLabel:nil];
+    [self setCommentaryLabel:nil];
+    [self setFavAnimalButton:nil];
+    [self setFavFeedingButton:nil];
+    [self setFavCommentaryButton:nil];
     [super viewDidUnload];
 }
 
@@ -109,6 +132,13 @@
         [contentView addSubview:content];
         
         [self.chalkboardScrollView addSubview:contentView];
+        
+        if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
+            self.favFeedingButton.hidden = YES;
+        }
+        if ([self.currentAnimal.commentaryTime isEqualToString:@"nicht öffentlich"]) {
+            self.favCommentaryButton.hidden = YES;
+        }
     }
     
     self.chalkboardScrollView.contentSize = CGSizeMake(self.chalkboardScrollView.frame.size.width * chalkboardContent.count, self.chalkboardScrollView.frame.size.height);
@@ -133,6 +163,60 @@
     frame.origin.y = 0;
     frame.size = self.chalkboardScrollView.frame.size;
     [self.chalkboardScrollView scrollRectToVisible:frame animated:YES];
+}
+
+
+- (void)checkFavStatus {
+    if (self.favAnimal == NO) {
+        [self.favAnimalButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+    } else {
+        [self.favAnimalButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
+    }
+    
+    if (self.favFeedingTime == NO) {
+        [self.favFeedingButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+    } else {
+        [self.favFeedingButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
+    }
+    
+    if (self.favCommentaryTime == NO) {
+        [self.favCommentaryButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+    } else {
+        [self.favCommentaryButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)favAnimalButtonPressed:(id)sender {
+    if (self.favAnimal == NO) {
+        self.favAnimal = YES;
+    } else {
+        self.favAnimal = NO;
+    }
+    [self checkFavStatus];
+}
+
+- (IBAction)favFeedingButtonPressed:(id)sender {
+    if (self.favFeedingTime == NO) {
+        self.favFeedingTime = YES;
+    } else {
+        self.favFeedingTime = NO;
+    }
+    [self checkFavStatus];
+}
+
+- (IBAction)favCommentaryButtonPressed:(id)sender {
+    if (self.favCommentaryTime == NO) {
+        self.favCommentaryTime = YES;
+    } else {
+        self.favCommentaryTime = NO;
+    }
+    [self checkFavStatus];
+}
+
+- (void)showAnimalOnMap {
+    AGAnimalMapViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalMapViewController"];
+    vc.currentAnimal = self.currentAnimal;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

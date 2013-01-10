@@ -1,5 +1,5 @@
 //
-//  AnimalMapViewController.h
+//  AGAnimalMapViewController.h
 //  ZooApp
 //
 //  Created by Andrea Gerlach on 22.10.12.
@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AGAnimal.h"
 
-@interface AnimalMapViewController : UIViewController
+@interface AGAnimalMapViewController : UIViewController
 
 @property (strong, nonatomic) AGAnimal *currentAnimal;
 @property (weak, nonatomic) IBOutlet MKMapView *animalMapView;

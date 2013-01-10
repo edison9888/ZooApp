@@ -22,6 +22,30 @@
 		D5135B6E162FEE0E00743CC5 /* AGAnimalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5135B6D162FEE0E00743CC5 /* AGAnimalListViewController.m */; };
 		D5135B70162FEEB600743CC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B6F162FEEB600743CC5 /* MapKit.framework */; };
 		D5135B72162FEECD00743CC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5135B71162FEECD00743CC5 /* CoreLocation.framework */; };
+		D513C364169F05430096616D /* rahmen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C362169F05430096616D /* rahmen@2x.png */; };
+		D513C366169F08F50096616D /* rahmen.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C365169F08F50096616D /* rahmen.png */; };
+		D513C36A169F10A90096616D /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C368169F10A90096616D /* paw.png */; };
+		D513C36B169F10A90096616D /* paw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C369169F10A90096616D /* paw@2x.png */; };
+		D513C36E169F111C0096616D /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C36C169F111C0096616D /* map.png */; };
+		D513C36F169F111C0096616D /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C36D169F111C0096616D /* map@2x.png */; };
+		D513C373169F12A00096616D /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C371169F12A00096616D /* house.png */; };
+		D513C374169F12A00096616D /* house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C372169F12A00096616D /* house@2x.png */; };
+		D513C377169F14710096616D /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C375169F14710096616D /* book.png */; };
+		D513C378169F14710096616D /* book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C376169F14710096616D /* book@2x.png */; };
+		D513C37D169F15C50096616D /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C379169F15C50096616D /* clock.png */; };
+		D513C37E169F15C50096616D /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C37A169F15C50096616D /* clock@2x.png */; };
+		D513C37F169F15C50096616D /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C37B169F15C50096616D /* lightbulb.png */; };
+		D513C380169F15C50096616D /* lightbulb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C37C169F15C50096616D /* lightbulb@2x.png */; };
+		D513C383169F19460096616D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C381169F19460096616D /* star.png */; };
+		D513C384169F19460096616D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C382169F19460096616D /* star@2x.png */; };
+		D513C387169F36180096616D /* greyStarFav.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C385169F36180096616D /* greyStarFav.png */; };
+		D513C388169F36180096616D /* greyStarFav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C386169F36180096616D /* greyStarFav@2x.png */; };
+		D513C38B169F4FA10096616D /* goldStarFav.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C389169F4FA00096616D /* goldStarFav.png */; };
+		D513C38C169F4FA10096616D /* goldStarFav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C38A169F4FA00096616D /* goldStarFav@2x.png */; };
+		D513C393169F631E0096616D /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C391169F631E0096616D /* compass.png */; };
+		D513C394169F631E0096616D /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C392169F631E0096616D /* compass@2x.png */; };
+		D513C397169F63450096616D /* compassClear.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C395169F63450096616D /* compassClear.png */; };
+		D513C398169F63450096616D /* compassClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C396169F63450096616D /* compassClear@2x.png */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -55,7 +79,7 @@
 		D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* AGAnimal.m */; };
 		D5B00832163142A4008EB564 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B00831163142A4008EB564 /* MarkerManager.m */; };
 		D5B0083516314506008EB564 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0083416314506008EB564 /* Location.m */; };
-		D5B0084416356F15008EB564 /* AnimalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0084316356F15008EB564 /* AnimalMapViewController.m */; };
+		D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */; };
 		D5B00853163590B7008EB564 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B00852163590B6008EB564 /* Icon-72.png */; };
 		D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */; };
 		D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */; };
@@ -98,6 +122,30 @@
 		D5135B6D162FEE0E00743CC5 /* AGAnimalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalListViewController.m; path = ViewController/AGAnimalListViewController.m; sourceTree = "<group>"; };
 		D5135B6F162FEEB600743CC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5135B71162FEECD00743CC5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D513C362169F05430096616D /* rahmen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rahmen@2x.png"; sourceTree = "<group>"; };
+		D513C365169F08F50096616D /* rahmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rahmen.png; sourceTree = "<group>"; };
+		D513C368169F10A90096616D /* paw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw.png; sourceTree = "<group>"; };
+		D513C369169F10A90096616D /* paw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paw@2x.png"; sourceTree = "<group>"; };
+		D513C36C169F111C0096616D /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		D513C36D169F111C0096616D /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		D513C371169F12A00096616D /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = house.png; path = Animals/house.png; sourceTree = "<group>"; };
+		D513C372169F12A00096616D /* house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "house@2x.png"; path = "Animals/house@2x.png"; sourceTree = "<group>"; };
+		D513C375169F14710096616D /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		D513C376169F14710096616D /* book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book@2x.png"; sourceTree = "<group>"; };
+		D513C379169F15C50096616D /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		D513C37A169F15C50096616D /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
+		D513C37B169F15C50096616D /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb.png; sourceTree = "<group>"; };
+		D513C37C169F15C50096616D /* lightbulb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightbulb@2x.png"; sourceTree = "<group>"; };
+		D513C381169F19460096616D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D513C382169F19460096616D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D513C385169F36180096616D /* greyStarFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyStarFav.png; sourceTree = "<group>"; };
+		D513C386169F36180096616D /* greyStarFav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greyStarFav@2x.png"; sourceTree = "<group>"; };
+		D513C389169F4FA00096616D /* goldStarFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goldStarFav.png; sourceTree = "<group>"; };
+		D513C38A169F4FA00096616D /* goldStarFav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goldStarFav@2x.png"; sourceTree = "<group>"; };
+		D513C391169F631E0096616D /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		D513C392169F631E0096616D /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
+		D513C395169F63450096616D /* compassClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compassClear.png; sourceTree = "<group>"; };
+		D513C396169F63450096616D /* compassClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compassClear@2x.png"; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -139,8 +187,8 @@
 		D5B00831163142A4008EB564 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
 		D5B0083316314506008EB564 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		D5B0083416314506008EB564 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		D5B0084216356F15008EB564 /* AnimalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalMapViewController.h; path = ViewController/AnimalMapViewController.h; sourceTree = "<group>"; };
-		D5B0084316356F15008EB564 /* AnimalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalMapViewController.m; path = ViewController/AnimalMapViewController.m; sourceTree = "<group>"; };
+		D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalMapViewController.h; path = ViewController/AGAnimalMapViewController.h; sourceTree = "<group>"; };
+		D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalMapViewController.m; path = ViewController/AGAnimalMapViewController.m; sourceTree = "<group>"; };
 		D5B00852163590B6008EB564 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterViewController.h; path = ViewController/AnimalFilterViewController.h; sourceTree = "<group>"; };
 		D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterViewController.m; path = ViewController/AnimalFilterViewController.m; sourceTree = "<group>"; };
@@ -264,14 +312,54 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		D513C367169F10860096616D /* TabBarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				D513C36C169F111C0096616D /* map.png */,
+				D513C36D169F111C0096616D /* map@2x.png */,
+				D513C368169F10A90096616D /* paw.png */,
+				D513C369169F10A90096616D /* paw@2x.png */,
+			);
+			name = TabBarIcons;
+			sourceTree = "<group>";
+		};
+		D513C370169F12500096616D /* AnimalTab */ = {
+			isa = PBXGroup;
+			children = (
+				D568AA2D163ADFDE00270E8B /* Animals */,
+				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
+				D513C365169F08F50096616D /* rahmen.png */,
+				D513C362169F05430096616D /* rahmen@2x.png */,
+				D513C391169F631E0096616D /* compass.png */,
+				D513C392169F631E0096616D /* compass@2x.png */,
+				D513C395169F63450096616D /* compassClear.png */,
+				D513C396169F63450096616D /* compassClear@2x.png */,
+				D513C381169F19460096616D /* star.png */,
+				D513C382169F19460096616D /* star@2x.png */,
+				D513C389169F4FA00096616D /* goldStarFav.png */,
+				D513C38A169F4FA00096616D /* goldStarFav@2x.png */,
+				D513C385169F36180096616D /* greyStarFav.png */,
+				D513C386169F36180096616D /* greyStarFav@2x.png */,
+				D513C379169F15C50096616D /* clock.png */,
+				D513C37A169F15C50096616D /* clock@2x.png */,
+				D513C37B169F15C50096616D /* lightbulb.png */,
+				D513C37C169F15C50096616D /* lightbulb@2x.png */,
+				D513C375169F14710096616D /* book.png */,
+				D513C376169F14710096616D /* book@2x.png */,
+				D513C371169F12A00096616D /* house.png */,
+				D513C372169F12A00096616D /* house@2x.png */,
+				D590E5C8169E67DE00FF3A9E /* chalkboard.png */,
+				D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */,
+			);
+			name = AnimalTab;
+			sourceTree = "<group>";
+		};
 		D568AA02163931C700270E8B /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D590E5C8169E67DE00FF3A9E /* chalkboard.png */,
-				D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */,
+				D513C370169F12500096616D /* AnimalTab */,
+				D513C367169F10860096616D /* TabBarIcons */,
 				D5DDE866169B35100009048B /* Wood */,
-				D568AA2D163ADFDE00270E8B /* Animals */,
-				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
 			);
 			name = Images;
 			path = ZooApp/Images;
@@ -319,6 +407,8 @@
 			children = (
 				D571C758169CAE9700C63A04 /* AGAnimalDetailViewController.h */,
 				D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */,
+				D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */,
+				D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */,
 			);
 			name = AnimalDetailView;
 			sourceTree = "<group>";
@@ -353,8 +443,6 @@
 				D571C756169CAE5E00C63A04 /* AnimalDetailView */,
 				D5B0081216300370008EB564 /* AnimalDetailViewController.h */,
 				D5B0081316300370008EB564 /* AnimalDetailViewController.m */,
-				D5B0084216356F15008EB564 /* AnimalMapViewController.h */,
-				D5B0084316356F15008EB564 /* AnimalMapViewController.m */,
 				D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */,
 				D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */,
 				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
@@ -489,6 +577,30 @@
 				D5DDE88A169B37B80009048B /* latte4halb@2x.png in Resources */,
 				D590E5CA169E67DE00FF3A9E /* chalkboard.png in Resources */,
 				D590E5CB169E67DE00FF3A9E /* chalkboard@2x.png in Resources */,
+				D513C364169F05430096616D /* rahmen@2x.png in Resources */,
+				D513C366169F08F50096616D /* rahmen.png in Resources */,
+				D513C36A169F10A90096616D /* paw.png in Resources */,
+				D513C36B169F10A90096616D /* paw@2x.png in Resources */,
+				D513C36E169F111C0096616D /* map.png in Resources */,
+				D513C36F169F111C0096616D /* map@2x.png in Resources */,
+				D513C373169F12A00096616D /* house.png in Resources */,
+				D513C374169F12A00096616D /* house@2x.png in Resources */,
+				D513C377169F14710096616D /* book.png in Resources */,
+				D513C378169F14710096616D /* book@2x.png in Resources */,
+				D513C37D169F15C50096616D /* clock.png in Resources */,
+				D513C37E169F15C50096616D /* clock@2x.png in Resources */,
+				D513C37F169F15C50096616D /* lightbulb.png in Resources */,
+				D513C380169F15C50096616D /* lightbulb@2x.png in Resources */,
+				D513C383169F19460096616D /* star.png in Resources */,
+				D513C384169F19460096616D /* star@2x.png in Resources */,
+				D513C387169F36180096616D /* greyStarFav.png in Resources */,
+				D513C388169F36180096616D /* greyStarFav@2x.png in Resources */,
+				D513C38B169F4FA10096616D /* goldStarFav.png in Resources */,
+				D513C38C169F4FA10096616D /* goldStarFav@2x.png in Resources */,
+				D513C393169F631E0096616D /* compass.png in Resources */,
+				D513C394169F631E0096616D /* compass@2x.png in Resources */,
+				D513C397169F63450096616D /* compassClear.png in Resources */,
+				D513C398169F63450096616D /* compassClear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +619,7 @@
 				D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */,
 				D5B00832163142A4008EB564 /* MarkerManager.m in Sources */,
 				D5B0083516314506008EB564 /* Location.m in Sources */,
-				D5B0084416356F15008EB564 /* AnimalMapViewController.m in Sources */,
+				D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */,
 				D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */,
 				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 				D5AF86151638661900129120 /* Colors.m in Sources */,

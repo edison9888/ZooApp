@@ -12,6 +12,8 @@
 @interface AGAnimal : AGPoi
 
 @property (nonatomic, strong) NSString *enclosure;
+@property (nonatomic, strong) NSString *feedingTime;
+@property (nonatomic, strong) NSString *commentaryTime;
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) NSString *relationship;
 @property (nonatomic, strong) NSString *habitat;

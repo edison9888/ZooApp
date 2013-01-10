@@ -1,16 +1,16 @@
 //
-//  AnimalMapViewController.m
+//  AGAnimalMapViewController.m
 //  ZooApp
 //
 //  Created by Andrea Gerlach on 22.10.12.
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "AnimalMapViewController.h"
+#import "AGAnimalMapViewController.h"
 #import "Location.h"
 #import "MarkerManager.h"
 
-@implementation AnimalMapViewController
+@implementation AGAnimalMapViewController
 
 - (void)viewDidUnload {
     [self setAnimalMapView:nil];

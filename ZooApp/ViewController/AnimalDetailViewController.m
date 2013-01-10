@@ -7,7 +7,7 @@
 //
 
 #import "AnimalDetailViewController.h"
-#import "AnimalMapViewController.h"
+#import "AGAnimalMapViewController.h"
 
 #define LABELWIDTH 300
 
@@ -171,7 +171,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showAnimalOnMap"]) {
-        AnimalMapViewController *controller = segue.destinationViewController;
+        AGAnimalMapViewController *controller = segue.destinationViewController;
         controller.currentAnimal = self.currentAnimal;
         return;
     }
