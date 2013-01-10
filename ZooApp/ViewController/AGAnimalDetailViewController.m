@@ -29,11 +29,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = Colors.sandColor;
-    self.title = self.currentAnimal.name;
-    self.title = @"Details";
-    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.area];
-    [self setContentArray];
-
+    
+    [self createChalkboardView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,43 +44,95 @@
     [self setAreaLabel:nil];
     [self setDistanceLabel:nil];
     [self setDirectionLabel:nil];
-    [self setInfoScrollView:nil];
-    [self setPageControl:nil];
+    [self setChalkboardScrollView:nil];
+    [self setChalkboardPageControl:nil];
     [super viewDidUnload];
 }
 
-- (void)setContentArray {
+
+- (void)createChalkboardView {
     
-    NSArray *contentArray = [NSArray arrayWithObjects:@"asdfg", @"wertzu", @"asdfg", @"wertzu", nil];
+    NSArray *chalkboardHeading = [[NSArray alloc] initWithObjects:
+                                  @"Kategorie",
+                                  @"Verwandschaft",
+                                  @"Lebensraum",
+                                  @"Höchstalter",
+                                  @"Größe",
+                                  @"Gewicht",
+                                  @"Sozialstruktur",
+                                  @"Fortpflanzung",
+                                  @"Feinde",
+                                  @"Nahrung",
+                                  @"Bedrohungsstatus",
+                                  nil];
     
-    for (int i = 0; i < contentArray.count; i++) {
-//        GVSpecialsModel *special = [contentArray objectAtIndex:i];
+    NSArray *chalkboardContent = [[NSArray alloc] initWithObjects:
+                                  self.currentAnimal.category,
+                                  self.currentAnimal.relationship,
+                                  self.currentAnimal.habitat,
+                                  self.currentAnimal.maximumAge,
+                                  self.currentAnimal.size,
+                                  self.currentAnimal.weight,
+                                  self.currentAnimal.socialStructure,
+                                  self.currentAnimal.propagation,
+                                  self.currentAnimal.enemies,
+                                  self.currentAnimal.food,
+                                  self.currentAnimal.threadState,
+                                  nil];
+
+
+    CGRect contentFrame = CGRectMake(0, 0, 230, 180);
+    contentFrame.origin.y = 0;
+    self.chalkboardScrollView.frame = contentFrame;
+    
+    for (int i = 0; i < chalkboardContent.count; i++) {
         
-        CGRect frame;
-        frame.origin.x = self.infoScrollView.frame.size.width * i;
-        frame.origin.y = 5.0f;
-        frame.size = self.infoScrollView.frame.size;
-       // frame.size.height -= 25.0f;
+        contentFrame.origin.x = self.chalkboardScrollView.frame.size.width * i;
+    
+        UIView *contentView = [[UIView alloc] initWithFrame:contentFrame];
+        //contentView.backgroundColor = [UIColor orangeColor];
         
-        UIView *contentView = [[UIView alloc] initWithFrame:frame];
-        contentView.backgroundColor = [UIColor redColor];
-      //  UILabel *test =
-   //     [contentArray objectAtIndex:i];
-     
-       // [contentView addSubview:test];
-      //  [contentView setContent:special];
+        UILabel *heading = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 210, 28)];
+        heading.text = [chalkboardHeading objectAtIndex:i];
+        heading.font = [UIFont boldSystemFontOfSize:16];
+        heading.textColor = [UIColor whiteColor];
+        heading.backgroundColor = [UIColor clearColor];
+        [contentView addSubview:heading];
+       
+        UILabel *content = [[UILabel alloc] initWithFrame:CGRectMake(10, 32, 210, 152)];
+        content.text = [chalkboardContent objectAtIndex:i];
+        content.textColor = [UIColor whiteColor];
+        content.lineBreakMode = UILineBreakModeWordWrap;
+        content.numberOfLines = 0;
+        content.backgroundColor = [UIColor clearColor];
+        [content sizeToFit];
+        [contentView addSubview:content];
         
-        [self.infoScrollView addSubview:contentView];
+        [self.chalkboardScrollView addSubview:contentView];
     }
     
-    self.infoScrollView.contentSize = CGSizeMake(self.infoScrollView.frame.size.width * contentArray.count, self.infoScrollView.frame.size.height);
-    self.pageControl.numberOfPages = contentArray.count;
-   // self.pageControl.
-  //  self.control.smfWidth = contentArray.count * 25.0f + 20.0f;
-  //  self.control.smfX = (self.infoScrollView.smfWidth - self.control.smfWidth)/2;
-    
-  //  [self.infoScrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(specialTapped:)]];
+    self.chalkboardScrollView.contentSize = CGSizeMake(self.chalkboardScrollView.frame.size.width * chalkboardContent.count, self.chalkboardScrollView.frame.size.height);
+    self.chalkboardPageControl.numberOfPages = chalkboardContent.count;
+  
 }
 
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    // Update the page when more than 50% of the previous/next page is visible
+    CGFloat pageWidth = self.chalkboardScrollView.frame.size.width;
+    int page = floor((self.chalkboardScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    self.chalkboardPageControl.currentPage = page;
+    
+}
+ 
+
+- (IBAction)pageChanged:(id)sender {
+    // update the scroll view to the appropriate page
+    CGRect frame;
+    frame.origin.x = self.chalkboardScrollView.frame.size.width * self.chalkboardPageControl.currentPage;
+    frame.origin.y = 0;
+    frame.size = self.chalkboardScrollView.frame.size;
+    [self.chalkboardScrollView scrollRectToVisible:frame animated:YES];
+}
 
 @end

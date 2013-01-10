@@ -48,6 +48,8 @@
 		D568AA2416396C6100270E8B /* AnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AnimalManager.m */; };
 		D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */; };
 		D571C75E169CE56900C63A04 /* AGPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = D571C75D169CE56900C63A04 /* AGPoi.m */; };
+		D590E5CA169E67DE00FF3A9E /* chalkboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D590E5C8169E67DE00FF3A9E /* chalkboard.png */; };
+		D590E5CB169E67DE00FF3A9E /* chalkboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */; };
 		D5AF86151638661900129120 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF86141638661900129120 /* Colors.m */; };
 		D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081316300370008EB564 /* AnimalDetailViewController.m */; };
 		D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* AGAnimal.m */; };
@@ -125,6 +127,8 @@
 		D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalDetailViewController.m; path = ViewController/AGAnimalDetailViewController.m; sourceTree = "<group>"; };
 		D571C75C169CE56900C63A04 /* AGPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoi.h; sourceTree = "<group>"; };
 		D571C75D169CE56900C63A04 /* AGPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoi.m; sourceTree = "<group>"; };
+		D590E5C8169E67DE00FF3A9E /* chalkboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chalkboard.png; sourceTree = "<group>"; };
+		D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chalkboard@2x.png"; sourceTree = "<group>"; };
 		D5AF86131638661900129120 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		D5AF86141638661900129120 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		D5B0081216300370008EB564 /* AnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalDetailViewController.h; path = ViewController/AnimalDetailViewController.h; sourceTree = "<group>"; };
@@ -263,6 +267,8 @@
 		D568AA02163931C700270E8B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D590E5C8169E67DE00FF3A9E /* chalkboard.png */,
+				D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */,
 				D5DDE866169B35100009048B /* Wood */,
 				D568AA2D163ADFDE00270E8B /* Animals */,
 				D568AA03163931C700270E8B /* AnimalFilterListThumbnails */,
@@ -481,6 +487,8 @@
 				D5DDE886169B36F70009048B /* latte0halb@2x.png in Resources */,
 				D5DDE889169B37B80009048B /* latte4halb.png in Resources */,
 				D5DDE88A169B37B80009048B /* latte4halb@2x.png in Resources */,
+				D590E5CA169E67DE00FF3A9E /* chalkboard.png in Resources */,
+				D590E5CB169E67DE00FF3A9E /* chalkboard@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
