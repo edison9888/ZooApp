@@ -25,6 +25,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,12 +35,8 @@
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Zooplan" style:UIBarButtonItemStylePlain target:self action:@selector(showAnimalOnMap)];
     self.navigationItem.rightBarButtonItem = mapButton;
     
-    self.animalImageView.image = [UIImage imageNamed:self.currentAnimal.image];
-    self.animalNameLabel.text = self.currentAnimal.name;
-    self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure];
-    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.area];
-    self.feedingLabel.text = self.currentAnimal.feedingTime;
-    self.commentaryLabel.text = self.currentAnimal.commentaryTime;
+    
+
     
     self.favAnimal = NO;
     self.favFeedingTime = NO;
@@ -69,9 +66,33 @@
     [self setFavAnimalButton:nil];
     [self setFavFeedingButton:nil];
     [self setFavCommentaryButton:nil];
+    [self setFunFactTextView:nil];
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self updateFields];
+}
+
+- (void)updateFields {
+    
+    NSString *distance = @"444 m";
+    
+    self.animalImageView.image = [UIImage imageNamed:self.currentAnimal.image];
+    self.animalNameLabel.text = self.currentAnimal.name;
+    self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure];
+    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.area];
+    self.distanceLabel.text = distance;
+    self.feedingLabel.text = self.currentAnimal.feedingTime;
+    self.commentaryLabel.text = self.currentAnimal.commentaryTime;
+    
+    self.funFactTextView.text = self.currentAnimal.funFact;
+    CGRect frame = self.funFactTextView.frame;
+    frame.size.height = self.funFactTextView.contentSize.height;
+    self.funFactTextView.frame = frame;
+    
+    
+}
 
 - (void)createChalkboardView {
     
@@ -168,19 +189,19 @@
 
 - (void)checkFavStatus {
     if (self.favAnimal == NO) {
-        [self.favAnimalButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+        [self.favAnimalButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
         [self.favAnimalButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }
     
     if (self.favFeedingTime == NO) {
-        [self.favFeedingButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+        [self.favFeedingButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
         [self.favFeedingButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }
     
     if (self.favCommentaryTime == NO) {
-        [self.favCommentaryButton setImage:[UIImage imageNamed:@"greyStarFav.png"] forState:UIControlStateNormal];
+        [self.favCommentaryButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
         [self.favCommentaryButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }

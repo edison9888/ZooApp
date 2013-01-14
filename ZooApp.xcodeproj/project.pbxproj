@@ -46,6 +46,15 @@
 		D513C394169F631E0096616D /* compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C392169F631E0096616D /* compass@2x.png */; };
 		D513C397169F63450096616D /* compassClear.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C395169F63450096616D /* compassClear.png */; };
 		D513C398169F63450096616D /* compassClear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C396169F63450096616D /* compassClear@2x.png */; };
+		D513C39F169F956E0096616D /* whiteStarFav.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C39D169F956E0096616D /* whiteStarFav.png */; };
+		D513C3A0169F956E0096616D /* whiteStarFav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C39E169F956E0096616D /* whiteStarFav@2x.png */; };
+		D513C3A816A076630096616D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3A616A076630096616D /* info.png */; };
+		D513C3A916A076630096616D /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3A716A076630096616D /* info@2x.png */; };
+		D513C3AD16A077CC0096616D /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3AB16A077CC0096616D /* user.png */; };
+		D513C3AE16A077CC0096616D /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3AC16A077CC0096616D /* user@2x.png */; };
+		D513C3B516A2AC0D0096616D /* compass5050.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3B316A2AC0D0096616D /* compass5050.png */; };
+		D513C3B616A2AC0D0096616D /* compass5050@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3B416A2AC0D0096616D /* compass5050@2x.png */; };
+		D513C3C616A388460096616D /* AGInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C3C516A388460096616D /* AGInfoListViewController.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -146,6 +155,16 @@
 		D513C392169F631E0096616D /* compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass@2x.png"; sourceTree = "<group>"; };
 		D513C395169F63450096616D /* compassClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compassClear.png; sourceTree = "<group>"; };
 		D513C396169F63450096616D /* compassClear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compassClear@2x.png"; sourceTree = "<group>"; };
+		D513C39D169F956E0096616D /* whiteStarFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteStarFav.png; sourceTree = "<group>"; };
+		D513C39E169F956E0096616D /* whiteStarFav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteStarFav@2x.png"; sourceTree = "<group>"; };
+		D513C3A616A076630096616D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		D513C3A716A076630096616D /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		D513C3AB16A077CC0096616D /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		D513C3AC16A077CC0096616D /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
+		D513C3B316A2AC0D0096616D /* compass5050.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass5050.png; sourceTree = "<group>"; };
+		D513C3B416A2AC0D0096616D /* compass5050@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass5050@2x.png"; sourceTree = "<group>"; };
+		D513C3C416A388460096616D /* AGInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGInfoListViewController.h; path = ViewController/AGInfoListViewController.h; sourceTree = "<group>"; };
+		D513C3C516A388460096616D /* AGInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGInfoListViewController.m; path = ViewController/AGInfoListViewController.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -306,8 +325,9 @@
 		D5135B68162FEDBB00743CC5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D5B0085B16381811008EB564 /* MapTab */,
+				D513C3C316A388120096616D /* InfoTab */,
 				D5B00859163817FE008EB564 /* AnimalTab */,
+				D5B0085B16381811008EB564 /* MapTab */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -315,6 +335,10 @@
 		D513C367169F10860096616D /* TabBarIcons */ = {
 			isa = PBXGroup;
 			children = (
+				D513C3AB16A077CC0096616D /* user.png */,
+				D513C3AC16A077CC0096616D /* user@2x.png */,
+				D513C3A616A076630096616D /* info.png */,
+				D513C3A716A076630096616D /* info@2x.png */,
 				D513C36C169F111C0096616D /* map.png */,
 				D513C36D169F111C0096616D /* map@2x.png */,
 				D513C368169F10A90096616D /* paw.png */,
@@ -334,6 +358,10 @@
 				D513C392169F631E0096616D /* compass@2x.png */,
 				D513C395169F63450096616D /* compassClear.png */,
 				D513C396169F63450096616D /* compassClear@2x.png */,
+				D513C3B316A2AC0D0096616D /* compass5050.png */,
+				D513C3B416A2AC0D0096616D /* compass5050@2x.png */,
+				D513C39D169F956E0096616D /* whiteStarFav.png */,
+				D513C39E169F956E0096616D /* whiteStarFav@2x.png */,
 				D513C381169F19460096616D /* star.png */,
 				D513C382169F19460096616D /* star@2x.png */,
 				D513C389169F4FA00096616D /* goldStarFav.png */,
@@ -352,6 +380,15 @@
 				D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */,
 			);
 			name = AnimalTab;
+			sourceTree = "<group>";
+		};
+		D513C3C316A388120096616D /* InfoTab */ = {
+			isa = PBXGroup;
+			children = (
+				D513C3C416A388460096616D /* AGInfoListViewController.h */,
+				D513C3C516A388460096616D /* AGInfoListViewController.m */,
+			);
+			name = InfoTab;
 			sourceTree = "<group>";
 		};
 		D568AA02163931C700270E8B /* Images */ = {
@@ -601,6 +638,14 @@
 				D513C394169F631E0096616D /* compass@2x.png in Resources */,
 				D513C397169F63450096616D /* compassClear.png in Resources */,
 				D513C398169F63450096616D /* compassClear@2x.png in Resources */,
+				D513C39F169F956E0096616D /* whiteStarFav.png in Resources */,
+				D513C3A0169F956E0096616D /* whiteStarFav@2x.png in Resources */,
+				D513C3A816A076630096616D /* info.png in Resources */,
+				D513C3A916A076630096616D /* info@2x.png in Resources */,
+				D513C3AD16A077CC0096616D /* user.png in Resources */,
+				D513C3AE16A077CC0096616D /* user@2x.png in Resources */,
+				D513C3B516A2AC0D0096616D /* compass5050.png in Resources */,
+				D513C3B616A2AC0D0096616D /* compass5050@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +672,7 @@
 				D5DDE862169B1E8C0009048B /* AGAnimalListTableCell.m in Sources */,
 				D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */,
 				D571C75E169CE56900C63A04 /* AGPoi.m in Sources */,
+				D513C3C616A388460096616D /* AGInfoListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

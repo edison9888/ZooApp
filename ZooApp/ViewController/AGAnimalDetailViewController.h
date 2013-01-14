@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *favAnimalButton;
 @property (weak, nonatomic) IBOutlet UIButton *favFeedingButton;
 @property (weak, nonatomic) IBOutlet UIButton *favCommentaryButton;
+@property (weak, nonatomic) IBOutlet UITextView *funFactTextView;
 
 
 // MODEL

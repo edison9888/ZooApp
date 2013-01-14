@@ -18,7 +18,7 @@
         "enemies":"neben Tigern und hundeartigen Raubtieren hauptsächlich der Mensch durch Bejagung und habitatzerstörung",
         "food":"Hirsche, Wildschweine und kleinere Wirbeltiere",
         "threadState":"vom Aussterben bedroht",
-        "funFact":"",
+        "funFact":"Er ist die seltenste Großkatze der Erde. Sein  Fell ist sehr weich. Die Haare auf dem Rücken sind im Sommer 20–25 mm und im Winter 50 mm lang. Das Sommerfell ist leuchtender und intensiver gezeichnet.",
         "image":"amurleopard.png"
     },
     {
@@ -40,7 +40,7 @@
         "enemies":"kein Angabe",
         "food":"winzige Wasserschnecken und Krebse, Insektenlarven, Algen und Fischbrut",
         "threadState":"nicht gefährdet",
-        "funFact":"",
+        "funFact":"Er hat 19 Halswirbel, also im Gegensatz zum Menschen mit 7 Halswirbeln trägt er seinen Kopf hoch. Er wird durchschnittlich ca. 30 Jahre alt, sein Höchstalter liegt bei über 40 Jahre.",
         "image":"roterFlamingo.png"
     },
     {
@@ -62,7 +62,7 @@
         "enemies":"Greifvögel wie der Würgadler und verschiedene andere Beutegreifer",
         "food":"Vögel und Säugetiere",
         "threadState":"nicht beurteilt",
-        "funFact":"",
+              "funFact":"Jungtiere sind bei der Geburt ziegelrot bis rotbraun. Eine Umfärbung bedarf mehrerer Häutungen. Am Tag ruht er aufgewickelt wie eine Spule über einem Ast, in der Nacht streckt er seinen Kopf nach unten und wartet auf Beute, die sich direkt unterhalb der lauernden Schlange nähert.",
         "image":"gruenerHundskopfschlinger.png"
     },
     {
@@ -84,7 +84,7 @@
         "enemies":"neben Schlangen der Gattung Leimadophis der Mensch durch illegalen Handel",
         "food":"hauptsächlich verschiedene Ameisenarten, daneben auch andere Insekten und Spinnen",
         "threadState":"nicht gefährdet",
-        "funFact":"",
+        "funFact":"In Terrarien sollten sie von den Kaulquappen getrennt werden , da die Pfeilgiftfrösche sonst zum Kannibalismus neigen.",
         "image":"azurblauerPfeilgiftfrosch.png"
     },
     {
@@ -106,7 +106,7 @@
         "enemies":"größere Drückerfische und Kugelfische",
         "food":"Algen, die von harten Untergründen abgeweidet werden",
         "threadState":"nicht beurteilt",
-        "funFact":"",
+        "funFact":"Als Untermieter nehmen sie gern z.B. Kardinalbarsche oder Rippengarnelen zwischen ihren Stacheln auf, die Schutz vor ihren Fressfeinden suchen.",
         "image":"diademSeeigel.png"
     },
     {
@@ -128,7 +128,7 @@
         "enemies":"neben dem Mensch nur der Löwe",
         "food":"Blätter, Knospen, Zweige (auch stark dornige) und Rinde",
         "threadState":"stark gefährdet",
-        "funFact":"",
+        "funFact":"Der Ruhezustand hält Hals und Kopf in der aufrechten Position; um den Kopf nach unten zu bewegen, z.B. zum Trinken, muss die Giraffe Muskelarbeit aufbringen. Die blaugraue Zunge kann 50 cm lang werden und ist zum Greifen befähigt.",
         "image":"rotschildgiraffe.png"
     },
     {
@@ -150,7 +150,7 @@
         "enemies":"Jaguare, Riesenschlangen, Greifvögel und der Mensch durch habitatzerstörung und Bejagung",
         "food":"Blätter, Triebe, Blüten, Früchte, Wurzelknollen und Kleintiere",
         "threadState":"nicht gefährdet",
-        "funFact":"",
+        "funFact":"Durch die am Ast hängende Lebensweise ist das Fell der Tiere im Gegensatz zu den meisten anderen Säugetieren vom Bauch abwärts gescheitelt, um einen besseren Abfluss des Regenwassers zu ermöglichen.",
         "image":"zweifingerFaultier.png"
     },
     {
@@ -172,7 +172,7 @@
         "enemies":"Leoparden und der Mensch durch habitatzerstörung und Bejagung (Bushmeat)",
         "food":"Früchte, Blätter, Kräuter, Mark, Schoten, Rinde, Blüten, Insekten und kleinere Wirbeltiere",
         "threadState":"stark gefährdet",
-        "funFact":"",
+        "funFact":"Ein Forschungsschwerpunkt ist, die Kommunikationsfähigkeit, die Intelligenz und das Lernverhalten dieser Tiere zu erkunden. Ein an Hundegebell erinnernder Laut stellt eine Warnung dar, hechelndes Ein- und Ausatmen stellt ein Äquivalent zum menschlichen Lachen dar.",
         "image":"bonobo.png"
     },
     {
@@ -194,7 +194,7 @@
         "enemies":"neben dem Mensch nur der Tiger",
         "food":"Gräser, Blätter, Rinde, Weichholz, Bambusschösslinge, Wurzeln und Früchte",
         "threadState":"stark gefährdet",
-        "funFact":"",
+        "funFact":"Sie sind Vegetarier, und fressen die beachtliche Menge von 150 kg/Tag. Schon im 6.-5. Jhd. V. Chr. wurden sie zur Arbeit eingesetzt. Heut ist nicht mehr der Elfenbeinraub die größte Bedrohung, sondern die Zerstörung ihres Lebensraums.",
         "image":"asiatischerElefant.png"
     },
     {
@@ -216,7 +216,7 @@
         "enemies":"neben Schlangen der Gattung Leimadophis der Mensch durch illegalen Handel",
         "food":"Weichtiere, Krebse und Fische",
         "threadState":"nicht beurteilt",
-        "funFact":"",
+        "funFact":"Sie können auch bis in 200 m Tiefe abtauchen. In manchen Ländern sind sie eine Delikatesse, aber erst durch erhitzen bei 75°C wird ihr giftiges Blut unschädlich.",
         "image":"netzmuraene.png"
     }]
 }

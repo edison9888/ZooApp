@@ -60,8 +60,9 @@ static NSString *filterKey;
 
             if ([p.name characterAtIndex:0] == [character characterAtIndex:0]) {
                 
-                if (![array containsObject:character])
+                if (![array containsObject:character]) {
                     [array addObject:character];
+                }
                 [allAnimalsForLetter addObject:p];
             }
         }
@@ -113,7 +114,7 @@ static NSString *filterKey;
     letterLabel.textColor = [UIColor whiteColor];
     letterLabel.backgroundColor = [UIColor clearColor];
     letterLabel.text = [self.indexArray objectAtIndex:section];
-    letterLabel.font = [UIFont boldSystemFontOfSize:19];
+    letterLabel.font = [UIFont boldSystemFontOfSize:18];
     [headerView addSubview:letterLabel];
     return headerView;
 }
