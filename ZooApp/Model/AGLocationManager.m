@@ -7,7 +7,37 @@
 //
 
 #import "AGLocationManager.h"
+#import "AGAnimalManager.h"
+#import "AGRestaurantManager.h"
 
 @implementation AGLocationManager
+
+
++ (NSArray*) getAllAnimalMarkers {
+    
+    NSMutableArray *annotations = [NSMutableArray new];
+    [annotations removeAllObjects];
+    
+    for (AGAnimal *animal in [AGAnimalManager getInstance].allAnimals) {
+        
+        [annotations addObject:animal.location];
+    }
+    
+    return annotations;
+}
+
+
++ (NSArray*) getAllRestaurantMarkers {
+    
+    NSMutableArray *annotations = [NSMutableArray new];
+    [annotations removeAllObjects];
+    
+    for (AGRestaurant *restaurant in [AGRestaurantManager getInstance].allRestaurants) {
+        
+        [annotations addObject:restaurant.location];
+    }
+    
+    return annotations;
+}
 
 @end

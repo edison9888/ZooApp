@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "AGAnimal.h"
 
-@interface AGAnimalDetailViewController : UIViewController <UIScrollViewDelegate, UIPageViewControllerDelegate>
+@interface AGAnimalDetailViewController : UIViewController <UIScrollViewDelegate, UIPageViewControllerDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *currentLocation;
 
 // UI
 @property (weak, nonatomic) IBOutlet UIImageView *animalImageView;
@@ -27,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *favFeedingButton;
 @property (weak, nonatomic) IBOutlet UIButton *favCommentaryButton;
 @property (weak, nonatomic) IBOutlet UITextView *funFactTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *compassImageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 
 
 // MODEL

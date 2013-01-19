@@ -6,19 +6,26 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "Location.h"
+#import "AGLocation.h"
 
-@implementation Location
+@implementation AGLocation
 
-- (id) initWithName:(NSString*) name subtitle:(NSString*)subtitle icon:(NSString*)icon color:(UIColor*)color coordinate:(CLLocationCoordinate2D)coordinate {
-    if((self = [super init])) {
-        self.name = [name copy];
-        self.subtitle = [subtitle copy];
-        self.icon = [icon copy];
-        self.color = [color copy];
-        self.coordinate = coordinate;
+
+- (id)initLocationWithCoordinate:(CLLocationCoordinate2D)coord {
+    
+    self = [super init];
+    if (self) {
+        self.coordinate = coord;
     }
     return self;
+}
+
+- (void)setAnnotationForLocationWithName:(NSString*)name subtitle:(NSString*)subtitle image:(NSString*)image color:(MKPinAnnotationColor)pinColor {
+    
+    self.name = name;
+    self.subtitle = subtitle;
+    self.image = image;    
+    self.pinColor = pinColor;
 }
 
 - (NSString *)title {
@@ -29,12 +36,6 @@
 }
 
 
-- (id)initWithLocation:(CLLocationCoordinate2D)coord {
-    self = [super init];
-    if (self) {
-        self.coordinate = coord;
-    }
-    return self;
-}
+
 
 @end

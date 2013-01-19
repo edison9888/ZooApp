@@ -8,6 +8,8 @@
 
 #import "AGAnimalDetailViewController.h"
 #import "AGAnimalMapViewController.h"
+#import "AGCompassView.h"
+#import "AGStringUtilities.h"
 
 @interface AGAnimalDetailViewController ()
 
@@ -36,6 +38,21 @@
     self.navigationItem.rightBarButtonItem = mapButton;
     
     
+    // LOCATION
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+  //  self.locationManager.distanceFilter = 1.0;
+    self.locationManager.delegate=self;
+    [self.locationManager startUpdatingLocation];
+    
+    
+    // COMPASS
+    self.compassImageView.hidden = YES;
+    UIImage *compassImage = [UIImage imageNamed:@"details_compass.png"];
+    AGCompassView *compassView = [[AGCompassView alloc] initWithFrame:CGRectMake(227, 357, compassImage.size.width, compassImage.size.height)];
+    compassView.currentAnimal = self.currentAnimal;
+    compassView.backgroundColor = [UIColor clearColor];
+    [self.mainScrollView addSubview:compassView];
 
     
     self.favAnimal = NO;
@@ -67,6 +84,8 @@
     [self setFavFeedingButton:nil];
     [self setFavCommentaryButton:nil];
     [self setFunFactTextView:nil];
+    [self setCompassImageView:nil];
+    [self setMainScrollView:nil];
     [super viewDidUnload];
 }
 
@@ -91,6 +110,7 @@
     frame.size.height = self.funFactTextView.contentSize.height;
     self.funFactTextView.frame = frame;
     
+    [self updateDistanceToPoi];
     
 }
 
@@ -232,6 +252,33 @@
         self.favCommentaryTime = NO;
     }
     [self checkFavStatus];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX didUpdateToLocation %@", newLocation);
+    
+    self.currentLocation = newLocation;
+    [self updateDistanceToPoi];
+}
+
+-(void)updateDistanceToPoi {
+    
+    if (self.currentLocation == nil) {
+        self.distanceLabel.text = @"n/a";
+        return;
+    }
+    
+    CLLocation *poiLocation = [[CLLocation alloc]
+                               initWithLatitude:self.currentAnimal.latitude.doubleValue
+                               longitude:self.currentAnimal.longitude.doubleValue];
+    
+    CLLocation *userLocation = [[CLLocation alloc]
+                                initWithLatitude:self.currentLocation.coordinate.latitude
+                                longitude:self.currentLocation.coordinate.longitude];
+    
+    CLLocationDistance distance = [poiLocation distanceFromLocation:userLocation];
+    
+    self.distanceLabel.text = [AGStringUtilities localizedDistanceFromMeters:distance];
 }
 
 - (void)showAnimalOnMap {

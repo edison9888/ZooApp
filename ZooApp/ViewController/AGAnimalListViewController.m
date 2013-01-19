@@ -9,7 +9,7 @@
 #import "AGAnimalListViewController.h"
 #import "AGAnimalDetailViewController.h"
 #import "AGAnimal.h"
-#import "AnimalManager.h"
+#import "AGAnimalManager.h"
 #import "AGAnimalListTableCell.h"
 
 
@@ -44,7 +44,7 @@ static NSString *filterKey;
 - (void)viewWillAppear:(BOOL)animated {
     
     self.navigationItem.title = filterKey;
-    self.currentFilteredList = [[AnimalManager getInstance] getAnimalArrayForFilterKey:filterKey];
+    self.currentFilteredList = [[AGAnimalManager getInstance] getAnimalArrayForFilterKey:filterKey];
     
     self.alphabetArray = [[NSArray alloc] initWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",nil];
     

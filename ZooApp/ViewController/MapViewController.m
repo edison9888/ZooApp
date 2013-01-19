@@ -7,8 +7,9 @@
 //
 
 #import "MapViewController.h"
-#import "MarkerManager.h"
+#import "AGLocationManager.h"
 #import "AnimalDetailViewController.h"
+#import "AGLocation.h"
 
 @interface MapViewController ()
 
@@ -43,13 +44,20 @@
     [self.iosMapView setRegion:viewRegion animated:YES];
     
     // add annotations
-    NSArray *animalMarkers = [MarkerManager createAllAnimalMarkers];
+    NSArray *animalMarkers = [AGLocationManager getAllAnimalMarkers];
     NSLog(@"Zahl der animalMarkers %d", animalMarkers.count);
     [self.iosMapView addAnnotations:animalMarkers];
-    NSMutableArray* annotations=[[NSMutableArray alloc] init];
-	[annotations addObjectsFromArray:animalMarkers];
     
-   //[self.iosMapView setShowsUserLocation:YES];
+    NSArray *restaurantMarkers = [AGLocationManager getAllRestaurantMarkers];
+    NSLog(@"Zahl der restaurantMarkers %d", restaurantMarkers.count);
+    [self.iosMapView addAnnotations:restaurantMarkers];
+    
+
+  //  NSMutableArray* annotations=[[NSMutableArray alloc] init];
+//	[annotations addObjectsFromArray:animalMarkers];
+   // [annotations addObjectsFromArray:restaurantMarkers];
+
+ //   [self.iosMapView setShowsUserLocation:YES];
 
 
    }
@@ -72,13 +80,17 @@
     
     pinView.animatesDrop = YES;
     pinView.canShowCallout = YES;
-    pinView.pinColor = MKPinAnnotationColorPurple;
+    
+    AGLocation *loc = (AGLocation*)annotation;
+    pinView.pinColor = loc.pinColor;
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [rightButton setTitle:annotation.title forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
     pinView.rightCalloutAccessoryView = rightButton;
     
+    //UIImageView *profileIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:loc.image]];
+
     UIImageView *profileIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Icon-72.png"]];
     pinView.leftCalloutAccessoryView = profileIconView;
     

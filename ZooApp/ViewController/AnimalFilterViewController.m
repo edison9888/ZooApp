@@ -9,7 +9,7 @@
 #import "AnimalFilterViewController.h"
 #import "AnimalFilterTableCell.h"
 #import "AGAnimalListViewController.h"
-#import "AnimalManager.h"
+#import "AGAnimalManager.h"
 
 @interface AnimalFilterViewController ()
 
@@ -19,7 +19,7 @@
 
 @implementation AnimalFilterViewController
 
-    AnimalManager *aM;
+    AGAnimalManager *aM;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +35,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    aM = [AnimalManager getInstance];
+    aM = [AGAnimalManager getInstance];
     
     [self createFilterCategories];
     

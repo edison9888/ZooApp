@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AGPoi.h"
+#import "AGLocation.h"
 
-@interface AGAnimal : AGPoi
+@interface AGAnimal : NSObject
 
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong) AGLocation *location;
+@property (nonatomic, strong) NSString *area;
 @property (nonatomic, strong) NSString *enclosure;
 @property (nonatomic, strong) NSString *feedingTime;
 @property (nonatomic, strong) NSString *commentaryTime;

@@ -10,4 +10,10 @@
 
 @interface AGRestaurantManager : NSObject
 
+@property (nonatomic, strong) NSMutableArray *allRestaurants;
+
++ (AGRestaurantManager*)getInstance;
+
+- (void)parseJSONToRestaurants;
+
 @end

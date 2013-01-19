@@ -524,6 +524,7 @@
                         <outlet property="chalkboardPageControl" destination="l4k-sp-XD6" id="4fl-ik-Gfg"/>
                         <outlet property="chalkboardScrollView" destination="36z-J3-ZFR" id="AiE-m9-cFu"/>
                         <outlet property="commentaryLabel" destination="Scj-g4-1H1" id="fVT-m2-Aw7"/>
+                        <outlet property="compassImageView" destination="X0M-Ak-p6S" id="ii1-Sf-Clw"/>
                         <outlet property="directionLabel" destination="Ysz-Um-jrw" id="BN2-HT-sis"/>
                         <outlet property="distanceLabel" destination="yPV-cF-QnW" id="M2e-ec-Ocu"/>
                         <outlet property="enclosureLabel" destination="3cO-rj-ZBy" id="2VO-F2-pf4"/>
@@ -532,6 +533,7 @@
                         <outlet property="favFeedingButton" destination="QSi-Do-Bc7" id="o8g-fW-3Q9"/>
                         <outlet property="feedingLabel" destination="Ze8-BK-KRu" id="ax2-Wv-hm8"/>
                         <outlet property="funFactTextView" destination="TP9-1O-qr6" id="cDE-7e-YnT"/>
+                        <outlet property="mainScrollView" destination="qLK-d6-Btw" id="rev-es-zHZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmw-JD-a7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,59 +608,6 @@
         <image name="user.png" width="24" height="21"/>
         <image name="whiteStarFav.png" width="40" height="38"/>
     </resources>
-    <classes>
-        <class className="AGAnimalDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="favAnimalButtonPressed:"/>
-                <relationship kind="action" name="favCommentaryButtonPressed:"/>
-                <relationship kind="action" name="favFeedingButtonPressed:"/>
-                <relationship kind="action" name="pageChanged:"/>
-                <relationship kind="outlet" name="animalImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="animalNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="areaLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="chalkboardPageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="chalkboardScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="commentaryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="directionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="enclosureLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="favAnimalButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="favCommentaryButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="favFeedingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="feedingLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="funFactTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="AGAnimalListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalListTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AGAnimalMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="AGInfoListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGInfoListViewController.h"/>
-        </class>
-        <class className="AnimalFilterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalFilterViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showDetails:"/>
-                <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

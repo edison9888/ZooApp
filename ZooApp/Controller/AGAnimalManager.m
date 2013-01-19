@@ -6,11 +6,12 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "AnimalManager.h"
+#import "AGAnimalManager.h"
+#import "AGLocation.h"
 
-@implementation AnimalManager
+@implementation AGAnimalManager
 
-static AnimalManager *instance = nil;
+static AGAnimalManager *instance = nil;
 
 - (id)init
 {
@@ -23,11 +24,11 @@ static AnimalManager *instance = nil;
 }
 
 
-+(AnimalManager*)getInstance {
++(AGAnimalManager*)getInstance {
     
     @synchronized(self) {
         if (instance == nil) {
-            instance = [AnimalManager new];
+            instance = [AGAnimalManager new];
         }
     }
     return instance;
@@ -60,6 +61,13 @@ static AnimalManager *instance = nil;
         animal.name = [a objectForKey:@"name"];
         animal.latitude = [a objectForKey:@"latitude"];
         animal.longitude = [a objectForKey:@"longitude"];
+        
+        CLLocationCoordinate2D animalCoordinate;
+        animalCoordinate.latitude = [[a objectForKey:@"latitude"] doubleValue];
+        animalCoordinate.longitude = [[a objectForKey:@"longitude"] doubleValue];
+        AGLocation *location = [[AGLocation alloc] initLocationWithCoordinate:animalCoordinate];
+        
+        animal.location = location;
         animal.area = [a objectForKey:@"area"];
         animal.enclosure = [a objectForKey:@"enclosure"];
         animal.feedingTime = [a objectForKey:@"feedingTime"];
@@ -77,6 +85,9 @@ static AnimalManager *instance = nil;
         animal.threadState = [a objectForKey:@"threadState"];
         animal.funFact = [a objectForKey:@"funFact"];
         animal.image = [a objectForKey:@"image"];
+        
+        [animal.location setAnnotationForLocationWithName:animal.name subtitle:animal.habitat image:animal.image color:MKPinAnnotationColorGreen];
+        
         [self.allAnimals addObject:animal];
 
     }

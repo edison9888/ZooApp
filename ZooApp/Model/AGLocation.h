@@ -9,15 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface Location : NSObject <MKAnnotation>
+@interface AGLocation : NSObject <MKAnnotation>
+
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *subtitle;
-@property (nonatomic, strong) NSString *icon;
-@property (nonatomic, strong) UIColor *color;
-@property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) NSString *image;
+@property (assign) MKPinAnnotationColor pinColor;
 
-- (id)initWithName:(NSString*)name subtitle:(NSString*)subtitle icon:(NSString*)icon color:(UIColor*)color coordinate:(CLLocationCoordinate2D)coordinate;
-- (id)initWithLocation:(CLLocationCoordinate2D)coord;
+- (id)initLocationWithCoordinate:(CLLocationCoordinate2D)coord;
+
+- (void)setAnnotationForLocationWithName:(NSString*)name subtitle:(NSString*)subtitle image:(NSString*)image color:(MKPinAnnotationColor)pinColor;
+
 
 @end

@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import "AnimalManager.h"
+#import "AGAnimalManager.h"
+#import "AGRestaurantManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //[Animal parseJSONToAnimals];
-    [AnimalManager getInstance];
+    [AGAnimalManager getInstance];
+    [AGRestaurantManager getInstance];
 //    self.window.rootViewController.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     
    // return YES;

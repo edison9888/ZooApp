@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "AGAnimal.h"
 
-@interface AnimalManager : NSObject
+@interface AGAnimalManager : NSObject
 
 @property (nonatomic, strong) NSDictionary *filteredAnimalList;
 @property (nonatomic, strong) NSMutableArray *allAnimals;
 
-+ (AnimalManager*)getInstance;
++ (AGAnimalManager*)getInstance;
 
 - (void)parseJSONToAnimals;
 - (void)categorizeAnimals;

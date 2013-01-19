@@ -55,6 +55,13 @@
 		D513C3B516A2AC0D0096616D /* compass5050.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3B316A2AC0D0096616D /* compass5050.png */; };
 		D513C3B616A2AC0D0096616D /* compass5050@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D513C3B416A2AC0D0096616D /* compass5050@2x.png */; };
 		D513C3C616A388460096616D /* AGInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C3C516A388460096616D /* AGInfoListViewController.m */; };
+		D513C3DB16A60CB00096616D /* AGCompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C3DA16A60CB00096616D /* AGCompassView.m */; };
+		D513C3EE16A614810096616D /* AGStringUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C3ED16A614810096616D /* AGStringUtilities.m */; };
+		D513C3FD16A75E970096616D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D513C3FB16A75E970096616D /* Model.xcdatamodeld */; };
+		D513C40016A9C3B20096616D /* restaurantList.json in Resources */ = {isa = PBXBuildFile; fileRef = D513C3FF16A9C3B20096616D /* restaurantList.json */; };
+		D513C40316A9EE430096616D /* AGRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C40216A9EE430096616D /* AGRestaurant.m */; };
+		D513C40F16AA04090096616D /* AGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C40E16AA04090096616D /* AGLocationManager.m */; };
+		D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C41116AA121D0096616D /* AGRestaurantManager.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -78,16 +85,14 @@
 		D568AA1B163931C700270E8B /* pongoland.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0E163931C700270E8B /* pongoland.png */; };
 		D568AA1C163931C700270E8B /* reptiles.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA0F163931C700270E8B /* reptiles.png */; };
 		D568AA1D163931C700270E8B /* southAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = D568AA10163931C700270E8B /* southAmerica.png */; };
-		D568AA2416396C6100270E8B /* AnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AnimalManager.m */; };
+		D568AA2416396C6100270E8B /* AGAnimalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D568AA2316396C6100270E8B /* AGAnimalManager.m */; };
 		D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */; };
-		D571C75E169CE56900C63A04 /* AGPoi.m in Sources */ = {isa = PBXBuildFile; fileRef = D571C75D169CE56900C63A04 /* AGPoi.m */; };
 		D590E5CA169E67DE00FF3A9E /* chalkboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D590E5C8169E67DE00FF3A9E /* chalkboard.png */; };
 		D590E5CB169E67DE00FF3A9E /* chalkboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */; };
 		D5AF86151638661900129120 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF86141638661900129120 /* Colors.m */; };
 		D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081316300370008EB564 /* AnimalDetailViewController.m */; };
 		D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0081F16300B4E008EB564 /* AGAnimal.m */; };
-		D5B00832163142A4008EB564 /* MarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B00831163142A4008EB564 /* MarkerManager.m */; };
-		D5B0083516314506008EB564 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0083416314506008EB564 /* Location.m */; };
+		D5B0083516314506008EB564 /* AGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0083416314506008EB564 /* AGLocation.m */; };
 		D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */; };
 		D5B00853163590B7008EB564 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B00852163590B6008EB564 /* Icon-72.png */; };
 		D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */; };
@@ -165,6 +170,18 @@
 		D513C3B416A2AC0D0096616D /* compass5050@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass5050@2x.png"; sourceTree = "<group>"; };
 		D513C3C416A388460096616D /* AGInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGInfoListViewController.h; path = ViewController/AGInfoListViewController.h; sourceTree = "<group>"; };
 		D513C3C516A388460096616D /* AGInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGInfoListViewController.m; path = ViewController/AGInfoListViewController.m; sourceTree = "<group>"; };
+		D513C3D916A60CB00096616D /* AGCompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGCompassView.h; path = ViewController/AGCompassView.h; sourceTree = "<group>"; };
+		D513C3DA16A60CB00096616D /* AGCompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGCompassView.m; path = ViewController/AGCompassView.m; sourceTree = "<group>"; };
+		D513C3EC16A614810096616D /* AGStringUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGStringUtilities.h; path = Helper/AGStringUtilities.h; sourceTree = "<group>"; };
+		D513C3ED16A614810096616D /* AGStringUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGStringUtilities.m; path = Helper/AGStringUtilities.m; sourceTree = "<group>"; };
+		D513C3FC16A75E970096616D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D513C3FF16A9C3B20096616D /* restaurantList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurantList.json; sourceTree = "<group>"; };
+		D513C40116A9EE420096616D /* AGRestaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRestaurant.h; sourceTree = "<group>"; };
+		D513C40216A9EE430096616D /* AGRestaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRestaurant.m; sourceTree = "<group>"; };
+		D513C40D16AA04090096616D /* AGLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLocationManager.h; path = ZooApp/Model/AGLocationManager.h; sourceTree = SOURCE_ROOT; };
+		D513C40E16AA04090096616D /* AGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLocationManager.m; path = ZooApp/Model/AGLocationManager.m; sourceTree = SOURCE_ROOT; };
+		D513C41016AA121D0096616D /* AGRestaurantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRestaurantManager.h; sourceTree = "<group>"; };
+		D513C41116AA121D0096616D /* AGRestaurantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRestaurantManager.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -188,12 +205,10 @@
 		D568AA0E163931C700270E8B /* pongoland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pongoland.png; sourceTree = "<group>"; };
 		D568AA0F163931C700270E8B /* reptiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reptiles.png; sourceTree = "<group>"; };
 		D568AA10163931C700270E8B /* southAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAmerica.png; sourceTree = "<group>"; };
-		D568AA2216396C6100270E8B /* AnimalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalManager.h; sourceTree = "<group>"; };
-		D568AA2316396C6100270E8B /* AnimalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalManager.m; sourceTree = "<group>"; };
+		D568AA2216396C6100270E8B /* AGAnimalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalManager.h; path = ../Controller/AGAnimalManager.h; sourceTree = "<group>"; };
+		D568AA2316396C6100270E8B /* AGAnimalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalManager.m; path = ../Controller/AGAnimalManager.m; sourceTree = "<group>"; };
 		D571C758169CAE9700C63A04 /* AGAnimalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalDetailViewController.h; path = ViewController/AGAnimalDetailViewController.h; sourceTree = "<group>"; };
 		D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalDetailViewController.m; path = ViewController/AGAnimalDetailViewController.m; sourceTree = "<group>"; };
-		D571C75C169CE56900C63A04 /* AGPoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPoi.h; sourceTree = "<group>"; };
-		D571C75D169CE56900C63A04 /* AGPoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPoi.m; sourceTree = "<group>"; };
 		D590E5C8169E67DE00FF3A9E /* chalkboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chalkboard.png; sourceTree = "<group>"; };
 		D590E5C9169E67DE00FF3A9E /* chalkboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chalkboard@2x.png"; sourceTree = "<group>"; };
 		D5AF86131638661900129120 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
@@ -202,10 +217,8 @@
 		D5B0081316300370008EB564 /* AnimalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalDetailViewController.m; path = ViewController/AnimalDetailViewController.m; sourceTree = "<group>"; };
 		D5B0081E16300B4E008EB564 /* AGAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGAnimal.h; sourceTree = "<group>"; };
 		D5B0081F16300B4E008EB564 /* AGAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGAnimal.m; sourceTree = "<group>"; };
-		D5B00830163142A4008EB564 /* MarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerManager.h; sourceTree = "<group>"; };
-		D5B00831163142A4008EB564 /* MarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerManager.m; sourceTree = "<group>"; };
-		D5B0083316314506008EB564 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		D5B0083416314506008EB564 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		D5B0083316314506008EB564 /* AGLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLocation.h; sourceTree = "<group>"; };
+		D5B0083416314506008EB564 /* AGLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLocation.m; sourceTree = "<group>"; };
 		D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalMapViewController.h; path = ViewController/AGAnimalMapViewController.h; sourceTree = "<group>"; };
 		D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalMapViewController.m; path = ViewController/AGAnimalMapViewController.m; sourceTree = "<group>"; };
 		D5B00852163590B6008EB564 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -286,9 +299,10 @@
 				D5135B66162F0E0000743CC5 /* Storyboard.storyboard */,
 				D5AF86131638661900129120 /* Colors.h */,
 				D5AF86141638661900129120 /* Colors.m */,
+				D5135B63162F0DDA00743CC5 /* Model */,
 				D5B0082F1631427E008EB564 /* Controller */,
 				D5135B68162FEDBB00743CC5 /* ViewController */,
-				D5135B63162F0DDA00743CC5 /* Model */,
+				D513C3EA16A6143C0096616D /* Helper */,
 				D5135B4D162F077700743CC5 /* Supporting Files */,
 			);
 			path = ZooApp;
@@ -311,13 +325,21 @@
 		D5135B63162F0DDA00743CC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
 				D5135B64162F0DDA00743CC5 /* animalList.json */,
-				D571C75C169CE56900C63A04 /* AGPoi.h */,
-				D571C75D169CE56900C63A04 /* AGPoi.m */,
+				D513C3FF16A9C3B20096616D /* restaurantList.json */,
 				D5B0081E16300B4E008EB564 /* AGAnimal.h */,
 				D5B0081F16300B4E008EB564 /* AGAnimal.m */,
-				D5B0083316314506008EB564 /* Location.h */,
-				D5B0083416314506008EB564 /* Location.m */,
+				D568AA2216396C6100270E8B /* AGAnimalManager.h */,
+				D568AA2316396C6100270E8B /* AGAnimalManager.m */,
+				D513C40116A9EE420096616D /* AGRestaurant.h */,
+				D513C40216A9EE430096616D /* AGRestaurant.m */,
+				D513C41016AA121D0096616D /* AGRestaurantManager.h */,
+				D513C41116AA121D0096616D /* AGRestaurantManager.m */,
+				D5B0083316314506008EB564 /* AGLocation.h */,
+				D5B0083416314506008EB564 /* AGLocation.m */,
+				D513C40D16AA04090096616D /* AGLocationManager.h */,
+				D513C40E16AA04090096616D /* AGLocationManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -391,6 +413,15 @@
 			name = InfoTab;
 			sourceTree = "<group>";
 		};
+		D513C3EA16A6143C0096616D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D513C3EC16A614810096616D /* AGStringUtilities.h */,
+				D513C3ED16A614810096616D /* AGStringUtilities.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		D568AA02163931C700270E8B /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +477,8 @@
 				D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */,
 				D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */,
 				D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */,
+				D513C3D916A60CB00096616D /* AGCompassView.h */,
+				D513C3DA16A60CB00096616D /* AGCompassView.m */,
 			);
 			name = AnimalDetailView;
 			sourceTree = "<group>";
@@ -465,10 +498,6 @@
 		D5B0082F1631427E008EB564 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D5B00830163142A4008EB564 /* MarkerManager.h */,
-				D5B00831163142A4008EB564 /* MarkerManager.m */,
-				D568AA2216396C6100270E8B /* AnimalManager.h */,
-				D568AA2316396C6100270E8B /* AnimalManager.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -646,6 +675,7 @@
 				D513C3AE16A077CC0096616D /* user@2x.png in Resources */,
 				D513C3B516A2AC0D0096616D /* compass5050.png in Resources */,
 				D513C3B616A2AC0D0096616D /* compass5050@2x.png in Resources */,
+				D513C40016A9C3B20096616D /* restaurantList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,17 +692,21 @@
 				D5135B6E162FEE0E00743CC5 /* AGAnimalListViewController.m in Sources */,
 				D5B0081416300370008EB564 /* AnimalDetailViewController.m in Sources */,
 				D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */,
-				D5B00832163142A4008EB564 /* MarkerManager.m in Sources */,
-				D5B0083516314506008EB564 /* Location.m in Sources */,
+				D5B0083516314506008EB564 /* AGLocation.m in Sources */,
 				D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */,
 				D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */,
 				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 				D5AF86151638661900129120 /* Colors.m in Sources */,
-				D568AA2416396C6100270E8B /* AnimalManager.m in Sources */,
+				D568AA2416396C6100270E8B /* AGAnimalManager.m in Sources */,
 				D5DDE862169B1E8C0009048B /* AGAnimalListTableCell.m in Sources */,
 				D571C75A169CAE9700C63A04 /* AGAnimalDetailViewController.m in Sources */,
-				D571C75E169CE56900C63A04 /* AGPoi.m in Sources */,
 				D513C3C616A388460096616D /* AGInfoListViewController.m in Sources */,
+				D513C3DB16A60CB00096616D /* AGCompassView.m in Sources */,
+				D513C3EE16A614810096616D /* AGStringUtilities.m in Sources */,
+				D513C3FD16A75E970096616D /* Model.xcdatamodeld in Sources */,
+				D513C40316A9EE430096616D /* AGRestaurant.m in Sources */,
+				D513C40F16AA04090096616D /* AGLocationManager.m in Sources */,
+				D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +823,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D513C3FB16A75E970096616D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D513C3FC16A75E970096616D /* Model.xcdatamodel */,
+			);
+			currentVersion = D513C3FC16A75E970096616D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D5135B39162F077700743CC5 /* Project object */;
 }
