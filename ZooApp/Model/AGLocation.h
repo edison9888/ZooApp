@@ -13,14 +13,14 @@
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *subtitle;
-@property (nonatomic, strong) NSString *image;
+@property (nonatomic, strong) NSString *icon;
 @property (assign) MKPinAnnotationColor pinColor;
 
 - (id)initLocationWithCoordinate:(CLLocationCoordinate2D)coord;
 
-- (void)setAnnotationForLocationWithName:(NSString*)name subtitle:(NSString*)subtitle image:(NSString*)image color:(MKPinAnnotationColor)pinColor;
+- (void)setAnnotationForLocationWithTitle:(NSString*)title subtitle:(NSString*)subtitle icon:(NSString*)icon pinColor:(MKPinAnnotationColor)pinColor;
 
 
 @end

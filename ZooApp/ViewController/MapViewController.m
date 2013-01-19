@@ -57,7 +57,7 @@
 //	[annotations addObjectsFromArray:animalMarkers];
    // [annotations addObjectsFromArray:restaurantMarkers];
 
- //   [self.iosMapView setShowsUserLocation:YES];
+    [self.iosMapView setShowsUserLocation:YES];
 
 
    }
@@ -81,8 +81,17 @@
     pinView.animatesDrop = YES;
     pinView.canShowCallout = YES;
     
-    AGLocation *loc = (AGLocation*)annotation;
-    pinView.pinColor = loc.pinColor;
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;  //return nil to use default blue dot view
+    }
+    
+    if([annotation isKindOfClass:[AGLocation class]]) {
+        AGLocation *loc = (AGLocation*)annotation;
+        pinView.pinColor = loc.pinColor;
+    }
+    
+    
+
     
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     [rightButton setTitle:annotation.title forState:UIControlStateNormal];

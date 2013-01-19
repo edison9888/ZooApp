@@ -86,7 +86,7 @@ static AGAnimalManager *instance = nil;
         animal.funFact = [a objectForKey:@"funFact"];
         animal.image = [a objectForKey:@"image"];
         
-        [animal.location setAnnotationForLocationWithName:animal.name subtitle:animal.habitat image:animal.image color:MKPinAnnotationColorGreen];
+        [animal.location setAnnotationForLocationWithTitle:animal.name subtitle:animal.habitat icon:animal.image pinColor:MKPinAnnotationColorGreen];
         
         [self.allAnimals addObject:animal];
 

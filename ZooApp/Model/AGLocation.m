@@ -20,19 +20,19 @@
     return self;
 }
 
-- (void)setAnnotationForLocationWithName:(NSString*)name subtitle:(NSString*)subtitle image:(NSString*)image color:(MKPinAnnotationColor)pinColor {
+- (void)setAnnotationForLocationWithTitle:(NSString*)title subtitle:(NSString*)subtitle icon:(NSString*)icon pinColor:(MKPinAnnotationColor)pinColor {
     
-    self.name = name;
+    self.title = title;
     self.subtitle = subtitle;
-    self.image = image;    
+    self.icon = icon;
     self.pinColor = pinColor;
 }
 
 - (NSString *)title {
-    if ([_name isKindOfClass:[NSNull class]])
+    if ([_title isKindOfClass:[NSNull class]])
         return @"Unknown charge";
     else
-        return _name;
+        return _title;
 }
 
 
