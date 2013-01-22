@@ -63,9 +63,13 @@
 		D513C40F16AA04090096616D /* AGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C40E16AA04090096616D /* AGLocationManager.m */; };
 		D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C41116AA121D0096616D /* AGRestaurantManager.m */; };
 		D513C44316ADF6CE0096616D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D513C44216ADF6CE0096616D /* CoreData.framework */; };
-		D513C44D16ADFBDB0096616D /* AGCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */; };
 		D513C45116AE2E760096616D /* AGFavManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C45016AE2E760096616D /* AGFavManager.m */; };
 		D513C45616AE33950096616D /* AGFavAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C45516AE33910096616D /* AGFavAnimal.m */; };
+		D513C45D16AEC2CC0096616D /* AGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C45C16AEC2CC0096616D /* AGAlertView.m */; };
+		D513C46F16AEF57B0096616D /* AGMyZooListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C46E16AEF57B0096616D /* AGMyZooListViewController.m */; };
+		D513C47B16AEF90A0096616D /* AGCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C47A16AEF8DC0096616D /* AGCoreDataHelper.m */; };
+		D513C47E16AF2BAA0096616D /* openingHours.html in Resources */ = {isa = PBXBuildFile; fileRef = D513C47D16AF2BAA0096616D /* openingHours.html */; };
+		D513C48116AF2CB20096616D /* AGInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C48016AF2CB20096616D /* AGInfoDetailViewController.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -187,12 +191,19 @@
 		D513C41016AA121D0096616D /* AGRestaurantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRestaurantManager.h; sourceTree = "<group>"; };
 		D513C41116AA121D0096616D /* AGRestaurantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRestaurantManager.m; sourceTree = "<group>"; };
 		D513C44216ADF6CE0096616D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D513C44B16ADFBDB0096616D /* AGCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCoreDataHelper.h; sourceTree = "<group>"; };
-		D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCoreDataHelper.m; sourceTree = "<group>"; };
 		D513C44F16AE2E760096616D /* AGFavManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGFavManager.h; path = UserData/AGFavManager.h; sourceTree = "<group>"; };
 		D513C45016AE2E760096616D /* AGFavManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGFavManager.m; path = UserData/AGFavManager.m; sourceTree = "<group>"; };
 		D513C45416AE338F0096616D /* AGFavAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGFavAnimal.h; path = UserData/AGFavAnimal.h; sourceTree = "<group>"; };
 		D513C45516AE33910096616D /* AGFavAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGFavAnimal.m; path = UserData/AGFavAnimal.m; sourceTree = "<group>"; };
+		D513C45B16AEC2CC0096616D /* AGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAlertView.h; path = Helper/AGAlertView.h; sourceTree = "<group>"; };
+		D513C45C16AEC2CC0096616D /* AGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAlertView.m; path = Helper/AGAlertView.m; sourceTree = "<group>"; };
+		D513C46D16AEF57B0096616D /* AGMyZooListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGMyZooListViewController.h; path = ViewController/AGMyZooListViewController.h; sourceTree = "<group>"; };
+		D513C46E16AEF57B0096616D /* AGMyZooListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGMyZooListViewController.m; path = ViewController/AGMyZooListViewController.m; sourceTree = "<group>"; };
+		D513C47916AEF8DC0096616D /* AGCoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AGCoreDataHelper.h; path = Helper/AGCoreDataHelper.h; sourceTree = "<group>"; };
+		D513C47A16AEF8DC0096616D /* AGCoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGCoreDataHelper.m; path = Helper/AGCoreDataHelper.m; sourceTree = "<group>"; };
+		D513C47D16AF2BAA0096616D /* openingHours.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = openingHours.html; sourceTree = "<group>"; };
+		D513C47F16AF2CB20096616D /* AGInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGInfoDetailViewController.h; path = ViewController/AGInfoDetailViewController.h; sourceTree = "<group>"; };
+		D513C48016AF2CB20096616D /* AGInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGInfoDetailViewController.m; path = ViewController/AGInfoDetailViewController.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -338,10 +349,8 @@
 		D5135B63162F0DDA00743CC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D513C47C16AF2A400096616D /* Data */,
 				D513C44E16AE2E1B0096616D /* UserData */,
-				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
-				D5135B64162F0DDA00743CC5 /* animalList.json */,
-				D513C3FF16A9C3B20096616D /* restaurantList.json */,
 				D5B0081E16300B4E008EB564 /* AGAnimal.h */,
 				D5B0081F16300B4E008EB564 /* AGAnimal.m */,
 				D568AA2216396C6100270E8B /* AGAnimalManager.h */,
@@ -364,6 +373,7 @@
 				D513C3C316A388120096616D /* InfoTab */,
 				D5B00859163817FE008EB564 /* AnimalTab */,
 				D5B0085B16381811008EB564 /* MapTab */,
+				D513C46816AEF43C0096616D /* MyZooTab */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -423,6 +433,8 @@
 			children = (
 				D513C3C416A388460096616D /* AGInfoListViewController.h */,
 				D513C3C516A388460096616D /* AGInfoListViewController.m */,
+				D513C47F16AF2CB20096616D /* AGInfoDetailViewController.h */,
+				D513C48016AF2CB20096616D /* AGInfoDetailViewController.m */,
 			);
 			name = InfoTab;
 			sourceTree = "<group>";
@@ -430,10 +442,12 @@
 		D513C3EA16A6143C0096616D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D513C47916AEF8DC0096616D /* AGCoreDataHelper.h */,
+				D513C47A16AEF8DC0096616D /* AGCoreDataHelper.m */,
 				D513C3EC16A614810096616D /* AGStringUtilities.h */,
 				D513C3ED16A614810096616D /* AGStringUtilities.m */,
-				D513C44B16ADFBDB0096616D /* AGCoreDataHelper.h */,
-				D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */,
+				D513C45B16AEC2CC0096616D /* AGAlertView.h */,
+				D513C45C16AEC2CC0096616D /* AGAlertView.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -447,6 +461,26 @@
 				D513C45516AE33910096616D /* AGFavAnimal.m */,
 			);
 			name = UserData;
+			sourceTree = "<group>";
+		};
+		D513C46816AEF43C0096616D /* MyZooTab */ = {
+			isa = PBXGroup;
+			children = (
+				D513C46D16AEF57B0096616D /* AGMyZooListViewController.h */,
+				D513C46E16AEF57B0096616D /* AGMyZooListViewController.m */,
+			);
+			name = MyZooTab;
+			sourceTree = "<group>";
+		};
+		D513C47C16AF2A400096616D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
+				D5135B64162F0DDA00743CC5 /* animalList.json */,
+				D513C3FF16A9C3B20096616D /* restaurantList.json */,
+				D513C47D16AF2BAA0096616D /* openingHours.html */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		D568AA02163931C700270E8B /* Images */ = {
@@ -703,6 +737,7 @@
 				D513C3B516A2AC0D0096616D /* compass5050.png in Resources */,
 				D513C3B616A2AC0D0096616D /* compass5050@2x.png in Resources */,
 				D513C40016A9C3B20096616D /* restaurantList.json in Resources */,
+				D513C47E16AF2BAA0096616D /* openingHours.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,9 +769,12 @@
 				D513C40316A9EE430096616D /* AGRestaurant.m in Sources */,
 				D513C40F16AA04090096616D /* AGLocationManager.m in Sources */,
 				D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */,
-				D513C44D16ADFBDB0096616D /* AGCoreDataHelper.m in Sources */,
 				D513C45116AE2E760096616D /* AGFavManager.m in Sources */,
 				D513C45616AE33950096616D /* AGFavAnimal.m in Sources */,
+				D513C45D16AEC2CC0096616D /* AGAlertView.m in Sources */,
+				D513C47B16AEF90A0096616D /* AGCoreDataHelper.m in Sources */,
+				D513C46F16AEF57B0096616D /* AGMyZooListViewController.m in Sources */,
+				D513C48116AF2CB20096616D /* AGInfoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

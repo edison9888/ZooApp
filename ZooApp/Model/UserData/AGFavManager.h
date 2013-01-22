@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AGFavAnimal.h"
 
 @interface AGFavManager : NSObject
 
@@ -16,7 +17,9 @@
 
 - (NSArray*) favouriteAnimalsArray;
 
-- (void) addAnimalToFavsWithName: (NSString*) name notified: (BOOL) notifiedIfClose;
-- (BOOL) checkIfFavsContainAnimalWithName: (NSString*) name;
+- (AGFavAnimal*) addAnimalToFavsWithName: (NSString*) name notified: (BOOL) notifiedIfClose;
+- (void) removeAnimalFromFavsWithName: (NSString*) name;
+
+- (AGFavAnimal*) getFavAnimalWithName: (NSString*) name;
 
 @end

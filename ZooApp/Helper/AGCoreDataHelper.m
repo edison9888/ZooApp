@@ -22,6 +22,12 @@
 
 + (NSManagedObjectContext*) managedObjectContext {
 
+    static NSManagedObjectContext *managedObjectContext;
+    
+    if (managedObjectContext != nil) {
+        return managedObjectContext;
+    }
+    
     NSError *error;
     
     // creates directory
@@ -51,7 +57,7 @@
     }
     
     // create managed object context with store coordinator
-    NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext new];
+    managedObjectContext = [NSManagedObjectContext new];
     managedObjectContext.persistentStoreCoordinator = storeCoordinator;
     
     return managedObjectContext;

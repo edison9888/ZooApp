@@ -55,8 +55,11 @@
     compassView.backgroundColor = [UIColor clearColor];
     [self.mainScrollView addSubview:compassView];
 
-    
-    self.favAnimal = [[AGFavManager sharedInstance] checkIfFavsContainAnimalWithName:self.currentAnimal.name];
+    if ([[AGFavManager sharedInstance] getFavAnimalWithName:self.currentAnimal.name] != nil) {
+        self.favAnimal = YES;
+    } else {
+        self.favAnimal = NO;
+    }
     self.favFeedingTime = NO;
     self.favCommentaryTime = NO;
     
@@ -207,9 +210,10 @@
     [self.chalkboardScrollView scrollRectToVisible:frame animated:YES];
 }
 
-#pragma mark - favorites
+#pragma mark - favorites and alerts
 
 - (void)checkFavStatus {
+    
     if (self.favAnimal == NO) {
         [self.favAnimalButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
@@ -230,97 +234,75 @@
 }
 
 - (IBAction)favAnimalButtonPressed:(id)sender {
-    
-    UIAlertView *alert;
-    
-    if (self.favAnimal == NO) {
-        alert = [self createFavAlertViewWithTitle:@"Tier favorisieren" message:@"Hiermit fügen Sie das Tier ihrer Favoritenliste hinzu. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    } else {
-        alert = [self createFavAlertViewWithTitle:@"Tier entfernen" message:@"Hiermit entfernen Sie das Tier aus ihrer Favoritenliste. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    }
-    [alert show];
+    [self createFavAlertViewWithArticle:@"das" object:@"Tier" fav:self.favAnimal];
 }
-
 
 - (IBAction)favFeedingButtonPressed:(id)sender {
-    
-    UIAlertView *alert;
-    
-    if (self.favFeedingTime == NO) {
-        alert = [self createFavAlertViewWithTitle:@"Fütterung favorisieren" message:@"Hiermit fügen Sie die Fütterung ihrer Favoritenliste hinzu. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    } else {
-        alert = [self createFavAlertViewWithTitle:@"Fütterung entfernen" message:@"Hiermit entfernen Sie die Fütterung aus ihrer Favoritenliste. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    }
-    [alert show];
-   
+    [self createFavAlertViewWithArticle:@"die" object:@"Fütterung" fav:self.favFeedingTime];
 }
-
 
 - (IBAction)favCommentaryButtonPressed:(id)sender {
+    [self createFavAlertViewWithArticle:@"die" object:@"Kommentierung" fav:self.favCommentaryTime];
+}
+
+- (void)createFavAlertViewWithArticle:(NSString*)article object:(NSString*)object fav:(BOOL) fav{
+
+    NSString *titleString;
+    NSString *messageString;
+    NSString *messageEnding = @"Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen.";
+
+    
+    if (fav) {
+        titleString = [NSString stringWithFormat:@"%@ entfernen", object];
+        messageString = [NSString stringWithFormat:@"Hiermit entfernen Sie %@ %@ aus Ihrer Favoritenliste. %@", article, object, messageEnding];
+    } else {
+        titleString = [NSString stringWithFormat:@"%@ favorisieren", object];
+        messageString = [NSString stringWithFormat:@"Hiermit fügen Sie %@ %@ Ihrer Favoritenliste hinzu. %@", article, object, messageEnding];
+    }
 
     UIAlertView *alert;
+    alert = [[UIAlertView alloc] initWithTitle:titleString message:messageString delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ok", nil];
     
-    if (self.favFeedingTime == NO) {
-        alert = [self createFavAlertViewWithTitle:@"Kommentierung favorisieren" message:@"Hiermit fügen Sie die Kommentierung ihrer Favoritenliste hinzu. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    } else {
-        alert = [self createFavAlertViewWithTitle:@"Kommentierung entfernen" message:@"Hiermit entfernen Sie die Kommentierung aus ihrer Favoritenliste. Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen."];
-    }
     [alert show];
 }
 
-- (UIAlertView*)createFavAlertViewWithTitle:(NSString*)title message:(NSString*)message {
-
-    UIAlertView *alert;
-    alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ok", nil];
-    return alert;
-}
-
-#pragma mark - alert 
-
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  
-    if ([[alertView title] isEqualToString:@"Tier favorisieren"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
-            self.favAnimal = YES;
-            // methode zum hinzufügen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Tier favorisieren");
-        }
-    } else if ([[alertView title] isEqualToString:@"Tier entfernen"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
-            self.favAnimal = NO;
-            // methode zum entfernen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Tier entfernen");
-        } 
-    }
     
-    if ([[alertView title] isEqualToString:@"Fütterung favorisieren"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
+    if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
+       
+        if ([[alertView title] isEqualToString:@"Tier favorisieren"]) {
+           
+            self.favAnimal = YES;
+            // add animal to favorites
+            [[AGFavManager sharedInstance] addAnimalToFavsWithName:self.currentAnimal.name notified:NO];
+        
+        } else if ([[alertView title] isEqualToString:@"Tier entfernen"]) {
+            
+            self.favAnimal = NO;
+            // remove animal from favorites
+            [[AGFavManager sharedInstance] removeAnimalFromFavsWithName:self.currentAnimal.name];
+            
+        } else  if ([[alertView title] isEqualToString:@"Fütterung favorisieren"]) {
             self.favFeedingTime = YES;
             // methode zum hinzufügen
             NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Fütterung hinzufügen");
-        }
-    } else if ([[alertView title] isEqualToString:@"Fütterung entfernen"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
+        
+        } else if ([[alertView title] isEqualToString:@"Fütterung entfernen"]) {
             self.favFeedingTime = NO;
             // methode zum entfernen
             NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Fütterung entfernen");
-        }
-    }
-
-    if ([[alertView title] isEqualToString:@"Kommentierung favorisieren"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
+       
+        } else if ([[alertView title] isEqualToString:@"Kommentierung favorisieren"]) {
             self.favCommentaryTime = YES;
             // methode zum hinzufügen
             NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Kommentierung hinzufügen");
-        }
-    } else if ([[alertView title] isEqualToString:@"Kommentierung entfernen"]) {
-        if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
+  
+        } else if ([[alertView title] isEqualToString:@"Kommentierung entfernen"]) {
             self.favCommentaryTime = NO;
             // methode zum entfernen
             NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Kommentierung entfernen");
         }
     }
-
     [self checkFavStatus];
 }
 

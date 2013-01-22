@@ -45,21 +45,28 @@
             </objects>
             <point key="canvasLocation" x="-1597" y="1762"/>
         </scene>
-        <!--Table View Controller - Mein Zoo-->
+        <!--My Zoo List View Controller - Mein Zoo-->
         <scene sceneID="eZ8-je-Sbt">
             <objects>
-                <tableViewController id="FWu-uS-D2M" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="FWu-uS-D2M" customClass="AGMyZooListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sKZ-Lm-YsB">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UBE-T6-DKa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyZooCell" textLabel="ale-qI-1NM" style="IBUITableViewCellStyleDefault" id="UBE-T6-DKa">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ale-qI-1NM">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -209,10 +216,28 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Info" id="flE-wJ-AB8"/>
+                    <connections>
+                        <segue destination="tdZ-oU-1zl" kind="push" id="7ym-d2-QOh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-UQ-5l9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1379" y="-304"/>
+        </scene>
+        <!--Info Detail View Controller-->
+        <scene sceneID="sgL-l6-QbT">
+            <objects>
+                <viewController storyboardIdentifier="AGInfoDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tdZ-oU-1zl" customClass="AGInfoDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vV-Rw-9ZR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OCx-Ju-qsF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YrE-tP-BbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-965" y="-304"/>
         </scene>
         <!--Navigation Controller - Info-->
         <scene sceneID="Yf1-57-H9K">
@@ -646,8 +671,14 @@
                 <relationship kind="outlet" name="animalMapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
+        <class className="AGInfoDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGInfoDetailViewController.h"/>
+        </class>
         <class className="AGInfoListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AGInfoListViewController.h"/>
+        </class>
+        <class className="AGMyZooListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGMyZooListViewController.h"/>
         </class>
         <class className="AnimalFilterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalFilterViewController.h"/>
@@ -655,6 +686,7 @@
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
             <relationships>
+                <relationship kind="action" name="showDetails:"/>
                 <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

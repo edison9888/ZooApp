@@ -33,35 +33,51 @@ static AGFavManager *instance = nil;
     return self;
 }
 
-- (void) addAnimalToFavsWithName: (NSString*) name notified: (BOOL) notifiedIfClose {
+- (AGFavAnimal*) addAnimalToFavsWithName: (NSString*) name notified: (BOOL) notifiedIfClose {
 
-    // check if animal does already exist --> this should never be the case, just a precaution
-    if(![self checkIfFavsContainAnimalWithName:name]) {
-        NSLog(@"Animal (%@) is now being added.", name);
+    // check if animal does already exist
+    if([self getFavAnimalWithName:name] == nil) {
+        
+        NSLog(@"Animal (%@) not yet in database. It is now being added.", name);
         AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:self.context];
         favAnimal.name = name;
         favAnimal.notificationIfClose = [NSNumber numberWithBool:notifiedIfClose];
         [AGCoreDataHelper saveManagedObjectContext:self.context];
-
+        return favAnimal;
+    
     } else {
-         NSLog(@"Animal (%@) will not be added.", name);
+    
+        NSLog(@"Animal (%@) is already in database. It will not be added.", name);
+        return nil;
     }
     
+}
+
+- (void) removeAnimalFromFavsWithName: (NSString*) name {
+    
+    AGFavAnimal *favAnimal = [self getFavAnimalWithName:name] ;
+    
+    // check if animal does already exist
+    if (favAnimal != nil) {
+        
+        NSLog(@"Animal (%@) found in database. It is now being removed.", name);
+        [self.context deleteObject:favAnimal];
+        [AGCoreDataHelper saveManagedObjectContext:self.context];
+        
+    } else {
+     
+        NSLog(@"Animal (%@) not found in database. It cannot be removed.", name);
+    }
 
 }
 
 
-- (BOOL) checkIfFavsContainAnimalWithName: (NSString*) name {
+- (AGFavAnimal*) getFavAnimalWithName: (NSString*) name {
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
-    if(![AGCoreDataHelper fetchEntitiesForClass:[AGFavAnimal class] withPredicate:predicate inManagedObjectContext:self.context]) {
-        NSLog(@"Animal (%@) not found in database.", name);
-        return NO;
-    } else {
-        NSLog(@"Animal (%@) found in database.", name);
-        return YES;
-    }
-  
+    AGFavAnimal *favAnimal = [[AGCoreDataHelper fetchEntitiesForClass:[AGFavAnimal class] withPredicate:predicate inManagedObjectContext:self.context] objectAtIndex:0];
+    
+    return favAnimal;
 }
 
 - (NSArray*) favouriteAnimalsArray {
