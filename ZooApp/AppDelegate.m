@@ -9,14 +9,46 @@
 #import "AppDelegate.h"
 #import "AGAnimalManager.h"
 #import "AGRestaurantManager.h"
+#import "AGFavManager.h"
+#import "AGCoreDataHelper.h"
+#import "AGFavAnimal.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+   // NSManagedObjectContext *context = [AGCoreDataHelper managedObjectContext];
+   // AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:context];
+   // favAnimal.name = @"Bonobo";
+   // favAnimal.notificationIfClose = NO;
+   // favAnimal.name = @"Rothschildgiraffe";
+   // favAnimal.notificationIfClose = NO;
+
+   // [AGCoreDataHelper saveManagedObjectContext:context];
+   
+    /*
+    NSArray *favAnimals = [AGCoreDataHelper fetchEntitiesForClass:[AGFavAnimal class] withPredicate:nil inManagedObjectContext:context];
+    
+    
+    for (AGFavAnimal *a in favAnimals) {
+        NSLog(@"Favorisiertes Tier gefunden: %@", a.name);
+    }
+    */
+    
     //[Animal parseJSONToAnimals];
-    [AGAnimalManager getInstance];
-    [AGRestaurantManager getInstance];
+    [AGAnimalManager sharedInstance];
+    [AGRestaurantManager sharedInstance];
+   
+    AGFavManager *favManager = [AGFavManager sharedInstance];
+    [favManager addAnimalToFavsWithName:@"Bonobo" notified:NO];
+    [favManager addAnimalToFavsWithName:@"Rothschildgiraffe" notified:NO];
+
+    
+    for (AGFavAnimal *a in [favManager favouriteAnimalsArray]) {
+        NSLog(@"AGFavManager: Favorisiertes Tier gefunden: %@", a.name);
+    }
+    
 //    self.window.rootViewController.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     
    // return YES;

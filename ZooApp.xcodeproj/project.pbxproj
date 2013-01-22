@@ -62,6 +62,10 @@
 		D513C40316A9EE430096616D /* AGRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C40216A9EE430096616D /* AGRestaurant.m */; };
 		D513C40F16AA04090096616D /* AGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C40E16AA04090096616D /* AGLocationManager.m */; };
 		D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C41116AA121D0096616D /* AGRestaurantManager.m */; };
+		D513C44316ADF6CE0096616D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D513C44216ADF6CE0096616D /* CoreData.framework */; };
+		D513C44D16ADFBDB0096616D /* AGCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */; };
+		D513C45116AE2E760096616D /* AGFavManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C45016AE2E760096616D /* AGFavManager.m */; };
+		D513C45616AE33950096616D /* AGFavAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C45516AE33910096616D /* AGFavAnimal.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -182,6 +186,13 @@
 		D513C40E16AA04090096616D /* AGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLocationManager.m; path = ZooApp/Model/AGLocationManager.m; sourceTree = SOURCE_ROOT; };
 		D513C41016AA121D0096616D /* AGRestaurantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGRestaurantManager.h; sourceTree = "<group>"; };
 		D513C41116AA121D0096616D /* AGRestaurantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGRestaurantManager.m; sourceTree = "<group>"; };
+		D513C44216ADF6CE0096616D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D513C44B16ADFBDB0096616D /* AGCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCoreDataHelper.h; sourceTree = "<group>"; };
+		D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCoreDataHelper.m; sourceTree = "<group>"; };
+		D513C44F16AE2E760096616D /* AGFavManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGFavManager.h; path = UserData/AGFavManager.h; sourceTree = "<group>"; };
+		D513C45016AE2E760096616D /* AGFavManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGFavManager.m; path = UserData/AGFavManager.m; sourceTree = "<group>"; };
+		D513C45416AE338F0096616D /* AGFavAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGFavAnimal.h; path = UserData/AGFavAnimal.h; sourceTree = "<group>"; };
+		D513C45516AE33910096616D /* AGFavAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGFavAnimal.m; path = UserData/AGFavAnimal.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -249,6 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D513C44316ADF6CE0096616D /* CoreData.framework in Frameworks */,
 				D5135B72162FEECD00743CC5 /* CoreLocation.framework in Frameworks */,
 				D5135B70162FEEB600743CC5 /* MapKit.framework in Frameworks */,
 				D5135B47162F077700743CC5 /* UIKit.framework in Frameworks */,
@@ -281,6 +293,7 @@
 		D5135B45162F077700743CC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D513C44216ADF6CE0096616D /* CoreData.framework */,
 				D5135B71162FEECD00743CC5 /* CoreLocation.framework */,
 				D5135B6F162FEEB600743CC5 /* MapKit.framework */,
 				D5135B46162F077700743CC5 /* UIKit.framework */,
@@ -325,6 +338,7 @@
 		D5135B63162F0DDA00743CC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D513C44E16AE2E1B0096616D /* UserData */,
 				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
 				D5135B64162F0DDA00743CC5 /* animalList.json */,
 				D513C3FF16A9C3B20096616D /* restaurantList.json */,
@@ -418,8 +432,21 @@
 			children = (
 				D513C3EC16A614810096616D /* AGStringUtilities.h */,
 				D513C3ED16A614810096616D /* AGStringUtilities.m */,
+				D513C44B16ADFBDB0096616D /* AGCoreDataHelper.h */,
+				D513C44C16ADFBDB0096616D /* AGCoreDataHelper.m */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		D513C44E16AE2E1B0096616D /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				D513C44F16AE2E760096616D /* AGFavManager.h */,
+				D513C45016AE2E760096616D /* AGFavManager.m */,
+				D513C45416AE338F0096616D /* AGFavAnimal.h */,
+				D513C45516AE33910096616D /* AGFavAnimal.m */,
+			);
+			name = UserData;
 			sourceTree = "<group>";
 		};
 		D568AA02163931C700270E8B /* Images */ = {
@@ -707,6 +734,9 @@
 				D513C40316A9EE430096616D /* AGRestaurant.m in Sources */,
 				D513C40F16AA04090096616D /* AGLocationManager.m in Sources */,
 				D513C41216AA121E0096616D /* AGRestaurantManager.m in Sources */,
+				D513C44D16ADFBDB0096616D /* AGCoreDataHelper.m in Sources */,
+				D513C45116AE2E760096616D /* AGFavManager.m in Sources */,
+				D513C45616AE33950096616D /* AGFavAnimal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

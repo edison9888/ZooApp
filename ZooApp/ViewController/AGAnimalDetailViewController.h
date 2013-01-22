@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AGAnimal.h"
 
-@interface AGAnimalDetailViewController : UIViewController <UIScrollViewDelegate, UIPageViewControllerDelegate, CLLocationManagerDelegate>
+@interface AGAnimalDetailViewController : UIViewController <UIScrollViewDelegate, UIPageViewControllerDelegate, CLLocationManagerDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *currentLocation;

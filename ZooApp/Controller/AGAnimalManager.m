@@ -24,7 +24,7 @@ static AGAnimalManager *instance = nil;
 }
 
 
-+(AGAnimalManager*)getInstance {
++(AGAnimalManager*)sharedInstance {
     
     @synchronized(self) {
         if (instance == nil) {

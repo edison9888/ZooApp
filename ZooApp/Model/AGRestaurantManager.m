@@ -23,7 +23,7 @@ static AGRestaurantManager *instance = nil;
     return self;
 }
 
-+(AGRestaurantManager*)getInstance {
++(AGRestaurantManager*)sharedInstance {
     
     @synchronized(self) {
         if (instance == nil) {

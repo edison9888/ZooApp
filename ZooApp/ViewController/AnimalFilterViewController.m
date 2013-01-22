@@ -35,7 +35,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    aM = [AGAnimalManager getInstance];
+    aM = [AGAnimalManager sharedInstance];
     
     [self createFilterCategories];
     

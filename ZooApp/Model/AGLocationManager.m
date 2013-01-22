@@ -18,7 +18,7 @@
     NSMutableArray *annotations = [NSMutableArray new];
     [annotations removeAllObjects];
     
-    for (AGAnimal *animal in [AGAnimalManager getInstance].allAnimals) {
+    for (AGAnimal *animal in [AGAnimalManager sharedInstance].allAnimals) {
         
         [annotations addObject:animal.location];
     }
@@ -32,7 +32,7 @@
     NSMutableArray *annotations = [NSMutableArray new];
     [annotations removeAllObjects];
     
-    for (AGRestaurant *restaurant in [AGRestaurantManager getInstance].allRestaurants) {
+    for (AGRestaurant *restaurant in [AGRestaurantManager sharedInstance].allRestaurants) {
         
         [annotations addObject:restaurant.location];
     }

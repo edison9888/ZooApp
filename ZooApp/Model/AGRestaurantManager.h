@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray *allRestaurants;
 
-+ (AGRestaurantManager*)getInstance;
++ (AGRestaurantManager*)sharedInstance;
 
 - (void)parseJSONToRestaurants;
 

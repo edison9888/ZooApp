@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSDictionary *filteredAnimalList;
 @property (nonatomic, strong) NSMutableArray *allAnimals;
 
-+ (AGAnimalManager*)getInstance;
++ (AGAnimalManager*)sharedInstance;
 
 - (void)parseJSONToAnimals;
 - (void)categorizeAnimals;
