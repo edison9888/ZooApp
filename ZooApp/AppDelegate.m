@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
+#import <HockeySDK/HockeySDK.h>
 #import "AppDelegate.h"
 #import "AGAnimalManager.h"
 #import "AGRestaurantManager.h"
@@ -13,11 +14,22 @@
 #import "AGCoreDataHelper.h"
 #import "AGFavAnimal.h"
 
-@implementation AppDelegate
+@interface AppDelegate (HockeySDK) //<BITHockeyManagerDelegate, BITUpdateManagerDelegate, BITCrashManagerDelegate>
+
+@end
+
+@implementation AppDelegate 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"eb31056e81e2d9ab29f65c608df60689"
+                                                           delegate:self];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    
+    
+    
+   
    // NSManagedObjectContext *context = [AGCoreDataHelper managedObjectContext];
    // AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:context];
    // favAnimal.name = @"Bonobo";
@@ -84,5 +96,16 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark - BITUpdateManagerDelegate
+- (NSString *)customDeviceIdentifierForUpdateManager:(BITUpdateManager *)updateManager {
+#ifndef CONFIGURATION_AppStore
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(uniqueIdentifier)])
+        return [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
+#endif
+    return nil;
+}
+ 
 
 @end

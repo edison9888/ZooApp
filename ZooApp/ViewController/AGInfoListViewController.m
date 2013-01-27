@@ -8,6 +8,7 @@
 
 #import "AGInfoListViewController.h"
 #import "AGInfoDetailViewController.h"
+#import "AGInfoDetailWebViewController.h"
 
 @interface AGInfoListViewController ()
 
@@ -35,6 +36,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSArray *section0 = [[NSArray alloc] initWithObjects:@"openingHours", @"prices", @"no", nil];
+
+    NSArray *section1 = [[NSArray alloc] initWithObjects:@"guidedTours", @"no", @"no", @"events", nil];
+
+    NSArray *section2 = [[NSArray alloc] initWithObjects:@"wheelchairAccess", @"lockers", @"kidsService", @"zooRules", nil];
+
+    self.htmlArray = [[NSArray alloc] initWithObjects:section0, section1, section2, nil];
     
     self.keyArray = [[NSArray alloc] initWithObjects:@"Zooinformationen", @"Aktivitäten", @"Service", nil];
     
@@ -146,11 +155,28 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    AGInfoDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGInfoDetailViewController"];
-    vc.title = @"hkhjhkjhk";
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    int numberOfSelectedSection = [self.tableView indexPathForSelectedRow].section;
+    int numberOfSelectedRow = [self.tableView indexPathForSelectedRow].row;
+    
+    NSString *htmlString = (NSString*)[[self.htmlArray objectAtIndex:numberOfSelectedSection] objectAtIndex:numberOfSelectedRow];
+    
+    if ([htmlString isEqualToString:@"no"]) {
+        
+        AGInfoDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGInfoDetailViewController"];
+        vc.title = @"No Web";
+        [self.navigationController pushViewController:vc animated:YES];
+    
+    } else {
+    
+        AGInfoDetailWebViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGInfoDetailWebViewController"];
+        vc.title = @"Info";
+        vc.htmlName = htmlString;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }
 
 }
 

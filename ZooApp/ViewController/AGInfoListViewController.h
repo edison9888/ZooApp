@@ -11,6 +11,7 @@
 @interface AGInfoListViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *keyArray;
+@property (strong, nonatomic) NSArray *htmlArray;
 @property (strong, nonatomic) NSMutableDictionary *infoData;
 
 

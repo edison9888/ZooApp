@@ -188,6 +188,35 @@
             </objects>
             <point key="canvasLocation" x="-1759" y="381"/>
         </scene>
+        <!--AGInfoDetailWebViewController-->
+        <scene sceneID="urD-60-nzn">
+            <objects>
+                <viewController restorationIdentifier="AGInfoDetailWebViewController" storyboardIdentifier="AGInfoDetailWebViewController" title="AGInfoDetailWebViewController" id="8Jk-Rd-fKQ" userLabel="AGInfoDetailWebViewController" customClass="AGInfoDetailWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SDU-Jj-Ugf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C35-MH-yy7">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C35-MH-yy7" firstAttribute="top" secondItem="SDU-Jj-Ugf" secondAttribute="top" type="default" id="Iqi-Nc-IwL"/>
+                            <constraint firstItem="C35-MH-yy7" firstAttribute="leading" secondItem="SDU-Jj-Ugf" secondAttribute="leading" type="default" id="JXH-n0-HTI"/>
+                            <constraint firstItem="C35-MH-yy7" firstAttribute="trailing" secondItem="SDU-Jj-Ugf" secondAttribute="trailing" type="default" id="ai9-GC-Uea"/>
+                            <constraint firstItem="C35-MH-yy7" firstAttribute="bottom" secondItem="SDU-Jj-Ugf" secondAttribute="bottom" type="default" id="qDw-Zl-ikA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YyT-KP-ArP"/>
+                    <connections>
+                        <outlet property="infoWebView" destination="C35-MH-yy7" id="1aG-ql-z1K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqI-pG-6e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975" y="-2336"/>
+        </scene>
         <!--AGInfoListViewController-->
         <scene sceneID="fiy-bd-iYu">
             <objects>
@@ -197,11 +226,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoCell" textLabel="zJV-oL-b6b" style="IBUITableViewCellStyleDefault" id="y6U-Ik-bgo">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="InfoCell" textLabel="zJV-oL-b6b" style="IBUITableViewCellStyleDefault" id="y6U-Ik-bgo">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJV-oL-b6b">
@@ -222,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQW-UQ-5l9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1379" y="-304"/>
+            <point key="canvasLocation" x="-1395" y="-1936"/>
         </scene>
         <!--Info Detail View Controller-->
         <scene sceneID="sgL-l6-QbT">
@@ -237,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YrE-tP-BbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-965" y="-304"/>
+            <point key="canvasLocation" x="-983" y="-1350"/>
         </scene>
         <!--Navigation Controller - Info-->
         <scene sceneID="Yf1-57-H9K">
@@ -256,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcF-Ff-o28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1753" y="-304"/>
+            <point key="canvasLocation" x="-1769" y="-1936"/>
         </scene>
         <!--AGAnimalDetailViewController-->
         <scene sceneID="S06-Ut-Zbz">
@@ -633,67 +662,6 @@
         <image name="user.png" width="24" height="21"/>
         <image name="whiteStarFav.png" width="40" height="38"/>
     </resources>
-    <classes>
-        <class className="AGAnimalDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="favAnimalButtonPressed:"/>
-                <relationship kind="action" name="favCommentaryButtonPressed:"/>
-                <relationship kind="action" name="favFeedingButtonPressed:"/>
-                <relationship kind="action" name="pageChanged:"/>
-                <relationship kind="outlet" name="animalImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="animalNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="areaLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="chalkboardPageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="chalkboardScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="commentaryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="compassImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="directionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="distanceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="enclosureLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="favAnimalButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="favCommentaryButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="favFeedingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="feedingLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="funFactTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="mainScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="AGAnimalListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalListTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AGAnimalMapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGAnimalMapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="animalMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="AGInfoDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGInfoDetailViewController.h"/>
-        </class>
-        <class className="AGInfoListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGInfoListViewController.h"/>
-        </class>
-        <class className="AGMyZooListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AGMyZooListViewController.h"/>
-        </class>
-        <class className="AnimalFilterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnimalFilterViewController.h"/>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showDetails:"/>
-                <relationship kind="outlet" name="iosMapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
