@@ -16,7 +16,6 @@
 		D5135B59162F077700743CC5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5135B58162F077700743CC5 /* Default.png */; };
 		D5135B5B162F077700743CC5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5135B5A162F077700743CC5 /* Default@2x.png */; };
 		D5135B5D162F077700743CC5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5135B5C162F077700743CC5 /* Default-568h@2x.png */; };
-		D5135B65162F0DDA00743CC5 /* animalList.json in Resources */ = {isa = PBXBuildFile; fileRef = D5135B64162F0DDA00743CC5 /* animalList.json */; };
 		D5135B67162F0E0000743CC5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5135B66162F0E0000743CC5 /* Storyboard.storyboard */; };
 		D5135B6B162FEDFC00743CC5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5135B6A162FEDFC00743CC5 /* MapViewController.m */; };
 		D5135B6E162FEE0E00743CC5 /* AGAnimalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5135B6D162FEE0E00743CC5 /* AGAnimalListViewController.m */; };
@@ -68,8 +67,6 @@
 		D513C46F16AEF57B0096616D /* AGMyZooListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C46E16AEF57B0096616D /* AGMyZooListViewController.m */; };
 		D513C47B16AEF90A0096616D /* AGCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C47A16AEF8DC0096616D /* AGCoreDataHelper.m */; };
 		D513C48116AF2CB20096616D /* AGInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D513C48016AF2CB20096616D /* AGInfoDetailViewController.m */; };
-		D54ABA3016BBF7B6007AC6B0 /* restaurantList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA2F16BBF7B6007AC6B0 /* restaurantList.json */; };
-		D54ABA3616BBF9CE007AC6B0 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA3516BBF9CD007AC6B0 /* Location.m */; };
 		D54ABA3916BBF9EA007AC6B0 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA3816BBF9EA007AC6B0 /* Marker.m */; };
 		D54ABA3C16BBFA36007AC6B0 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA3B16BBFA36007AC6B0 /* Restaurant.m */; };
 		D54ABA3F16BBFAC1007AC6B0 /* AGJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA3E16BBFAC1007AC6B0 /* AGJSONParser.m */; };
@@ -79,6 +76,11 @@
 		D54ABA5A16BC8142007AC6B0 /* AGRestaurantListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA5916BC8142007AC6B0 /* AGRestaurantListTableCell.xib */; };
 		D54ABA5D16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA5C16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m */; };
 		D54ABA6016BC9AE1007AC6B0 /* ZooItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */; };
+		D54ABA6B16BD3E95007AC6B0 /* animalList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6716BD3E95007AC6B0 /* animalList.json */; };
+		D54ABA6C16BD3E95007AC6B0 /* enclosureList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6816BD3E95007AC6B0 /* enclosureList.json */; };
+		D54ABA6D16BD3E95007AC6B0 /* restaurantList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6916BD3E95007AC6B0 /* restaurantList.json */; };
+		D54ABA6E16BD3E95007AC6B0 /* serviceList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6A16BD3E95007AC6B0 /* serviceList.json */; };
+		D54ABA7116BD47DB007AC6B0 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA7016BD47DB007AC6B0 /* Location.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -159,7 +161,6 @@
 		D5135B58162F077700743CC5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D5135B5A162F077700743CC5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D5135B5C162F077700743CC5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D5135B64162F0DDA00743CC5 /* animalList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animalList.json; sourceTree = "<group>"; };
 		D5135B66162F0E0000743CC5 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		D5135B69162FEDFC00743CC5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ViewController/MapViewController.h; sourceTree = "<group>"; };
 		D5135B6A162FEDFC00743CC5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ViewController/MapViewController.m; sourceTree = "<group>"; };
@@ -201,8 +202,8 @@
 		D513C3B416A2AC0D0096616D /* compass5050@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compass5050@2x.png"; sourceTree = "<group>"; };
 		D513C3C416A388460096616D /* AGInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGInfoListViewController.h; path = ViewController/AGInfoListViewController.h; sourceTree = "<group>"; };
 		D513C3C516A388460096616D /* AGInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGInfoListViewController.m; path = ViewController/AGInfoListViewController.m; sourceTree = "<group>"; };
-		D513C3D916A60CB00096616D /* AGCompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGCompassView.h; path = ViewController/AGCompassView.h; sourceTree = "<group>"; };
-		D513C3DA16A60CB00096616D /* AGCompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGCompassView.m; path = ViewController/AGCompassView.m; sourceTree = "<group>"; };
+		D513C3D916A60CB00096616D /* AGCompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGCompassView.h; path = ../ViewController/AGCompassView.h; sourceTree = "<group>"; };
+		D513C3DA16A60CB00096616D /* AGCompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGCompassView.m; path = ../ViewController/AGCompassView.m; sourceTree = "<group>"; };
 		D513C3EC16A614810096616D /* AGStringUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGStringUtilities.h; path = Helper/AGStringUtilities.h; sourceTree = "<group>"; };
 		D513C3ED16A614810096616D /* AGStringUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGStringUtilities.m; path = Helper/AGStringUtilities.m; sourceTree = "<group>"; };
 		D513C3FC16A75E970096616D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -225,9 +226,6 @@
 		D513C47A16AEF8DC0096616D /* AGCoreDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AGCoreDataHelper.m; path = Helper/AGCoreDataHelper.m; sourceTree = "<group>"; };
 		D513C47F16AF2CB20096616D /* AGInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGInfoDetailViewController.h; path = ViewController/AGInfoDetailViewController.h; sourceTree = "<group>"; };
 		D513C48016AF2CB20096616D /* AGInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGInfoDetailViewController.m; path = ViewController/AGInfoDetailViewController.m; sourceTree = "<group>"; };
-		D54ABA2F16BBF7B6007AC6B0 /* restaurantList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurantList.json; sourceTree = "<group>"; };
-		D54ABA3416BBF9CD007AC6B0 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Entities/Location.h; sourceTree = "<group>"; };
-		D54ABA3516BBF9CD007AC6B0 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Entities/Location.m; sourceTree = "<group>"; };
 		D54ABA3716BBF9EA007AC6B0 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Marker.h; path = Entities/Marker.h; sourceTree = "<group>"; };
 		D54ABA3816BBF9EA007AC6B0 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Marker.m; path = Entities/Marker.m; sourceTree = "<group>"; };
 		D54ABA3A16BBFA36007AC6B0 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Restaurant.h; path = Entities/Restaurant.h; sourceTree = "<group>"; };
@@ -245,6 +243,12 @@
 		D54ABA5C16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGRestaurantDetailViewController..m; path = ViewController/AGRestaurantDetailViewController..m; sourceTree = "<group>"; };
 		D54ABA5E16BC9AD6007AC6B0 /* ZooItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZooItem.h; path = Entities/ZooItem.h; sourceTree = "<group>"; };
 		D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZooItem.m; path = Entities/ZooItem.m; sourceTree = "<group>"; };
+		D54ABA6716BD3E95007AC6B0 /* animalList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animalList.json; sourceTree = "<group>"; };
+		D54ABA6816BD3E95007AC6B0 /* enclosureList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enclosureList.json; sourceTree = "<group>"; };
+		D54ABA6916BD3E95007AC6B0 /* restaurantList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurantList.json; sourceTree = "<group>"; };
+		D54ABA6A16BD3E95007AC6B0 /* serviceList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = serviceList.json; sourceTree = "<group>"; };
+		D54ABA6F16BD47DB007AC6B0 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Entities/Location.h; sourceTree = "<group>"; };
+		D54ABA7016BD47DB007AC6B0 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Entities/Location.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -410,11 +414,10 @@
 		D5135B63162F0DDA00743CC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D54ABA2516BBEFE6007AC6B0 /* JSON */,
+				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
+				D54ABA6616BD3E95007AC6B0 /* JSON */,
 				D5F31B9116B2F27F005A798A /* HTML */,
 				D54ABA2316BBEFBF007AC6B0 /* Entities */,
-				D513C3FB16A75E970096616D /* Model.xcdatamodeld */,
-				D513C47C16AF2A400096616D /* Data */,
 				D513C44E16AE2E1B0096616D /* UserData */,
 				D5B0081E16300B4E008EB564 /* AGAnimal.h */,
 				D5B0081F16300B4E008EB564 /* AGAnimal.m */,
@@ -544,35 +547,19 @@
 			name = MyZooTab;
 			sourceTree = "<group>";
 		};
-		D513C47C16AF2A400096616D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		D54ABA2316BBEFBF007AC6B0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D54ABA6F16BD47DB007AC6B0 /* Location.h */,
+				D54ABA7016BD47DB007AC6B0 /* Location.m */,
 				D54ABA3A16BBFA36007AC6B0 /* Restaurant.h */,
 				D54ABA3B16BBFA36007AC6B0 /* Restaurant.m */,
 				D54ABA3716BBF9EA007AC6B0 /* Marker.h */,
 				D54ABA3816BBF9EA007AC6B0 /* Marker.m */,
-				D54ABA3416BBF9CD007AC6B0 /* Location.h */,
-				D54ABA3516BBF9CD007AC6B0 /* Location.m */,
 				D54ABA5E16BC9AD6007AC6B0 /* ZooItem.h */,
 				D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */,
 			);
 			name = Entities;
-			sourceTree = "<group>";
-		};
-		D54ABA2516BBEFE6007AC6B0 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				D5135B64162F0DDA00743CC5 /* animalList.json */,
-				D54ABA2F16BBF7B6007AC6B0 /* restaurantList.json */,
-			);
-			name = JSON;
 			sourceTree = "<group>";
 		};
 		D54ABA4F16BC7EE4007AC6B0 /* Restaurant */ = {
@@ -587,6 +574,17 @@
 				D54ABA5C16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m */,
 			);
 			name = Restaurant;
+			sourceTree = "<group>";
+		};
+		D54ABA6616BD3E95007AC6B0 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D54ABA6716BD3E95007AC6B0 /* animalList.json */,
+				D54ABA6816BD3E95007AC6B0 /* enclosureList.json */,
+				D54ABA6916BD3E95007AC6B0 /* restaurantList.json */,
+				D54ABA6A16BD3E95007AC6B0 /* serviceList.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		D568AA02163931C700270E8B /* Images */ = {
@@ -644,8 +642,6 @@
 				D571C759169CAE9700C63A04 /* AGAnimalDetailViewController.m */,
 				D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */,
 				D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */,
-				D513C3D916A60CB00096616D /* AGCompassView.h */,
-				D513C3DA16A60CB00096616D /* AGCompassView.m */,
 			);
 			name = AnimalDetailView;
 			sourceTree = "<group>";
@@ -665,6 +661,8 @@
 		D5B0082F1631427E008EB564 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D513C3D916A60CB00096616D /* AGCompassView.h */,
+				D513C3DA16A60CB00096616D /* AGCompassView.m */,
 			);
 			name = View;
 			path = Controller;
@@ -802,7 +800,6 @@
 				D5135B59162F077700743CC5 /* Default.png in Resources */,
 				D5135B5B162F077700743CC5 /* Default@2x.png in Resources */,
 				D5135B5D162F077700743CC5 /* Default-568h@2x.png in Resources */,
-				D5135B65162F0DDA00743CC5 /* animalList.json in Resources */,
 				D5135B67162F0E0000743CC5 /* Storyboard.storyboard in Resources */,
 				D5B00853163590B7008EB564 /* Icon-72.png in Resources */,
 				D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */,
@@ -887,8 +884,11 @@
 				D5F31BA716B2F47E005A798A /* zooRules.html in Resources */,
 				D5F31C0B16B56039005A798A /* HockeySDK.xcconfig in Resources */,
 				D5F31C0C16B56039005A798A /* HockeySDKResources.bundle in Resources */,
-				D54ABA3016BBF7B6007AC6B0 /* restaurantList.json in Resources */,
 				D54ABA5A16BC8142007AC6B0 /* AGRestaurantListTableCell.xib in Resources */,
+				D54ABA6B16BD3E95007AC6B0 /* animalList.json in Resources */,
+				D54ABA6C16BD3E95007AC6B0 /* enclosureList.json in Resources */,
+				D54ABA6D16BD3E95007AC6B0 /* restaurantList.json in Resources */,
+				D54ABA6E16BD3E95007AC6B0 /* serviceList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -926,7 +926,6 @@
 				D513C48116AF2CB20096616D /* AGInfoDetailViewController.m in Sources */,
 				D5F31B8616B2ED61005A798A /* AGInfoDetailWebViewController.m in Sources */,
 				D56D513516B6F5EA00105C0C /* AGInfoEntryViewController.m in Sources */,
-				D54ABA3616BBF9CE007AC6B0 /* Location.m in Sources */,
 				D54ABA3916BBF9EA007AC6B0 /* Marker.m in Sources */,
 				D54ABA3C16BBFA36007AC6B0 /* Restaurant.m in Sources */,
 				D54ABA3F16BBFAC1007AC6B0 /* AGJSONParser.m in Sources */,
@@ -935,6 +934,7 @@
 				D54ABA5816BC80F1007AC6B0 /* AGRestaurantListTableCell.m in Sources */,
 				D54ABA5D16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m in Sources */,
 				D54ABA6016BC9AE1007AC6B0 /* ZooItem.m in Sources */,
+				D54ABA7116BD47DB007AC6B0 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

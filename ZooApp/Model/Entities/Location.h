@@ -2,7 +2,7 @@
 //  Location.h
 //  ZooApp
 //
-//  Created by Andrea Gerlach on 01.02.13.
+//  Created by Andrea Gerlach on 02.02.13.
 //  Copyright (c) 2013 de.andreagerlach. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 @interface Location : NSManagedObject
 
+@property (nonatomic, retain) NSString * area;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
-@property (nonatomic, retain) NSString * area;
 @property (nonatomic, retain) ZooItem *zooItem;
 
 @end

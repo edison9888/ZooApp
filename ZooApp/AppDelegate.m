@@ -23,12 +23,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+   
+    // HOCKEY
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"eb31056e81e2d9ab29f65c608df60689"
                                                            delegate:self];
     [[BITHockeyManager sharedHockeyManager] startManager];
     
-    
+    // UPDATE CORE DATA FROM JSON FILES
+    [[AGJSONParser sharedInstance] updateCoreDataFromJSONFiles];
+
     
    // NSManagedObjectContext *context = [AGCoreDataHelper managedObjectContext];
    // AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:context];
@@ -48,7 +51,6 @@
     }
     */
     
-    [AGJSONParser parseRestaurantJSON];
     
     //[Animal parseJSONToAnimals];
     [AGAnimalManager sharedInstance];

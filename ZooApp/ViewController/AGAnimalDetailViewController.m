@@ -95,6 +95,13 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self updateFields];
+    
+    if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
+        self.favFeedingButton.hidden = YES;
+    }
+    if ([self.currentAnimal.commentaryTime isEqualToString:@"nicht öffentlich"]) {
+        self.favCommentaryButton.hidden = YES;
+    }
 }
 
 - (void)updateFields {
@@ -177,13 +184,7 @@
         [contentView addSubview:content];
         
         [self.chalkboardScrollView addSubview:contentView];
-        
-        if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
-            self.favFeedingButton.hidden = YES;
-        }
-        if ([self.currentAnimal.commentaryTime isEqualToString:@"nicht öffentlich"]) {
-            self.favCommentaryButton.hidden = YES;
-        }
+
     }
     
     self.chalkboardScrollView.contentSize = CGSizeMake(self.chalkboardScrollView.frame.size.width * chalkboardContent.count, self.chalkboardScrollView.frame.size.height);
@@ -193,6 +194,7 @@
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
+    
     // Update the page when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.chalkboardScrollView.frame.size.width;
     int page = floor((self.chalkboardScrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
