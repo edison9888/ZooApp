@@ -4,7 +4,45 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notificationIfClose" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="location" inverseEntity="ZooItem" syncable="YES"/>
+    </entity>
+    <entity name="Marker" representedClassName="Marker" syncable="YES">
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="marker" inverseEntity="ZooItem" syncable="YES"/>
+    </entity>
+    <entity name="Restaurant" representedClassName="Restaurant" parentEntity="ZooItem" syncable="YES">
+        <attribute name="additionalInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ambience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookingPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catering" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="food" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="key" value="value"/>
+            </userInfo>
+        </attribute>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openingHours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seats" optional="YES" attributeType="String" syncable="YES"/>
+        <userInfo>
+            <entry key="version" value="number"/>
+        </userInfo>
+    </entity>
+    <entity name="ZooItem" representedClassName="ZooItem" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="zooItem" inverseEntity="Location" syncable="YES"/>
+        <relationship name="marker" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Marker" inverseName="zooItem" inverseEntity="Marker" syncable="YES"/>
+    </entity>
     <elements>
         <element name="AGFavAnimal" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Location" positionX="-308" positionY="-123" width="128" height="105"/>
+        <element name="Marker" positionX="-315" positionY="9" width="128" height="105"/>
+        <element name="Restaurant" positionX="-81" positionY="45" width="128" height="165"/>
+        <element name="ZooItem" positionX="-110" positionY="-81" width="128" height="90"/>
     </elements>
 </model>

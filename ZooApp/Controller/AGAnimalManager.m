@@ -49,6 +49,10 @@ static AGAnimalManager *instance = nil;
     if (error != nil) {
         NSLog(@"Fehler: %@", [error localizedDescription]);
     }
+   
+    NSNumber *versionNumber = (NSNumber*)[animalListJSON objectForKey:@"version"];
+    
+    NSLog(@"Versionsnummer JSONArray %@", versionNumber);
     
     NSArray *animalArrayJSON = [animalListJSON objectForKey:@"animals"];
     

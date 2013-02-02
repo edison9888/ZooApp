@@ -1,32 +1,31 @@
 @font-face {
-	font-family: System Bold;
+	// font-family: Stratum2-Bold;
 	//src: url('Stratum2-Bold.ttf');
 }
 
 @font-face {
-	font-family: System;
+	//font-family: System;
 	//src: url('Stratum2-Regular.ttf');
 }
 
 body {
-	
+	font-family: Helvetica;
 	background-attachment: fixed;
     background-color: #FFDA7C;
 }
 
 h1 {
-	font-family: System Bold;
-	font-size: 14pt;
+	font-size: 18pt;
 	color: #d60000;
-	margin-left: 10px;
+	margin-left: 0px;
 	margin-top: 25px;
 }
 
 h2 {
-	font-family: System Bold;
 	font-size: 19pt;
 	color: #000000;
 	display: inline;
+    margin-left: 0px;
 	line-height: 19pt;
 	text-transform: uppercase;
 }
@@ -62,12 +61,12 @@ h2 {
 
 #content {
 	/*position: relative;*/
-	width: 255px;
-	margin-left: 27px;
+	width: 270px;
+	margin-left: 20px;
 }
 
 #heading {
-	width:250px;
+	width:270px;
 	/*background-image:url('PicAppName.png');*/
 	background-repeat: no-repeat;
 	margin-bottom: 10px;
@@ -98,7 +97,7 @@ h2 {
 }
 
 .date {
-	font-family: Stratum2-Bold;
+	//font-family: Stratum2-Bold;
 	font-size: 10pt;
 	color: #666666;
 	position: relative;
@@ -107,21 +106,21 @@ h2 {
 }
 
 .text {
-	font-family: Stratum2-Regular;
+	//font-family: Stratum2-Regular;
 	font-size: 11pt;
 	color: #000;
 	line-height: 5pt;
 }
 
 .textImp {
-	font-family: Stratum2-Regular;
+	//font-family: Stratum2-Regular;
 	font-size: 10pt;
 	color: #000;
 	line-height: 5pt;
 }
 
 .app {
-	font-family: Stratum2-Bold;
+	//font-family: Stratum2-Bold;
 	font-size: 10pt;
 	text-decoration: underline;
 	text-transform: uppercase;
@@ -137,7 +136,7 @@ h2 {
 }
 
 .employee {
-	font-family: Stratum2-Bold;
+	//font-family: Stratum2-Bold;
 	font-size: 6pt;
 	text-transform: uppercase;
 	color: #666666;
@@ -146,7 +145,7 @@ h2 {
 }
 
 .descr {
-	font-family: Stratum2-Regular;
+	//font-family: Stratum2-Regular;
 	color: #999999;
 }
 a {

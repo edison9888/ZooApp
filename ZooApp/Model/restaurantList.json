@@ -1,4 +1,5 @@
-{ "restaurants": [  
+{ "version":"1",
+  "restaurants": [
     {
         "name":"Marche Pakatan",
         "latitude":"52.512278",

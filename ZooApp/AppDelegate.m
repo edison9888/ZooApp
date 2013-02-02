@@ -12,6 +12,7 @@
 #import "AGRestaurantManager.h"
 #import "AGFavManager.h"
 #import "AGCoreDataHelper.h"
+#import "AGJSONParser.h"
 #import "AGFavAnimal.h"
 
 @interface AppDelegate (HockeySDK) //<BITHockeyManagerDelegate, BITUpdateManagerDelegate, BITCrashManagerDelegate>
@@ -29,7 +30,6 @@
     
     
     
-   
    // NSManagedObjectContext *context = [AGCoreDataHelper managedObjectContext];
    // AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:context];
    // favAnimal.name = @"Bonobo";
@@ -48,6 +48,8 @@
     }
     */
     
+    [AGJSONParser parseRestaurantJSON];
+    
     //[Animal parseJSONToAnimals];
     [AGAnimalManager sharedInstance];
     [AGRestaurantManager sharedInstance];
@@ -56,11 +58,14 @@
     [favManager addAnimalToFavsWithName:@"Bonobo" notified:NO];
     [favManager addAnimalToFavsWithName:@"Rothschildgiraffe" notified:NO];
 
+    NSMutableArray *favAnimals = [NSMutableArray new];
     
     for (AGFavAnimal *a in [favManager favouriteAnimalsArray]) {
-        NSLog(@"AGFavManager: Favorisiertes Tier gefunden: %@", a.name);
+        [favAnimals addObject:a.name];
     }
-    
+
+    NSLog(@"Favorisierte Tiere: %@", favAnimals);
+
 //    self.window.rootViewController.tabBarController.tabBar.tintColor = [UIColor orangeColor];
     
    // return YES;
@@ -105,6 +110,19 @@
         return [[UIDevice currentDevice] performSelector:@selector(uniqueIdentifier)];
 #endif
     return nil;
+}
+
+- (BOOL) isFirstRun {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"isFirstRun"]) {
+        return NO;
+    }
+    
+    [defaults setObject:[NSDate date] forKey:@"isFirstRun"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    return YES;
 }
  
 

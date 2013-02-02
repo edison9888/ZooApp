@@ -9,6 +9,7 @@
 #import "AGInfoListViewController.h"
 #import "AGInfoDetailViewController.h"
 #import "AGInfoDetailWebViewController.h"
+#import "AGRestaurantListViewController.h"
 
 @interface AGInfoListViewController ()
 
@@ -41,7 +42,7 @@
 
     NSArray *section1 = [[NSArray alloc] initWithObjects:@"guidedTours", @"no", @"no", @"events", nil];
 
-    NSArray *section2 = [[NSArray alloc] initWithObjects:@"wheelchairAccess", @"lockers", @"kidsService", @"zooRules", nil];
+    NSArray *section2 = [[NSArray alloc] initWithObjects:@"restaurants", @"wheelchairAccess", @"lockers", @"kidsService", @"zooRules", nil];
 
     self.htmlArray = [[NSArray alloc] initWithObjects:section0, section1, section2, nil];
     
@@ -49,7 +50,7 @@
     
     NSArray *zooInfoArray = [[NSArray alloc] initWithObjects:@"Öffnungszeiten", @"Preise", @"Anfahrt", nil];
     NSArray *activityArray = [[NSArray alloc] initWithObjects:@"Führungen", @"Fütterungszeiten", @"Kommentierungszeiten", @"Veranstaltungen", nil];
-    NSArray *serviceArray = [[NSArray alloc] initWithObjects:@"Barrierefreiheit", @"Schließfächer", @"Kinderservice", @"Zooordnung", nil];
+    NSArray *serviceArray = [[NSArray alloc] initWithObjects:@"Gastronomie", @"Barrierefreiheit", @"Schließfächer", @"Kinderservice", @"Zooordnung", nil];
     
     self.infoData = [NSMutableDictionary dictionary];
     [self.infoData setObject:zooInfoArray forKey:[self.keyArray objectAtIndex:0]];
@@ -168,6 +169,12 @@
         vc.title = @"No Web";
         [self.navigationController pushViewController:vc animated:YES];
     
+    } else if ([htmlString isEqualToString:@"restaurants"]) {
+        
+        AGInfoDetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGRestaurantListViewController"];
+        vc.title = @"Gastronomie";
+        [self.navigationController pushViewController:vc animated:YES];
+        
     } else {
     
         AGInfoDetailWebViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGInfoDetailWebViewController"];

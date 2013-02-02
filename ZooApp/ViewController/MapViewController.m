@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 #import "AGLocationManager.h"
-#import "AnimalDetailViewController.h"
+#import "AGAnimalDetailViewController.h"
 #import "AGLocation.h"
 
 @interface MapViewController ()
