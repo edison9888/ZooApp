@@ -1,22 +1,20 @@
 //
-//  ZooItem.m
+//  Event.m
 //  ZooApp
 //
 //  Created by Andrea Gerlach on 03.02.13.
 //  Copyright (c) 2013 de.andreagerlach. All rights reserved.
 //
 
-#import "ZooItem.h"
 #import "Event.h"
-#import "Location.h"
-#import "Marker.h"
+#import "ZooItem.h"
 
 
-@implementation ZooItem
+@implementation Event
 
 @dynamic name;
-@dynamic event;
-@dynamic location;
-@dynamic marker;
+@dynamic time;
+@dynamic type;
+@dynamic zooItem;
 
 @end
