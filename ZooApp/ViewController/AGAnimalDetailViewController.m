@@ -11,6 +11,10 @@
 #import "AGCompassView.h"
 #import "AGStringUtilities.h"
 #import "AGFavManager.h"
+#import "Location.h"
+#import "Enclosure.h"
+#import "Event.h"
+#import "AGCoreDataHelper.h"
 
 @interface AGAnimalDetailViewController ()
 
@@ -38,7 +42,8 @@
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Zooplan" style:UIBarButtonItemStylePlain target:self action:@selector(showAnimalOnMap)];
     self.navigationItem.rightBarButtonItem = mapButton;
     
-    
+ 
+   
     // LOCATION
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
@@ -51,10 +56,10 @@
     self.compassImageView.hidden = YES;
     UIImage *compassImage = [UIImage imageNamed:@"details_compass.png"];
     AGCompassView *compassView = [[AGCompassView alloc] initWithFrame:CGRectMake(227, 357, compassImage.size.width, compassImage.size.height)];
-    compassView.currentAnimal = self.currentAnimal;
+    compassView.currentZooItem = self.currentAnimal;
     compassView.backgroundColor = [UIColor clearColor];
     [self.mainScrollView addSubview:compassView];
-
+/*
     if ([[AGFavManager sharedInstance] getFavAnimalWithName:self.currentAnimal.name] != nil) {
         self.favAnimal = YES;
     } else {
@@ -62,9 +67,10 @@
     }
     self.favFeedingTime = NO;
     self.favCommentaryTime = NO;
-    
+  */   
     [self checkFavStatus];
     [self createChalkboardView];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,12 +102,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [self updateFields];
     
-    if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
+   /* if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
         self.favFeedingButton.hidden = YES;
     }
     if ([self.currentAnimal.commentaryTime isEqualToString:@"nicht öffentlich"]) {
         self.favCommentaryButton.hidden = YES;
     }
+    */
 }
 
 - (void)updateFields {
@@ -110,16 +117,31 @@
     
     self.animalImageView.image = [UIImage imageNamed:self.currentAnimal.image];
     self.animalNameLabel.text = self.currentAnimal.name;
-    self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure];
-    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.area];
+    self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure.name];
+    self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.location.area];
     self.distanceLabel.text = distance;
-    self.feedingLabel.text = self.currentAnimal.feedingTime;
-    self.commentaryLabel.text = self.currentAnimal.commentaryTime;
     
+    self.feedingLabel.text = @"nicht öffentlich";
+    self.commentaryLabel.text = @"nicht öffentlich";
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    
+     NSArray *evs = [self.currentAnimal.event allObjects];
+    for (Event* ev in evs) {
+        if ([ev.type isEqualToString:@"Fütterung"]) {
+            self.feedingLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:ev.time]];
+        }
+        if ([ev.type isEqualToString:@"Kommentierung"]) {
+            self.commentaryLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:ev.time]];
+        }
+    }
+
     self.funFactTextView.text = self.currentAnimal.funFact;
     CGRect frame = self.funFactTextView.frame;
     frame.size.height = self.funFactTextView.contentSize.height;
     self.funFactTextView.frame = frame;
+    
     
     [self updateDistanceToPoi];
     
@@ -177,7 +199,7 @@
         UILabel *content = [[UILabel alloc] initWithFrame:CGRectMake(10, 32, 210, 152)];
         content.text = [chalkboardContent objectAtIndex:i];
         content.textColor = [UIColor whiteColor];
-        content.lineBreakMode = UILineBreakModeWordWrap;
+        content.lineBreakMode = NSLineBreakByWordWrapping;
         content.numberOfLines = 0;
         content.backgroundColor = [UIColor clearColor];
         [content sizeToFit];
@@ -325,8 +347,8 @@
     }
     
     CLLocation *poiLocation = [[CLLocation alloc]
-                               initWithLatitude:self.currentAnimal.latitude.doubleValue
-                               longitude:self.currentAnimal.longitude.doubleValue];
+                               initWithLatitude:self.currentAnimal.location.latitude.doubleValue
+                               longitude:self.currentAnimal.location.longitude.doubleValue];
     
     CLLocation *userLocation = [[CLLocation alloc]
                                 initWithLatitude:self.currentLocation.coordinate.latitude

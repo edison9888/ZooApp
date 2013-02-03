@@ -75,8 +75,16 @@
     NSError *error;
     
     if (! [managedObjectContext save:&error]) {
-        NSLog(@"Fehler; %@", [error localizedDescription]);
-        return NO;
+        NSLog(@"Failed to save to data store: %@", [error localizedDescription]);
+		NSArray* detailedErrors = [[error userInfo] objectForKey:NSDetailedErrorsKey];
+		if(detailedErrors != nil && [detailedErrors count] > 0) {
+			for(NSError* detailedError in detailedErrors) {
+				NSLog(@"  DetailedError: %@", [detailedError userInfo]);
+			}
+		}
+		else {
+			NSLog(@"  %@", [error userInfo]);
+		}
     }
     
     return YES;
@@ -98,11 +106,22 @@
         NSLog(@"Fehler; %@", [error localizedDescription]);
         return nil;
     } else if (items.count == 0) {
-        NSLog(@"zero results");
+       // NSLog(@"zero results for %@", predicate);
         return nil;
     }
     
     return items;
+}
+
++ (BOOL) performFetchOnFetchedResultsController: (NSFetchedResultsController*) fetchedResultsController {
+    
+    NSError *error;
+    if (! [fetchedResultsController performFetch:&error]) {
+        NSLog(@"Fehler; %@", [error localizedDescription]);
+        return NO;
+    }
+    return  YES;
+    
 }
 
 @end

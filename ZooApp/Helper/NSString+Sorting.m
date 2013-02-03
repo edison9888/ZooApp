@@ -8,6 +8,10 @@
 
 #import "NSString+Sorting.h"
 
-@implementation NSString_Sorting
-
+@implementation NSString (Sorting)
+- (NSString *)stringGroupByFirstInitial {
+    if (!self.length || self.length == 1)
+        return self;
+    return [self substringToIndex:1];
+}
 @end

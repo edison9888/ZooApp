@@ -45,4 +45,12 @@
     return [NSString stringWithFormat: @"%@ m", [NSString stringWithFormat: @"%.0f", meters]];
 }
 
+- (NSString *)stringGroupByFirstInitial: (NSString*) string {
+    
+    NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX section");
+    if (!string.length || string.length == 1)
+        return string;
+    return [string substringToIndex:1];
+}
+
 @end

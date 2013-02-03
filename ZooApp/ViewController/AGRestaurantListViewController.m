@@ -79,8 +79,7 @@
     
     cell.selectedBackgroundView = selectionView;
     
-   Restaurant *res = [[AGCoreDataHelper fetchEntitiesForClass:[Restaurant class] withPredicate:nil inManagedObjectContext:[AGCoreDataHelper managedObjectContext]] objectAtIndex:indexPath.row];
-    
+    Restaurant *res = [[AGCoreDataHelper fetchEntitiesForClass:[Restaurant class] withPredicate:nil inManagedObjectContext:[AGCoreDataHelper managedObjectContext]] objectAtIndex:indexPath.row];
     
     cell.restaurantName.text = res.name;
     cell.subtitle.text = res.ambience;

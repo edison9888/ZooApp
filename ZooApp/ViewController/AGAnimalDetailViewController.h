@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "AGAnimal.h"
+#import "Animal.h"
 
 @interface AGAnimalDetailViewController : UIViewController <UIScrollViewDelegate, UIPageViewControllerDelegate, CLLocationManagerDelegate, UIAlertViewDelegate>
 
@@ -36,7 +36,7 @@
 
 
 // MODEL
-@property (nonatomic, strong) AGAnimal *currentAnimal;
+@property (nonatomic, strong) Animal *currentAnimal;
 
 
 @property (assign) BOOL favAnimal;

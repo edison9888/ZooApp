@@ -10,6 +10,13 @@
 
 @interface AGJSONParser : NSObject
 
+@property (nonatomic, retain) NSManagedObjectContext *context;
+
+@property (nonatomic, strong) NSDictionary* eventJSON;
+@property (nonatomic, strong) NSDictionary* eventList;
+@property (nonatomic, strong) NSNumber* versionEventJSON;
+@property (nonatomic, strong) NSNumber* versionEventCoreData;
+
 @property (nonatomic, strong) NSDictionary* animalJSON;
 @property (nonatomic, strong) NSDictionary* animalList;
 @property (nonatomic, strong) NSNumber* versionAnimalJSON;

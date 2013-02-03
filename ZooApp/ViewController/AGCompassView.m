@@ -7,6 +7,7 @@
 //
 
 #import "AGCompassView.h"
+#import "Location.h"
 
 #define degreesToRadians(x) (M_PI * x / 180.0)
 #define RAD_TO_DEG(r) ((r) * (180 / M_PI))
@@ -73,7 +74,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
     
-    self.poiLocation = [[CLLocation alloc] initWithLatitude:self.currentAnimal.latitude.doubleValue longitude:self.currentAnimal.longitude.doubleValue];
+    self.poiLocation = [[CLLocation alloc] initWithLatitude:self.currentZooItem.location.latitude.doubleValue longitude:self.currentZooItem.location.longitude.doubleValue];
     
     float angle = [self angleFromCoordinate:self.currentLocation.coordinate toCoordinate:self.poiLocation.coordinate];
     

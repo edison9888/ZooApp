@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString_Sorting : NSObject
-
+@interface NSString (Sorting)
+- (NSString *)stringGroupByFirstInitial;
 @end

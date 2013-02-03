@@ -75,12 +75,17 @@
 		D54ABA5816BC80F1007AC6B0 /* AGRestaurantListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA5716BC80F1007AC6B0 /* AGRestaurantListTableCell.m */; };
 		D54ABA5A16BC8142007AC6B0 /* AGRestaurantListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA5916BC8142007AC6B0 /* AGRestaurantListTableCell.xib */; };
 		D54ABA5D16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA5C16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m */; };
-		D54ABA6016BC9AE1007AC6B0 /* ZooItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */; };
 		D54ABA6B16BD3E95007AC6B0 /* animalList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6716BD3E95007AC6B0 /* animalList.json */; };
 		D54ABA6C16BD3E95007AC6B0 /* enclosureList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6816BD3E95007AC6B0 /* enclosureList.json */; };
 		D54ABA6D16BD3E95007AC6B0 /* restaurantList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6916BD3E95007AC6B0 /* restaurantList.json */; };
 		D54ABA6E16BD3E95007AC6B0 /* serviceList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA6A16BD3E95007AC6B0 /* serviceList.json */; };
 		D54ABA7116BD47DB007AC6B0 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA7016BD47DB007AC6B0 /* Location.m */; };
+		D54ABA8116BD7E4D007AC6B0 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA8016BD7E4C007AC6B0 /* Service.m */; };
+		D54ABA8816BD7E4E007AC6B0 /* Enclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABA8716BD7E4E007AC6B0 /* Enclosure.m */; };
+		D54ABA9E16BE7028007AC6B0 /* eventList.json in Resources */ = {isa = PBXBuildFile; fileRef = D54ABA9D16BE7028007AC6B0 /* eventList.json */; };
+		D54ABAAC16BE89D5007AC6B0 /* ZooItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABAAB16BE89D5007AC6B0 /* ZooItem.m */; };
+		D54ABAAF16BE89E3007AC6B0 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABAAE16BE89E3007AC6B0 /* Animal.m */; };
+		D54ABAB216BE8A6A007AC6B0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D54ABAB116BE8A6A007AC6B0 /* Event.m */; };
 		D55D27FB163AEEDC00B715DB /* amurleopard.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F5163AEEDC00B715DB /* amurleopard.png */; };
 		D55D27FC163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */; };
 		D55D27FD163AEEDC00B715DB /* diademSeeigel.png in Resources */ = {isa = PBXBuildFile; fileRef = D55D27F7163AEEDC00B715DB /* diademSeeigel.png */; };
@@ -114,9 +119,10 @@
 		D5B0083516314506008EB564 /* AGLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0083416314506008EB564 /* AGLocation.m */; };
 		D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */; };
 		D5B00853163590B7008EB564 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B00852163590B6008EB564 /* Icon-72.png */; };
-		D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */; };
+		D5B0085E163818BF008EB564 /* AGAnimalFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0085D163818BF008EB564 /* AGAnimalFilterViewController.m */; };
 		D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */; };
 		D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0086216383020008EB564 /* AnimalFilterTableCell.m */; };
+		D5BE608716BEE4BF006DB696 /* NSString+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BE608616BEE4BF006DB696 /* NSString+Sorting.m */; };
 		D5DDE864169B1F3F0009048B /* AGAnimalListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE863169B1F3F0009048B /* AGAnimalListTableCell.xib */; };
 		D5DDE875169B35100009048B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE867169B35100009048B /* background.jpg */; };
 		D5DDE876169B35100009048B /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE868169B35100009048B /* background@2x.jpg */; };
@@ -241,14 +247,23 @@
 		D54ABA5916BC8142007AC6B0 /* AGRestaurantListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AGRestaurantListTableCell.xib; path = ViewController/AGRestaurantListTableCell.xib; sourceTree = "<group>"; };
 		D54ABA5B16BC8F88007AC6B0 /* AGRestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGRestaurantDetailViewController.h; path = ViewController/AGRestaurantDetailViewController.h; sourceTree = "<group>"; };
 		D54ABA5C16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGRestaurantDetailViewController..m; path = ViewController/AGRestaurantDetailViewController..m; sourceTree = "<group>"; };
-		D54ABA5E16BC9AD6007AC6B0 /* ZooItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZooItem.h; path = Entities/ZooItem.h; sourceTree = "<group>"; };
-		D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZooItem.m; path = Entities/ZooItem.m; sourceTree = "<group>"; };
 		D54ABA6716BD3E95007AC6B0 /* animalList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animalList.json; sourceTree = "<group>"; };
 		D54ABA6816BD3E95007AC6B0 /* enclosureList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enclosureList.json; sourceTree = "<group>"; };
 		D54ABA6916BD3E95007AC6B0 /* restaurantList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restaurantList.json; sourceTree = "<group>"; };
 		D54ABA6A16BD3E95007AC6B0 /* serviceList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = serviceList.json; sourceTree = "<group>"; };
 		D54ABA6F16BD47DB007AC6B0 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = Entities/Location.h; sourceTree = "<group>"; };
 		D54ABA7016BD47DB007AC6B0 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = Entities/Location.m; sourceTree = "<group>"; };
+		D54ABA7F16BD7E4C007AC6B0 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Service.h; path = Entities/Service.h; sourceTree = "<group>"; };
+		D54ABA8016BD7E4C007AC6B0 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Service.m; path = Entities/Service.m; sourceTree = "<group>"; };
+		D54ABA8616BD7E4E007AC6B0 /* Enclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enclosure.h; path = Entities/Enclosure.h; sourceTree = "<group>"; };
+		D54ABA8716BD7E4E007AC6B0 /* Enclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enclosure.m; path = Entities/Enclosure.m; sourceTree = "<group>"; };
+		D54ABA9D16BE7028007AC6B0 /* eventList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eventList.json; sourceTree = "<group>"; };
+		D54ABAAA16BE89D4007AC6B0 /* ZooItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZooItem.h; path = Entities/ZooItem.h; sourceTree = "<group>"; };
+		D54ABAAB16BE89D5007AC6B0 /* ZooItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZooItem.m; path = Entities/ZooItem.m; sourceTree = "<group>"; };
+		D54ABAAD16BE89E3007AC6B0 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = Entities/Animal.h; sourceTree = "<group>"; };
+		D54ABAAE16BE89E3007AC6B0 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = Entities/Animal.m; sourceTree = "<group>"; };
+		D54ABAB016BE8A6A007AC6B0 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = Entities/Event.h; sourceTree = "<group>"; };
+		D54ABAB116BE8A6A007AC6B0 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = Entities/Event.m; sourceTree = "<group>"; };
 		D55D27F5163AEEDC00B715DB /* amurleopard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amurleopard.png; sourceTree = "<group>"; };
 		D55D27F6163AEEDC00B715DB /* azurblauerPfeilgiftfrosch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azurblauerPfeilgiftfrosch.png; sourceTree = "<group>"; };
 		D55D27F7163AEEDC00B715DB /* diademSeeigel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diademSeeigel.png; sourceTree = "<group>"; };
@@ -289,11 +304,13 @@
 		D5B0084216356F15008EB564 /* AGAnimalMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalMapViewController.h; path = ViewController/AGAnimalMapViewController.h; sourceTree = "<group>"; };
 		D5B0084316356F15008EB564 /* AGAnimalMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalMapViewController.m; path = ViewController/AGAnimalMapViewController.m; sourceTree = "<group>"; };
 		D5B00852163590B6008EB564 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterViewController.h; path = ViewController/AnimalFilterViewController.h; sourceTree = "<group>"; };
-		D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterViewController.m; path = ViewController/AnimalFilterViewController.m; sourceTree = "<group>"; };
+		D5B0085C163818BF008EB564 /* AGAnimalFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAnimalFilterViewController.h; path = ViewController/AGAnimalFilterViewController.h; sourceTree = "<group>"; };
+		D5B0085D163818BF008EB564 /* AGAnimalFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAnimalFilterViewController.m; path = ViewController/AGAnimalFilterViewController.m; sourceTree = "<group>"; };
 		D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimalFilterTableCell.xib; path = ViewController/AnimalFilterTableCell.xib; sourceTree = "<group>"; };
 		D5B0086116383020008EB564 /* AnimalFilterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimalFilterTableCell.h; path = ViewController/AnimalFilterTableCell.h; sourceTree = "<group>"; };
 		D5B0086216383020008EB564 /* AnimalFilterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterTableCell.m; path = ViewController/AnimalFilterTableCell.m; sourceTree = "<group>"; };
+		D5BE608516BEE4BE006DB696 /* NSString+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Sorting.h"; path = "Helper/NSString+Sorting.h"; sourceTree = "<group>"; };
+		D5BE608616BEE4BF006DB696 /* NSString+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Sorting.m"; path = "Helper/NSString+Sorting.m"; sourceTree = "<group>"; };
 		D5DDE863169B1F3F0009048B /* AGAnimalListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AGAnimalListTableCell.xib; path = ViewController/AGAnimalListTableCell.xib; sourceTree = "<group>"; };
 		D5DDE867169B35100009048B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		D5DDE868169B35100009048B /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
@@ -523,6 +540,8 @@
 				D513C3ED16A614810096616D /* AGStringUtilities.m */,
 				D513C45B16AEC2CC0096616D /* AGAlertView.h */,
 				D513C45C16AEC2CC0096616D /* AGAlertView.m */,
+				D5BE608516BEE4BE006DB696 /* NSString+Sorting.h */,
+				D5BE608616BEE4BF006DB696 /* NSString+Sorting.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -550,14 +569,22 @@
 		D54ABA2316BBEFBF007AC6B0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D54ABAB016BE8A6A007AC6B0 /* Event.h */,
+				D54ABAB116BE8A6A007AC6B0 /* Event.m */,
+				D54ABAAD16BE89E3007AC6B0 /* Animal.h */,
+				D54ABAAE16BE89E3007AC6B0 /* Animal.m */,
+				D54ABAAA16BE89D4007AC6B0 /* ZooItem.h */,
+				D54ABAAB16BE89D5007AC6B0 /* ZooItem.m */,
+				D54ABA8616BD7E4E007AC6B0 /* Enclosure.h */,
+				D54ABA8716BD7E4E007AC6B0 /* Enclosure.m */,
+				D54ABA7F16BD7E4C007AC6B0 /* Service.h */,
+				D54ABA8016BD7E4C007AC6B0 /* Service.m */,
 				D54ABA6F16BD47DB007AC6B0 /* Location.h */,
 				D54ABA7016BD47DB007AC6B0 /* Location.m */,
 				D54ABA3A16BBFA36007AC6B0 /* Restaurant.h */,
 				D54ABA3B16BBFA36007AC6B0 /* Restaurant.m */,
 				D54ABA3716BBF9EA007AC6B0 /* Marker.h */,
 				D54ABA3816BBF9EA007AC6B0 /* Marker.m */,
-				D54ABA5E16BC9AD6007AC6B0 /* ZooItem.h */,
-				D54ABA5F16BC9AD9007AC6B0 /* ZooItem.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -579,6 +606,7 @@
 		D54ABA6616BD3E95007AC6B0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D54ABA9D16BE7028007AC6B0 /* eventList.json */,
 				D54ABA6716BD3E95007AC6B0 /* animalList.json */,
 				D54ABA6816BD3E95007AC6B0 /* enclosureList.json */,
 				D54ABA6916BD3E95007AC6B0 /* restaurantList.json */,
@@ -671,13 +699,9 @@
 		D5B00859163817FE008EB564 /* AnimalTab */ = {
 			isa = PBXGroup;
 			children = (
+				D5BE608916BF1E7F006DB696 /* AnimalFilterView */,
 				D571C75B169CB4CD00C63A04 /* AnimalListView */,
 				D571C756169CAE5E00C63A04 /* AnimalDetailView */,
-				D5B0085C163818BF008EB564 /* AnimalFilterViewController.h */,
-				D5B0085D163818BF008EB564 /* AnimalFilterViewController.m */,
-				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
-				D5B0086116383020008EB564 /* AnimalFilterTableCell.h */,
-				D5B0086216383020008EB564 /* AnimalFilterTableCell.m */,
 			);
 			name = AnimalTab;
 			sourceTree = "<group>";
@@ -689,6 +713,18 @@
 				D5135B6A162FEDFC00743CC5 /* MapViewController.m */,
 			);
 			name = MapTab;
+			sourceTree = "<group>";
+		};
+		D5BE608916BF1E7F006DB696 /* AnimalFilterView */ = {
+			isa = PBXGroup;
+			children = (
+				D5B0085C163818BF008EB564 /* AGAnimalFilterViewController.h */,
+				D5B0085D163818BF008EB564 /* AGAnimalFilterViewController.m */,
+				D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */,
+				D5B0086116383020008EB564 /* AnimalFilterTableCell.h */,
+				D5B0086216383020008EB564 /* AnimalFilterTableCell.m */,
+			);
+			name = AnimalFilterView;
 			sourceTree = "<group>";
 		};
 		D5DDE866169B35100009048B /* Wood */ = {
@@ -889,6 +925,7 @@
 				D54ABA6C16BD3E95007AC6B0 /* enclosureList.json in Resources */,
 				D54ABA6D16BD3E95007AC6B0 /* restaurantList.json in Resources */,
 				D54ABA6E16BD3E95007AC6B0 /* serviceList.json in Resources */,
+				D54ABA9E16BE7028007AC6B0 /* eventList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,7 +943,7 @@
 				D5B0082016300B4E008EB564 /* AGAnimal.m in Sources */,
 				D5B0083516314506008EB564 /* AGLocation.m in Sources */,
 				D5B0084416356F15008EB564 /* AGAnimalMapViewController.m in Sources */,
-				D5B0085E163818BF008EB564 /* AnimalFilterViewController.m in Sources */,
+				D5B0085E163818BF008EB564 /* AGAnimalFilterViewController.m in Sources */,
 				D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */,
 				D5AF86151638661900129120 /* Colors.m in Sources */,
 				D568AA2416396C6100270E8B /* AGAnimalManager.m in Sources */,
@@ -933,8 +970,13 @@
 				D54ABA5516BC808D007AC6B0 /* AGAnimalListTableCell.m in Sources */,
 				D54ABA5816BC80F1007AC6B0 /* AGRestaurantListTableCell.m in Sources */,
 				D54ABA5D16BC8F89007AC6B0 /* AGRestaurantDetailViewController..m in Sources */,
-				D54ABA6016BC9AE1007AC6B0 /* ZooItem.m in Sources */,
 				D54ABA7116BD47DB007AC6B0 /* Location.m in Sources */,
+				D54ABA8116BD7E4D007AC6B0 /* Service.m in Sources */,
+				D54ABA8816BD7E4E007AC6B0 /* Enclosure.m in Sources */,
+				D54ABAAC16BE89D5007AC6B0 /* ZooItem.m in Sources */,
+				D54ABAAF16BE89E3007AC6B0 /* Animal.m in Sources */,
+				D54ABAB216BE8A6A007AC6B0 /* Event.m in Sources */,
+				D5BE608716BEE4BF006DB696 /* NSString+Sorting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

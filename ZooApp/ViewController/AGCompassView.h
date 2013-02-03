@@ -15,7 +15,6 @@
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, strong) UIView *compassContainer;
-@property (nonatomic, strong) AGAnimal *currentAnimal;
 @property (nonatomic, strong) ZooItem *currentZooItem;
 @property (nonatomic, strong) CLLocation *poiLocation;
 @property (nonatomic, strong) CLLocation *currentLocation;

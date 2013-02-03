@@ -22,4 +22,6 @@
 
 + (NSArray*) fetchEntitiesForClass: (Class) agClass withPredicate: (NSPredicate*) predicate inManagedObjectContext: (NSManagedObjectContext*) managedObjectContext;
 
++ (BOOL) performFetchOnFetchedResultsController: (NSFetchedResultsController*) fetchedResultsController;
+
 @end

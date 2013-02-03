@@ -121,7 +121,7 @@
         UILabel *content = [[UILabel alloc] initWithFrame:CGRectMake(10, 32, 210, 152)];
         content.text = [chalkboardContent objectAtIndex:i];
         content.textColor = [UIColor whiteColor];
-        content.lineBreakMode = UILineBreakModeWordWrap;
+        content.lineBreakMode = NSLineBreakByWordWrapping;
         content.numberOfLines = 0;
         content.backgroundColor = [UIColor clearColor];
         [content sizeToFit];

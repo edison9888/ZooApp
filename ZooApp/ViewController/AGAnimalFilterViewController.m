@@ -6,18 +6,18 @@
 //  Copyright (c) 2012 de.andreagerlach. All rights reserved.
 //
 
-#import "AnimalFilterViewController.h"
+#import "AGAnimalFilterViewController.h"
 #import "AnimalFilterTableCell.h"
 #import "AGAnimalListViewController.h"
 #import "AGAnimalManager.h"
 
-@interface AnimalFilterViewController ()
+@interface AGAnimalFilterViewController ()
 
 
 
 @end
 
-@implementation AnimalFilterViewController
+@implementation AGAnimalFilterViewController
 
     AGAnimalManager *aM;
 
@@ -34,6 +34,11 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.barButtonItemDone = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(barButtonItemDonePressed:)];
+    self.navigationItem.rightBarButtonItem = self.barButtonItemDone;
+
+    self.title = @"Tierfilter";
     
     aM = [AGAnimalManager sharedInstance];
     
@@ -65,6 +70,11 @@
     [self.filterCategoryData setObject:animalCategoryFilterOption forKey:[self.filterOptions objectAtIndex:1]];
     [self.filterCategoryData setObject:areaCategoryFilterOption forKey:[self.filterOptions objectAtIndex:2]];
 
+}
+
+
+- (void) barButtonItemDonePressed: (id) sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

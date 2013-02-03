@@ -4,6 +4,32 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notificationIfClose" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
+    <entity name="Animal" representedClassName="Animal" parentEntity="ZooItem" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enemies" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="food" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="funFact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="habitat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maximumAge" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="propagation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="relationship" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="socialStructure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="threadState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="enclosure" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Enclosure" inverseName="animals" inverseEntity="Enclosure" syncable="YES"/>
+    </entity>
+    <entity name="Enclosure" representedClassName="Enclosure" parentEntity="ZooItem" syncable="YES">
+        <attribute name="additionalInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="animals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Animal" inverseName="enclosure" inverseEntity="Animal" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="event" inverseEntity="ZooItem" syncable="YES"/>
+    </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
@@ -33,16 +59,24 @@
             <entry key="version" value="number"/>
         </userInfo>
     </entity>
+    <entity name="Service" representedClassName="Service" parentEntity="ZooItem" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="ZooItem" representedClassName="ZooItem" isAbstract="YES" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="zooItem" inverseEntity="Location" syncable="YES"/>
-        <relationship name="marker" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Marker" inverseName="zooItem" inverseEntity="Marker" syncable="YES"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="zooItem" inverseEntity="Event" syncable="YES"/>
+        <relationship name="location" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="zooItem" inverseEntity="Location" syncable="YES"/>
+        <relationship name="marker" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Marker" inverseName="zooItem" inverseEntity="Marker" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AGFavAnimal" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="AGFavAnimal" positionX="261" positionY="-27" width="128" height="75"/>
+        <element name="Animal" positionX="-297" positionY="48" width="128" height="255"/>
+        <element name="Enclosure" positionX="-101" positionY="171" width="128" height="75"/>
+        <element name="Event" positionX="-641" positionY="75" width="128" height="105"/>
         <element name="Location" positionX="-308" positionY="-123" width="128" height="105"/>
-        <element name="Marker" positionX="-315" positionY="9" width="128" height="105"/>
-        <element name="Restaurant" positionX="-81" positionY="45" width="128" height="165"/>
-        <element name="ZooItem" positionX="-110" positionY="-81" width="128" height="90"/>
+        <element name="Marker" positionX="117" positionY="-123" width="128" height="105"/>
+        <element name="Restaurant" positionX="54" positionY="171" width="128" height="165"/>
+        <element name="Service" positionX="124" positionY="90" width="128" height="60"/>
+        <element name="ZooItem" positionX="-110" positionY="-81" width="128" height="105"/>
     </elements>
 </model>

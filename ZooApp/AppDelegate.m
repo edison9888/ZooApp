@@ -53,7 +53,7 @@
     
     
     //[Animal parseJSONToAnimals];
-    [AGAnimalManager sharedInstance];
+   // [AGAnimalManager sharedInstance];
     [AGRestaurantManager sharedInstance];
    
     AGFavManager *favManager = [AGFavManager sharedInstance];
