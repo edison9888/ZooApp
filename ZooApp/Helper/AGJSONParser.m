@@ -14,8 +14,8 @@
 #import "Restaurant.h"
 #import "Service.h"
 #import "Location.h"
-#import "Marker.h"
 #import "Event.h"
+#import "AGConstants.h"
 
 @implementation AGJSONParser
 
@@ -99,7 +99,6 @@ static AGJSONParser *instance = nil;
     NSDictionary *evDict = [[NSDictionary alloc] initWithObjects:[[NSArray alloc] initWithObjects:self.versionEventJSON, nil] forKeys:[[NSArray alloc] initWithObjects:@"version", nil]];
     [eventEntityDescription setUserInfo:evDict];
        
-    
     NSEntityDescription *animalEntityDescription = [NSEntityDescription entityForName:@"Animal" inManagedObjectContext:self.context];
     NSDictionary *aniDict = [[NSDictionary alloc] initWithObjects:[[NSArray alloc] initWithObjects:self.versionAnimalJSON, nil] forKeys:[[NSArray alloc] initWithObjects:@"version", nil]];
     [animalEntityDescription setUserInfo:aniDict];
@@ -165,7 +164,7 @@ static AGJSONParser *instance = nil;
 
 # pragma mark - save JSON dictionaries as Core Data objects
 
-- (Location*) createAndAddLocationToCoreDataWithLatitude: (NSString*) latitude longitude: (NSString*) longitude andArea: (NSString*) area {
+- (Location*) createAndAddLocationToCoreDataWithLatitude: (NSString*) latitude longitude: (NSString*) longitude area: (NSString*) area title: (NSString*) title subtitle: (NSString*) subtitle andIconPath: (NSString*) iconPath {
     
     Location *location = [AGCoreDataHelper insertManagedObjectOfClass:[Location class] inManagedObjectContext:self.context];
     
@@ -174,23 +173,13 @@ static AGJSONParser *instance = nil;
     location.latitude = [f numberFromString:latitude];
     location.longitude = [f numberFromString:longitude];
     location.area = area;
+    location.title = title;
+    location.subtitle = subtitle;
+    location.icon = iconPath;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
     return location;
-}
-
-- (Marker*) createAndAddMarkerToCoreDataWithTitle: (NSString*) title subtitle: (NSString*) subtitle andIcon: (NSString*) iconPath {
-    
-    Marker *marker = [AGCoreDataHelper insertManagedObjectOfClass:[Marker class] inManagedObjectContext:self.context];
-    
-    marker.title = title;
-    marker.subtitle = subtitle;
-    marker.icon = iconPath;
-    
-    [AGCoreDataHelper saveManagedObjectContext:self.context];
-    
-    return marker;
 }
 
 - (void) createAndAddEventToCoreData: (NSDictionary*) a {
@@ -223,10 +212,7 @@ static AGJSONParser *instance = nil;
   //  NSLog(@"[AGJSONParser] createAndAddAnimalToCoreData");
 
     // create Location
-    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] andArea:[a objectForKey:@"area"]];
-    
-    // create Marker
-    Marker *marker = [self createAndAddMarkerToCoreDataWithTitle:[a objectForKey:@"name"] subtitle:[a objectForKey:@"ambience"]andIcon:nil];
+    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"habitat"] andIconPath:cAnimalAnnotationIconPath];
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -249,8 +235,6 @@ static AGJSONParser *instance = nil;
     animal.image = [a objectForKey:@"image"];
     
     animal.location = location;
-    animal.marker = marker;
-
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -278,7 +262,6 @@ static AGJSONParser *instance = nil;
     [enclosure addAnimalsObject:animal];
     
     location.zooItem = animal;
-    marker.zooItem = animal;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -289,10 +272,7 @@ static AGJSONParser *instance = nil;
    // NSLog(@"[AGJSONParser] createAndAddEnclosureToCoreData");
 
     // create Location
-    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] andArea:[a objectForKey:@"area"]];
-    
-    // create Marker
-    Marker *marker = [self createAndAddMarkerToCoreDataWithTitle:[a objectForKey:@"name"] subtitle:[a objectForKey:@"ambience"]andIcon:nil];
+    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"area"] andIconPath:cEnclosureAnnotationIconPath];
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -302,12 +282,10 @@ static AGJSONParser *instance = nil;
     enclosure.additionalInfo = [a objectForKey:@"additionalInfo"];
     
     enclosure.location = location;
-    enclosure.marker = marker;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
     location.zooItem = enclosure;
-    marker.zooItem = enclosure;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -319,11 +297,8 @@ static AGJSONParser *instance = nil;
    // NSLog(@"[AGJSONParser] createAndAddRestaurantToCoreData");
 
     // create Location
-    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] andArea:[a objectForKey:@"area"]];
+    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"catering"] andIconPath:cRestaurantAnnotationIconPath];
     
-    // create Marker
-    Marker *marker = [self createAndAddMarkerToCoreDataWithTitle:[a objectForKey:@"name"] subtitle:[a objectForKey:@"ambience"]andIcon:nil];
-
     [AGCoreDataHelper saveManagedObjectContext:self.context];
 
     Restaurant *restaurant = [AGCoreDataHelper insertManagedObjectOfClass:[Restaurant class] inManagedObjectContext:self.context];
@@ -339,12 +314,10 @@ static AGJSONParser *instance = nil;
     restaurant.image = [a objectForKey:@"image"];
     
     restaurant.location = location;
-    restaurant.marker = marker;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
     location.zooItem = restaurant;
-    marker.zooItem = restaurant;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
@@ -355,12 +328,9 @@ static AGJSONParser *instance = nil;
    // NSLog(@"[AGJSONParser] createAndAddServiceToCoreData");
     
     // create Location
-    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] andArea:[a objectForKey:@"area"]];
+    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"type"] andIconPath:cServiceAnnotationIconPath];
     
-    // create Marker
-    Marker *marker = [self createAndAddMarkerToCoreDataWithTitle:[a objectForKey:@"name"] subtitle:[a objectForKey:@"ambience"]andIcon:nil];
-
-    [AGCoreDataHelper saveManagedObjectContext:self.context];
+   [AGCoreDataHelper saveManagedObjectContext:self.context];
     
     Service *service = [AGCoreDataHelper insertManagedObjectOfClass:[Service class] inManagedObjectContext:self.context];
     
@@ -368,12 +338,10 @@ static AGJSONParser *instance = nil;
     service.type = [a objectForKey:@"type"];
     
     service.location = location;
-    service.marker = marker;
-
+   
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     
     location.zooItem = service;
-    marker.zooItem = service;
     
     [AGCoreDataHelper saveManagedObjectContext:self.context];
     

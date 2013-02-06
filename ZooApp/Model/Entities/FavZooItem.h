@@ -1,18 +1,20 @@
 //
-//  AGFavAnimal.h
+//  FavZooItem.h
 //  ZooApp
 //
-//  Created by Andrea Gerlach on 22.01.13.
+//  Created by Andrea Gerlach on 06.02.13.
 //  Copyright (c) 2013 de.andreagerlach. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class ZooItem;
 
-@interface AGFavAnimal : NSManagedObject
+@interface FavZooItem : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * notificationIfClose;
+@property (nonatomic, retain) NSString * type;
+@property (nonatomic, retain) ZooItem *zooItem;
 
 @end

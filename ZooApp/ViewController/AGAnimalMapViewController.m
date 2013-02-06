@@ -8,7 +8,7 @@
 
 #import "AGAnimalMapViewController.h"
 #import "Location.h"
-#import "Marker.h"
+//#import "Marker.h"
 #import "AGLocation.h"
 
 @implementation AGAnimalMapViewController
@@ -27,11 +27,8 @@
     // display the region
     [self.animalMapView setRegion:viewRegion animated:YES];
     
-    // add annotations
-    AGLocation *ann = [[AGLocation alloc] initLocationWithCoordinate:zoomLocation];
-    
-    [ann setAnnotationForLocationWithTitle:self.currentAnimal.marker.title subtitle:self.currentAnimal.marker.subtitle icon:self.currentAnimal.marker.icon];
-    [self.animalMapView addAnnotation:ann];
+    // add annotation
+    [self.animalMapView addAnnotation:self.currentAnimal.location];
     
 
 }

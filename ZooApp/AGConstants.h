@@ -22,3 +22,9 @@ extern NSString *const cAreaFilterPongoland;                // String für "Pong
 extern NSString *const cAreaFilterAfrica;                   // String für "Afrika"
 extern NSString *const cAreaFilterSouthAmerica;             // String für "Südamerika"
 
+extern NSString *const cAnimalAnnotationIconPath;
+extern NSString *const cEnclosureAnnotationIconPath;
+extern NSString *const cRestaurantAnnotationIconPath;
+extern NSString *const cServiceAnnotationIconPath;
+
+

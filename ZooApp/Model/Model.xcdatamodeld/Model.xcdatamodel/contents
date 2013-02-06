@@ -30,17 +30,24 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="event" inverseEntity="ZooItem" syncable="YES"/>
     </entity>
+    <entity name="FavEvent" representedClassName="FavEvent" syncable="YES">
+        <attribute name="reminder" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="reminderMinBeforeEvent" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="event" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="FavZooItem" representedClassName="FavZooItem" syncable="YES">
+        <attribute name="notificationIfClose" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" syncable="YES"/>
+    </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
         <attribute name="area" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
-        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="location" inverseEntity="ZooItem" syncable="YES"/>
-    </entity>
-    <entity name="Marker" representedClassName="Marker" syncable="YES">
-        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="marker" inverseEntity="ZooItem" syncable="YES"/>
+        <relationship name="zooItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ZooItem" inverseName="location" inverseEntity="ZooItem" syncable="YES"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" parentEntity="ZooItem" syncable="YES">
         <attribute name="additionalInfo" optional="YES" attributeType="String" syncable="YES"/>
@@ -66,17 +73,17 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="zooItem" inverseEntity="Event" syncable="YES"/>
         <relationship name="location" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="zooItem" inverseEntity="Location" syncable="YES"/>
-        <relationship name="marker" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Marker" inverseName="zooItem" inverseEntity="Marker" syncable="YES"/>
     </entity>
     <elements>
         <element name="AGFavAnimal" positionX="261" positionY="-27" width="128" height="75"/>
         <element name="Animal" positionX="-297" positionY="48" width="128" height="255"/>
         <element name="Enclosure" positionX="-101" positionY="171" width="128" height="75"/>
         <element name="Event" positionX="-641" positionY="75" width="128" height="105"/>
-        <element name="Location" positionX="-308" positionY="-123" width="128" height="105"/>
-        <element name="Marker" positionX="117" positionY="-123" width="128" height="105"/>
+        <element name="Location" positionX="-308" positionY="-123" width="128" height="150"/>
         <element name="Restaurant" positionX="54" positionY="171" width="128" height="165"/>
         <element name="Service" positionX="124" positionY="90" width="128" height="60"/>
-        <element name="ZooItem" positionX="-110" positionY="-81" width="128" height="105"/>
+        <element name="ZooItem" positionX="-110" positionY="-81" width="128" height="90"/>
+        <element name="FavZooItem" positionX="-261" positionY="342" width="128" height="90"/>
+        <element name="FavEvent" positionX="160" positionY="192" width="128" height="90"/>
     </elements>
 </model>

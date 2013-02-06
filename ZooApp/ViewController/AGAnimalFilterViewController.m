@@ -26,6 +26,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
     // Custom initialization
+        
+
     }
     return self;
 }
@@ -36,22 +38,78 @@
    // Do any additional setup after loading the view.
    
    [self.view setBackgroundColor:Colors.sandColor];
-   
-   
-   self.catFilter = [NSMutableArray new];
-   self.areaFilter = [NSMutableArray new];
-       
-       self.barButtonItemDone = [[UIBarButtonItem alloc] initWithTitle:@"Fertig" style:UIBarButtonItemStyleDone target:self action:@selector(barButtonItemDonePressed:)];
-       self.navigationItem.rightBarButtonItem = self.barButtonItemDone;
-       
-       self.title = @"Tier-Filter";
     
-   }
-   
-   
+    self.barButtonItemDone = [[UIBarButtonItem alloc] initWithTitle:@"Fertig" style:UIBarButtonItemStyleDone target:self action:@selector(barButtonItemDonePressed:)];
+    self.navigationItem.rightBarButtonItem = self.barButtonItemDone;
+       
+    self.title = @"Tier-Filter";
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [self unselectAllCatButtons];
+    [self unselectAllAreaButtons];
+    [self useAppropriateCatFiler];
+    [self useAppropriateAreaFiler];
+}
+    
+
+- (void) useAppropriateCatFiler {
+    if ([self.catFilterString isEqualToString:cCatFilterMammals]) {
+        self.mammalsButton.selected = YES;
+    } else if ([self.catFilterString isEqualToString:cCatFilterBirds]){
+        self.birdsButton.selected = YES;
+    } else if ([self.catFilterString isEqualToString:cCatFilterReptiles]){
+        self.reptilesButton.selected = YES;
+    } else if ([self.catFilterString isEqualToString:cCatFilterAmphibians]){
+        self.amphibiansButton.selected = YES;
+    } else if ([self.catFilterString isEqualToString:cCatFilterInvertebrates]){
+        self.invertebratesButton.selected = YES;
+    } else if ([self.catFilterString isEqualToString:cCatFilterFish]){
+        self.fishButton.selected = YES;
+    }
+}
+
+- (void) useAppropriateAreaFiler {
+    if ([self.areaFilterString isEqualToString:cAreaFilterFoundersGarden]) {
+        self.foundersGardenButton.selected = YES;
+    } else if ([self.areaFilterString isEqualToString:cAreaFilterGondwanaland]){
+        self.gondwanaland.selected = YES;
+    } else if ([self.areaFilterString isEqualToString:cAreaFilterAsia]){
+        self.asiaButton.selected = YES;
+    } else if ([self.areaFilterString isEqualToString:cAreaFilterPongoland]){
+        self.pongolandButton.selected = YES;
+    } else if ([self.areaFilterString isEqualToString:cAreaFilterAfrica]){
+        self.africaButton.selected = YES;
+    } else if ([self.areaFilterString isEqualToString:cAreaFilterSouthAmerica]){
+        self.southAmericaButton.selected = YES;
+    }
+}
+
+- (void) unselectAllCatButtons {
+    
+    self.mammalsButton.selected = NO;
+    self.birdsButton.selected = NO;
+    self.reptilesButton.selected = NO;
+    self.amphibiansButton.selected = NO;
+    self.invertebratesButton.selected = NO;
+    self.fishButton.selected = NO;
+}
+
+- (void) unselectAllAreaButtons {
+    
+    self.foundersGardenButton.selected = NO;
+    self.gondwanaland.selected = NO;
+    self.asiaButton.selected = NO;
+    self.pongolandButton.selected = NO;
+    self.asiaButton.selected = NO;
+    self.southAmericaButton.selected = NO;
+}
+
 - (void) barButtonItemDonePressed: (id) sender {
-    [self.delegate setCatFilter:self.catFilter];
-    [self.delegate setAreaFilter:self.areaFilter];
+    [self.delegate setCatFilterString:self.catFilterString];
+    [self.delegate setAreaFilterString:self.areaFilterString];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -63,131 +121,141 @@
    
 - (IBAction)filterButtonPressed:(id)sender {
    
+   
    UIButton *button = (UIButton*) sender;
    
    switch (button.tag) {
        case 0:
-            for (UIView *view in self.scrollView.subviews) {
-                if ([view isKindOfClass:[UIButton class]]) {
-                    UIButton *button = (UIButton*) view;
-                    button.selected = NO;
-                }
-            }
-           [self.catFilter removeAllObjects];
-           [self.areaFilter removeAllObjects];
+           
+           [self unselectAllCatButtons];
+           [self unselectAllAreaButtons];
+           self.catFilterString = nil;
+           self.areaFilterString = nil;
            break;
        case 1:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterMammals];
+               [self unselectAllCatButtons];
+               self.mammalsButton.selected = YES;
+               self.catFilterString = cCatFilterMammals;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterMammals];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 2:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterBirds];
+               [self unselectAllCatButtons];
+               self.birdsButton.selected = YES;
+               self.catFilterString = cCatFilterBirds;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterBirds];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 3:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterReptiles];
+               [self unselectAllCatButtons];
+               self.reptilesButton.selected = YES;
+               self.catFilterString = cCatFilterReptiles;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterReptiles];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 4:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterAmphibians];
+               [self unselectAllCatButtons];
+               self.amphibiansButton.selected = YES;
+               self.catFilterString = cCatFilterAmphibians;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterAmphibians];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 5:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterInvertebrates];
+               [self unselectAllCatButtons];
+               self.invertebratesButton.selected = YES;
+               self.catFilterString = cCatFilterInvertebrates;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterInvertebrates];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 6:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cCatFilterFish];
+               [self unselectAllCatButtons];
+               self.fishButton.selected = YES;
+               self.catFilterString = cCatFilterFish;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cCatFilterFish];
+               [self unselectAllCatButtons];
+               self.catFilterString = nil;
            }
            break;
        case 7:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterFoundersGarden];
+               [self unselectAllAreaButtons];
+               self.foundersGardenButton.selected = YES;
+               self.areaFilterString = cAreaFilterFoundersGarden;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterFoundersGarden];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
        case 8:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterGondwanaland];
+               [self unselectAllAreaButtons];
+               self.gondwanaland.selected = YES;
+               self.areaFilterString = cAreaFilterGondwanaland;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterGondwanaland];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
        case 9:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterAsia];
+               [self unselectAllAreaButtons];
+               self.asiaButton.selected = YES;
+               self.areaFilterString = cAreaFilterAsia;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterAsia];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
        case 10:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterPongoland];
+               [self unselectAllAreaButtons];
+               self.pongolandButton.selected = YES;
+               self.areaFilterString = cAreaFilterPongoland;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterPongoland];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
        case 11:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterAfrica];
+               [self unselectAllAreaButtons];
+               self.africaButton.selected = YES;
+               self.areaFilterString = cAreaFilterAfrica;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterAfrica];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
+
        case 12:
            if (!button.selected) {
-               button.selected = YES;
-               [self.catFilter addObject:cAreaFilterSouthAmerica];
+               [self unselectAllAreaButtons];
+               self.southAmericaButton.selected = YES;
+               self.areaFilterString = cAreaFilterSouthAmerica;
            } else {
-               button.selected = NO;
-               [self.catFilter removeObject:cAreaFilterSouthAmerica];
+               [self unselectAllAreaButtons];
+               self.areaFilterString = nil;
            }
            break;
        default:
            break;
    }
-
 }
    
    

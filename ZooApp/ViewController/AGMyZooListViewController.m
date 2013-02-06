@@ -8,7 +8,8 @@
 
 #import "AGMyZooListViewController.h"
 #import "AGFavManager.h"
-#import "AGFavAnimal.h"
+#import "FavZooItem.h"
+#import "ZooItem.h"
 
 @interface AGMyZooListViewController ()
 
@@ -56,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[AGFavManager sharedInstance] favouriteAnimalsArray] count];
+    return [[[AGFavManager sharedInstance] favAnimalsArray] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,9 +67,9 @@
 
     // Configure the cell...
 
-    NSArray *favAnimals = [[AGFavManager sharedInstance] favouriteAnimalsArray];
-    AGFavAnimal *favAnimal = [favAnimals objectAtIndex:indexPath.row];
-    cell.textLabel.text = favAnimal.name;
+    NSArray *favAnimals = [[AGFavManager sharedInstance] favAnimalsArray];
+    FavZooItem *favZooItem = [favAnimals objectAtIndex:indexPath.row];
+    cell.textLabel.text = favZooItem.zooItem.name;
     return cell;
 }
 

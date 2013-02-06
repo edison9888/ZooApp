@@ -7,19 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AGFavAnimal.h"
+#import "FavZooItem.h"
+#import "FavEvent.h"
 
 @interface AGFavManager : NSObject
+
 
 @property (nonatomic, retain) NSManagedObjectContext *context;
 
 + (AGFavManager*) sharedInstance;
 
-- (NSArray*) favouriteAnimalsArray;
+- (NSArray*) favAnimalsArray;
+- (NSArray*) favRestaurantsArray;
 
-- (AGFavAnimal*) addAnimalToFavsWithName: (NSString*) name notified: (BOOL) notifiedIfClose;
-- (void) removeAnimalFromFavsWithName: (NSString*) name;
+- (FavZooItem*) createFavZooItemAndAddToCoreData: (ZooItem*) zooItem withType: (NSString*) type notified: (BOOL) notifiedIfClose;
+- (void) removeFavZooItemFromCoreData: (FavZooItem*) favZooItem;
+- (FavZooItem*) getFavZooItemWithName: (NSString*) name;
 
-- (AGFavAnimal*) getFavAnimalWithName: (NSString*) name;
+
+- (FavEvent*) createFavEventAndAddToCoreData: (Event*) event reminder: (BOOL) reminder minBeforeEvent: (NSNumber*) reminderMinBeforeEvent;
+- (void) removeFavEventFromCoreData: (FavEvent*) favEvent;
+- (FavEvent*) getFavEventWithName: (NSString*) name;
 
 @end

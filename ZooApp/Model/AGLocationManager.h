@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "AGLocation.h"
-#import "AGAnimal.h"
-#import "AGRestaurant.h"
 
 @interface AGLocationManager : NSObject
 

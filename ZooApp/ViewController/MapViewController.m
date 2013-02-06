@@ -110,7 +110,6 @@
 
 - (IBAction)showDetails:(id)sender {
  
-    NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX");
     
  //   AnimalDetailViewController * lvc = [[AnimalDetailViewController alloc] init];
     //lvc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;

@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSMutableArray *catFilter;
 @property (nonatomic, strong) NSMutableArray *areaFilter;
+@property (nonatomic, strong) NSString *areaFilterString;
+@property (nonatomic, strong) NSString *catFilterString;
 
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemSearch;
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemFilter;

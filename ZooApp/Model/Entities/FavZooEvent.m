@@ -1,20 +1,19 @@
 //
-//  ZooItem.m
+//  FavZooEvent.m
 //  ZooApp
 //
 //  Created by Andrea Gerlach on 06.02.13.
 //  Copyright (c) 2013 de.andreagerlach. All rights reserved.
 //
 
-#import "ZooItem.h"
+#import "FavZooEvent.h"
 #import "Event.h"
-#import "Location.h"
 
 
-@implementation ZooItem
+@implementation FavZooEvent
 
-@dynamic name;
+@dynamic reminder;
+@dynamic minutesOfReminderBeforeEvent;
 @dynamic event;
-@dynamic location;
 
 @end

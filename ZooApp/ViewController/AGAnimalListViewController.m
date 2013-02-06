@@ -15,6 +15,7 @@
 #import "AGCoreDataHelper.h"
 #import "AGStringUtilities.h"
 #import "AGAnimalFilterViewController.h"
+#import "AGConstants.h"
 
 
 
@@ -32,7 +33,6 @@ static NSString *filterKey;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        filterKey = [NSString new];
     }
     return self;
 }
@@ -41,7 +41,7 @@ static NSString *filterKey;
 {
     [super viewDidLoad];
     
-     self.barButtonItemSearch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(barButtonItemSearchPressed:)];
+    self.barButtonItemSearch = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(barButtonItemSearchPressed:)];
     self.barButtonItemFilter = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStylePlain target:self action:@selector(barButtonItemFilterPressed:)];
     // RightBarButtomItems
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:
@@ -67,9 +67,26 @@ static NSString *filterKey;
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    self.navigationItem.title = filterKey;
-    self.currentFilteredList = [[AGAnimalManager sharedInstance] getAnimalArrayForFilterKey:filterKey];
+    NSMutableArray *predicates = [NSMutableArray array];
+    
+    if (self.catFilterString == nil && self.areaFilterString == nil) {
+        self.fetchPredicate = nil;
+    } else {
+        if (self.catFilterString != nil) {
+            [predicates addObject:[NSPredicate predicateWithFormat:@"category = %@", self.catFilterString]];
+        }
+        if (self.areaFilterString != nil) {
+            [predicates addObject:[NSPredicate predicateWithFormat:@"location.area = %@", self.areaFilterString]];
+            
+        }
+        NSPredicate *compoundpred = [NSCompoundPredicate andPredicateWithSubpredicates:predicates];
+        self.fetchPredicate = compoundpred;
+    }
+    
+    self.animalsFetchedResultsController = nil;
+    [AGCoreDataHelper performFetchOnFetchedResultsController:self.fetchedResultsController];
     [self.tableView reloadData];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,17 +100,14 @@ static NSString *filterKey;
     [super viewDidUnload];
 }
 
-+ (void)setFilterKey: (NSString*) filKey {
-    filterKey = filKey;
-}
-
 - (void) barButtonItemFilterPressed: (id) sender {
    
     AGAnimalFilterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalFilterViewController"];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
     vc.navigationController.navigationBar.tintColor = [UIColor blackColor];
     vc.delegate = self;
-    
+    vc.catFilterString = self.catFilterString;
+    vc.areaFilterString = self.areaFilterString;
     [self presentViewController:navController animated:YES completion:nil];
 }
 
@@ -144,6 +158,7 @@ static NSString *filterKey;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     
     static NSString *CellIdentifier = @"AGAnimalListTableCell";
     

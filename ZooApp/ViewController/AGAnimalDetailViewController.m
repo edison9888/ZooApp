@@ -9,6 +9,7 @@
 #import "AGAnimalDetailViewController.h"
 #import "AGAnimalMapViewController.h"
 #import "AGCompassView.h"
+#import "AGCoreDataHelper.h"
 #import "AGStringUtilities.h"
 #import "AGFavManager.h"
 #import "Location.h"
@@ -59,16 +60,7 @@
     compassView.currentZooItem = self.currentAnimal;
     compassView.backgroundColor = [UIColor clearColor];
     [self.mainScrollView addSubview:compassView];
-/*
-    if ([[AGFavManager sharedInstance] getFavAnimalWithName:self.currentAnimal.name] != nil) {
-        self.favAnimal = YES;
-    } else {
-        self.favAnimal = NO;
-    }
-    self.favFeedingTime = NO;
-    self.favCommentaryTime = NO;
-  */   
-    [self checkFavStatus];
+    
     [self createChalkboardView];
 
 }
@@ -90,7 +82,6 @@
     [self setAnimalNameLabel:nil];
     [self setFeedingLabel:nil];
     [self setCommentaryLabel:nil];
-    [self setFavAnimalButton:nil];
     [self setFavFeedingButton:nil];
     [self setFavCommentaryButton:nil];
     [self setFunFactTextView:nil];
@@ -100,15 +91,53 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self updateFields];
+  
+    self.favAnimal = [[AGFavManager sharedInstance] getFavZooItemWithName:self.currentAnimal.name];
+    if (self.favAnimal != nil) {
+        self.animalIsFav = YES;
+    } else {
+        self.animalIsFav = NO;
+    }
     
-   /* if ([self.currentAnimal.feedingTime isEqualToString:@"nicht öffentlich"]) {
-        self.favFeedingButton.hidden = YES;
-    }
-    if ([self.currentAnimal.commentaryTime isEqualToString:@"nicht öffentlich"]) {
-        self.favCommentaryButton.hidden = YES;
-    }
-    */
+    self.feedingLabel.text = @"nicht öffentlich";
+    self.favFeedingButton.hidden = YES;
+    self.commentaryLabel.text = @"nicht öffentlich";
+    self.favCommentaryButton.hidden = YES;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    
+    NSArray *evs = [self.currentAnimal.event allObjects];
+    if (evs != nil && evs.count > 0) {
+        for (Event* ev in evs) {
+            if ([ev.type isEqualToString:@"Fütterung"]) {
+                self.feedingEvent = ev;
+                self.feedingLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:self.feedingEvent.time]];
+                self.favFeedingButton.hidden = NO;
+                self.favFeedingEvent = [[AGFavManager sharedInstance] getFavEventWithName:self.feedingEvent.name];
+                if (self.favFeedingEvent != nil) {
+                    self.feedingTimeIsFav = YES;
+                } else {
+                    self.feedingTimeIsFav = NO;
+                }
+            }
+            if ([ev.type isEqualToString:@"Kommentierung"]) {
+                self.commentaryEvent = ev;
+                self.commentaryLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:self.commentaryEvent.time]];
+                self.favCommentaryButton.hidden = NO;
+                self.favCommentaryEvent = [[AGFavManager sharedInstance] getFavEventWithName:self.commentaryEvent.name];
+                if (self.favCommentaryEvent != nil) {
+                    self.commentaryTimeIsFav = YES;
+                } else {
+                    self.commentaryTimeIsFav = NO;
+                }
+            }
+        }
+    } 
+    
+    [self updateFields];
+    [self checkFavStatus];
+    
 }
 
 - (void)updateFields {
@@ -120,23 +149,7 @@
     self.enclosureLabel.text = [NSString stringWithFormat:@"Gehege: %@", self.currentAnimal.enclosure.name];
     self.areaLabel.text = [NSString stringWithFormat:@"Themenwelt: %@", self.currentAnimal.location.area];
     self.distanceLabel.text = distance;
-    
-    self.feedingLabel.text = @"nicht öffentlich";
-    self.commentaryLabel.text = @"nicht öffentlich";
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm"];
-    
-     NSArray *evs = [self.currentAnimal.event allObjects];
-    for (Event* ev in evs) {
-        if ([ev.type isEqualToString:@"Fütterung"]) {
-            self.feedingLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:ev.time]];
-        }
-        if ([ev.type isEqualToString:@"Kommentierung"]) {
-            self.commentaryLabel.text = [NSString stringWithFormat:@"%@ Uhr", [formatter stringFromDate:ev.time]];
-        }
-    }
-
+  
     self.funFactTextView.text = self.currentAnimal.funFact;
     CGRect frame = self.funFactTextView.frame;
     frame.size.height = self.funFactTextView.contentSize.height;
@@ -225,6 +238,8 @@
 }
  
 
+
+
 - (IBAction)pageChanged:(id)sender {
     // update the scroll view to the appropriate page
     CGRect frame;
@@ -234,98 +249,61 @@
     [self.chalkboardScrollView scrollRectToVisible:frame animated:YES];
 }
 
-#pragma mark - favorites and alerts
+#pragma mark - favorites
 
 - (void)checkFavStatus {
     
-    if (self.favAnimal == NO) {
-        [self.favAnimalButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
+    if (self.animalIsFav == NO) {
+        [self.favouriteAnimalButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
-        [self.favAnimalButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
+        [self.favouriteAnimalButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }
     
-    if (self.favFeedingTime == NO) {
+    if (self.feedingTimeIsFav == NO) {
         [self.favFeedingButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
         [self.favFeedingButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }
     
-    if (self.favCommentaryTime == NO) {
+    if (self.commentaryTimeIsFav == NO) {
         [self.favCommentaryButton setImage:[UIImage imageNamed:@"whiteStarFav.png"] forState:UIControlStateNormal];
     } else {
         [self.favCommentaryButton setImage:[UIImage imageNamed:@"goldStarFav.png"] forState:UIControlStateNormal];
     }
 }
 
-- (IBAction)favAnimalButtonPressed:(id)sender {
-    [self createFavAlertViewWithArticle:@"das" object:@"Tier" fav:self.favAnimal];
+- (IBAction)favouriteAnimalButtonPressed:(id)sender {
+    
+   if (self.animalIsFav == YES) {
+        self.animalIsFav = NO;
+        [[AGFavManager sharedInstance] removeFavZooItemFromCoreData:self.favAnimal];
+    } else {
+        self.animalIsFav = YES;
+        self.favAnimal = [[AGFavManager sharedInstance] createFavZooItemAndAddToCoreData:self.currentAnimal withType:@"Animal" notified:NO];
+    }
+    [self checkFavStatus];
 }
 
 - (IBAction)favFeedingButtonPressed:(id)sender {
-    [self createFavAlertViewWithArticle:@"die" object:@"Fütterung" fav:self.favFeedingTime];
+    
+    if (self.feedingTimeIsFav == YES) {
+        self.feedingTimeIsFav = NO;
+        [[AGFavManager sharedInstance] removeFavEventFromCoreData:self.favFeedingEvent];
+    } else {
+        self.feedingTimeIsFav = YES;
+        self.favFeedingEvent = [[AGFavManager sharedInstance] createFavEventAndAddToCoreData:self.feedingEvent reminder:NO minBeforeEvent:0];
+    }
+    [self checkFavStatus];
 }
 
 - (IBAction)favCommentaryButtonPressed:(id)sender {
-    [self createFavAlertViewWithArticle:@"die" object:@"Kommentierung" fav:self.favCommentaryTime];
-}
-
-- (void)createFavAlertViewWithArticle:(NSString*)article object:(NSString*)object fav:(BOOL) fav{
-
-    NSString *titleString;
-    NSString *messageString;
-    NSString *messageEnding = @"Diese können Sie unter der Rubrik \"Mein Zoo\" einsehen.";
-
     
-    if (fav) {
-        titleString = [NSString stringWithFormat:@"%@ entfernen", object];
-        messageString = [NSString stringWithFormat:@"Hiermit entfernen Sie %@ %@ aus Ihrer Favoritenliste. %@", article, object, messageEnding];
+    if (self.commentaryTimeIsFav == YES) {
+        self.commentaryTimeIsFav = NO;
+        [[AGFavManager sharedInstance] removeFavEventFromCoreData:self.favCommentaryEvent];
     } else {
-        titleString = [NSString stringWithFormat:@"%@ favorisieren", object];
-        messageString = [NSString stringWithFormat:@"Hiermit fügen Sie %@ %@ Ihrer Favoritenliste hinzu. %@", article, object, messageEnding];
-    }
-
-    UIAlertView *alert;
-    alert = [[UIAlertView alloc] initWithTitle:titleString message:messageString delegate:self cancelButtonTitle:@"Abbrechen" otherButtonTitles:@"Ok", nil];
-    
-    [alert show];
-}
-
-- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Ok"]) {
-       
-        if ([[alertView title] isEqualToString:@"Tier favorisieren"]) {
-           
-            self.favAnimal = YES;
-            // add animal to favorites
-            [[AGFavManager sharedInstance] addAnimalToFavsWithName:self.currentAnimal.name notified:NO];
-        
-        } else if ([[alertView title] isEqualToString:@"Tier entfernen"]) {
-            
-            self.favAnimal = NO;
-            // remove animal from favorites
-            [[AGFavManager sharedInstance] removeAnimalFromFavsWithName:self.currentAnimal.name];
-            
-        } else  if ([[alertView title] isEqualToString:@"Fütterung favorisieren"]) {
-            self.favFeedingTime = YES;
-            // methode zum hinzufügen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Fütterung hinzufügen");
-        
-        } else if ([[alertView title] isEqualToString:@"Fütterung entfernen"]) {
-            self.favFeedingTime = NO;
-            // methode zum entfernen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Fütterung entfernen");
-       
-        } else if ([[alertView title] isEqualToString:@"Kommentierung favorisieren"]) {
-            self.favCommentaryTime = YES;
-            // methode zum hinzufügen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Kommentierung hinzufügen");
-  
-        } else if ([[alertView title] isEqualToString:@"Kommentierung entfernen"]) {
-            self.favCommentaryTime = NO;
-            // methode zum entfernen
-            NSLog(@"XXXXXXXX Hier bin ich XXXXXXXX Kommentierung entfernen");
-        }
+        self.commentaryTimeIsFav = YES;
+        self.favCommentaryEvent = [[AGFavManager sharedInstance] createFavEventAndAddToCoreData:self.commentaryEvent reminder:NO minBeforeEvent:0];
     }
     [self checkFavStatus];
 }
