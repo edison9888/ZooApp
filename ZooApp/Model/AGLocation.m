@@ -20,12 +20,11 @@
     return self;
 }
 
-- (void)setAnnotationForLocationWithTitle:(NSString*)title subtitle:(NSString*)subtitle icon:(NSString*)icon pinColor:(MKPinAnnotationColor)pinColor {
+- (void)setAnnotationForLocationWithTitle:(NSString*)title subtitle:(NSString*)subtitle icon:(NSString*)icon {
     
     self.title = title;
     self.subtitle = subtitle;
     self.icon = icon;
-    self.pinColor = pinColor;
 }
 
 - (NSString *)title {

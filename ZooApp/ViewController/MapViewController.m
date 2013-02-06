@@ -87,7 +87,7 @@
     
     if([annotation isKindOfClass:[AGLocation class]]) {
         AGLocation *loc = (AGLocation*)annotation;
-        pinView.pinColor = loc.pinColor;
+        pinView.pinColor = MKPinAnnotationColorGreen;
     }
     
     

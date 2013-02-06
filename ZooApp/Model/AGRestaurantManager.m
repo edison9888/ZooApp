@@ -77,7 +77,7 @@ static AGRestaurantManager *instance = nil;
         restaurant.bookingPhone = [a objectForKey:@"bookingPhone"];
         restaurant.image = [a objectForKey:@"image"];
                 
-        [restaurant.location setAnnotationForLocationWithTitle:restaurant.name subtitle:restaurant.ambience icon:restaurant.image pinColor:MKPinAnnotationColorPurple];
+        [restaurant.location setAnnotationForLocationWithTitle:restaurant.name subtitle:restaurant.ambience icon:restaurant.image];
         
         [self.allRestaurants addObject:restaurant];
         

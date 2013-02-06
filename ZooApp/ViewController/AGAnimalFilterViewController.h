@@ -8,17 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGAnimalFilterViewController : UITableViewController
-<UITableViewDelegate, UITableViewDataSource>
+@interface AGAnimalFilterViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *filterCategories;
-@property (nonatomic, strong) NSArray *filterOptions;
-@property (strong, nonatomic) NSMutableDictionary *filterCategoryData;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) NSMutableArray *catFilter;
+@property (nonatomic, strong) NSMutableArray *areaFilter;
+@property (strong, nonatomic) id delegate;
 
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemDone;
+- (IBAction)filterButtonPressed:(id)sender;
 
-
-- (void)createFilterCategories;
-- (NSMutableArray*) createFilterCategoryWithTitleKey:(NSString*)tK imageName:(NSString*)iN category:(NSString*)c;
 
 @end

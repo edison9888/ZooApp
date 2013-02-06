@@ -360,6 +360,7 @@
 }
 
 - (void)showAnimalOnMap {
+    
     AGAnimalMapViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalMapViewController"];
     vc.currentAnimal = self.currentAnimal;
     [self.navigationController pushViewController:vc animated:YES];

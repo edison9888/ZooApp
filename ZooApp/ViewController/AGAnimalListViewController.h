@@ -14,6 +14,9 @@
 
 @interface AGAnimalListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UISearchBarDelegate>
 
+@property (nonatomic, strong) NSMutableArray *catFilter;
+@property (nonatomic, strong) NSMutableArray *areaFilter;
+
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemSearch;
 @property (nonatomic, strong) UIBarButtonItem *barButtonItemFilter;
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -27,8 +30,6 @@
 
 
 - (NSFetchedResultsController *) fetchedResultsController;
-
-
 + (void)setFilterKey: (NSString*) filKey;
 
 @end

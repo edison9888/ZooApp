@@ -123,6 +123,7 @@
 		D5B0086016382DFC008EB564 /* AnimalFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B0085F16382DFB008EB564 /* AnimalFilterTableCell.xib */; };
 		D5B0086316383021008EB564 /* AnimalFilterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B0086216383020008EB564 /* AnimalFilterTableCell.m */; };
 		D5BE608716BEE4BF006DB696 /* NSString+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BE608616BEE4BF006DB696 /* NSString+Sorting.m */; };
+		D5BE60B216C1E3EA006DB696 /* AGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BE60B116C1E3EA006DB696 /* AGConstants.m */; };
 		D5DDE864169B1F3F0009048B /* AGAnimalListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE863169B1F3F0009048B /* AGAnimalListTableCell.xib */; };
 		D5DDE875169B35100009048B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE867169B35100009048B /* background.jpg */; };
 		D5DDE876169B35100009048B /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5DDE868169B35100009048B /* background@2x.jpg */; };
@@ -311,6 +312,8 @@
 		D5B0086216383020008EB564 /* AnimalFilterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimalFilterTableCell.m; path = ViewController/AnimalFilterTableCell.m; sourceTree = "<group>"; };
 		D5BE608516BEE4BE006DB696 /* NSString+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Sorting.h"; path = "Helper/NSString+Sorting.h"; sourceTree = "<group>"; };
 		D5BE608616BEE4BF006DB696 /* NSString+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Sorting.m"; path = "Helper/NSString+Sorting.m"; sourceTree = "<group>"; };
+		D5BE60B016C1E3EA006DB696 /* AGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGConstants.h; sourceTree = "<group>"; };
+		D5BE60B116C1E3EA006DB696 /* AGConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGConstants.m; sourceTree = "<group>"; };
 		D5DDE863169B1F3F0009048B /* AGAnimalListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AGAnimalListTableCell.xib; path = ViewController/AGAnimalListTableCell.xib; sourceTree = "<group>"; };
 		D5DDE867169B35100009048B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		D5DDE868169B35100009048B /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				D5135B66162F0E0000743CC5 /* Storyboard.storyboard */,
 				D5AF86131638661900129120 /* Colors.h */,
 				D5AF86141638661900129120 /* Colors.m */,
+				D5BE60B016C1E3EA006DB696 /* AGConstants.h */,
+				D5BE60B116C1E3EA006DB696 /* AGConstants.m */,
 				D5135B63162F0DDA00743CC5 /* Model */,
 				D5B0082F1631427E008EB564 /* View */,
 				D5135B68162FEDBB00743CC5 /* ViewController */,
@@ -977,6 +982,7 @@
 				D54ABAAF16BE89E3007AC6B0 /* Animal.m in Sources */,
 				D54ABAB216BE8A6A007AC6B0 /* Event.m in Sources */,
 				D5BE608716BEE4BF006DB696 /* NSString+Sorting.m in Sources */,
+				D5BE60B216C1E3EA006DB696 /* AGConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

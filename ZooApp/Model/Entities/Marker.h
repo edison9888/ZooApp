@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <MapKit/MapKit.h>
 
 @class ZooItem;
 
-@interface Marker : NSManagedObject
+@interface Marker : NSManagedObject <MKAnnotation>
 
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * subtitle;

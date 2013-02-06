@@ -92,6 +92,7 @@ static NSString *filterKey;
     AGAnimalFilterViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGAnimalFilterViewController"];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
     vc.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    vc.delegate = self;
     
     [self presentViewController:navController animated:YES completion:nil];
 }
