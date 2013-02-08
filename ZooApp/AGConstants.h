@@ -25,6 +25,8 @@ extern NSString *const cAreaFilterSouthAmerica;             // String für "Süd
 extern NSString *const cAnimalAnnotationIconPath;
 extern NSString *const cEnclosureAnnotationIconPath;
 extern NSString *const cRestaurantAnnotationIconPath;
-extern NSString *const cServiceAnnotationIconPath;
+extern NSString *const cToiletAnnotationIconPath;
+extern NSString *const cGiftshopAnnotationIconPath;
+extern NSString *const cMedicareAnnotationIconPath;
 
 

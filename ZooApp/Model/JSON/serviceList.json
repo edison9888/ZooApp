@@ -2,16 +2,30 @@
   "services": [
     {
         "name":"WC Gründer-Garten",
-        "latitude":"52.512697",
-        "longitude":"13.408655",
+        "latitude":"52.513769",
+        "longitude":"13.406437",
         "area":"Gründer-Garten",
         "type":"WC",
     },
     {
         "name":"WC Gondwanaland",
-        "latitude":"52.513141",
-        "longitude":"13.413794",
+        "latitude":"52.515676",
+        "longitude":"13.406995",
         "area":"Gondwanaland",
         "type":"WC"
+    },
+    {
+        "name":"Safari-Shop",
+        "latitude":"52.514334",
+        "longitude":"13.406775",
+        "area":"Gründer-Garten",
+        "type":"Giftshop",
+    },
+    {
+        "name":"Erste Hilfe",
+        "latitude":"52.511344",
+        "longitude":"13.406550",
+        "area":"Südamerika",
+        "type":"Medicare",
     }]
 }

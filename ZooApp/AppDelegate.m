@@ -8,8 +8,6 @@
 
 #import <HockeySDK/HockeySDK.h>
 #import "AppDelegate.h"
-#import "AGAnimalManager.h"
-#import "AGRestaurantManager.h"
 #import "AGFavManager.h"
 #import "AGCoreDataHelper.h"
 #import "AGJSONParser.h"
@@ -31,56 +29,6 @@
     // UPDATE CORE DATA FROM JSON FILES
     [[AGJSONParser sharedInstance] updateCoreDataFromJSONFiles];
 
-    
-    
-   // NSManagedObjectContext *context = [AGCoreDataHelper managedObjectContext];
-   // AGFavAnimal *favAnimal = [AGCoreDataHelper insertManagedObjectOfClass:[AGFavAnimal class] inManagedObjectContext:context];
-   // favAnimal.name = @"Bonobo";
-   // favAnimal.notificationIfClose = NO;
-   // favAnimal.name = @"Rothschildgiraffe";
-   // favAnimal.notificationIfClose = NO;
-
-   // [AGCoreDataHelper saveManagedObjectContext:context];
-   
-    /*
-    NSArray *favAnimals = [AGCoreDataHelper fetchEntitiesForClass:[AGFavAnimal class] withPredicate:nil inManagedObjectContext:context];
-    
-    
-    for (AGFavAnimal *a in favAnimals) {
-        NSLog(@"Favorisiertes Tier gefunden: %@", a.name);
-    }
-    */
-    
-    
-    //[Animal parseJSONToAnimals];
-   // [AGAnimalManager sharedInstance];
- /*   [AGRestaurantManager sharedInstance];
-   
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", @"Bonobo"];
-    FavZooItem *favZooItem = [[AGCoreDataHelper fetchEntitiesForClass:[ZooItem class] withPredicate:predicate inManagedObjectContext:self.context] objectAtIndex:0];
-    
-
-    [favManager createFavZooItemAndAddToCoreData:<#(ZooItem *)#> withType:<#(NSString *)#> notified:<#(BOOL)#>]
-    [favManager addAnimalToFavsWithName:@"Bonobo" notified:NO];
-    [favManager addAnimalToFavsWithName:@"Rothschildgiraffe" notified:NO];
-
-    NSMutableArray *favAnimals = [NSMutableArray new];
-    
-    for (AGFavAnimal *a in [favManager favAnimalsArray]) {
-        [favAnimals addObject:a.name];
-    }
-*/
-    AGFavManager *favManager = [AGFavManager sharedInstance];
-    
-  //  NSLog(@"Favorisierte Tiere: %@", favManager.favAnimalsArray);
-    
-   
-
-//    self.window.rootViewController.tabBarController.tabBar.tintColor = [UIColor orangeColor];
-    
-   // return YES;
-    
     return YES;
 }
 

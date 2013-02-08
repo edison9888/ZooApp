@@ -2,15 +2,22 @@
   "enclosures": [
     {
         "name":"Terrarium",
-        "latitude":"52.512278",
-        "longitude":"13.408620",
+        "latitude":"52.514141",
+        "longitude":"13.410219",
+        "area":"Gründer-Garten",
+        "additionalInfo":"",
+    },
+    {
+        "name":"Aquarium",
+        "latitude":"52.514243",
+        "longitude":"13.407462",
         "area":"Gründer-Garten",
         "additionalInfo":"",
     },
     {
         "name":"Elefantentempel",
-        "latitude":"52.512278",
-        "longitude":"13.408620",
+        "latitude":"52.511923",
+        "longitude":"13.405133",
         "area":"Asien",
         "additionalInfo":"",
     }]

@@ -635,6 +635,36 @@
             </objects>
             <point key="canvasLocation" x="-501" y="-2863"/>
         </scene>
+        <!--Restaurant Map View Controller-->
+        <scene sceneID="qwP-Sc-kvA">
+            <objects>
+                <viewController storyboardIdentifier="AGRestaurantMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MB8-r0-mEs" customClass="AGRestaurantMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uU0-Zm-Hyh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gWt-GD-74x">
+                                <connections>
+                                    <outlet property="delegate" destination="MB8-r0-mEs" id="PNG-DH-ARP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gWt-GD-74x" firstAttribute="bottom" secondItem="uU0-Zm-Hyh" secondAttribute="bottom" type="default" id="88U-gK-lRu"/>
+                            <constraint firstItem="gWt-GD-74x" firstAttribute="trailing" secondItem="uU0-Zm-Hyh" secondAttribute="trailing" type="default" id="Hxu-i7-PMe"/>
+                            <constraint firstItem="gWt-GD-74x" firstAttribute="top" secondItem="uU0-Zm-Hyh" secondAttribute="top" type="default" id="UOn-03-hXh"/>
+                            <constraint firstItem="gWt-GD-74x" firstAttribute="leading" secondItem="uU0-Zm-Hyh" secondAttribute="leading" type="default" id="YES-c6-lgN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantMapView" destination="gWt-GD-74x" id="SUI-zG-f8X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qP-HL-N4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-2863"/>
+        </scene>
         <!--Info Detail View Controller-->
         <scene sceneID="sgL-l6-QbT">
             <objects>
@@ -1155,7 +1185,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-ET-s4v">
                                 <connections>
-                                    <outlet property="delegate" destination="XsV-zl-BHv" id="bSa-d8-Khr"/>
+                                    <outlet property="delegate" destination="Uxz-aj-Dre" id="imk-8c-C6v"/>
                                 </connections>
                             </mapView>
                         </subviews>

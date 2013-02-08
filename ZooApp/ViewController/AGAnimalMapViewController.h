@@ -11,9 +11,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Animal.h"
 
-@interface AGAnimalMapViewController : UIViewController
+@interface AGAnimalMapViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) Animal *currentAnimal;
 @property (weak, nonatomic) IBOutlet MKMapView *animalMapView;
+@property (assign) MKCoordinateRegion viewRegion;
 
 @end

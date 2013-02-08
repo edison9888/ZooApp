@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import "AGAnimal.h"
 #import "ZooItem.h"
 
 @interface AGCompassView : UIView <CLLocationManagerDelegate> {}

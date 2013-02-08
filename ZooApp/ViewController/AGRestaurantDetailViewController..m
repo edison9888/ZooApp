@@ -7,6 +7,7 @@
 //
 
 #import "AGRestaurantDetailViewController.h"
+#import "AGRestaurantMapViewController.h"
 #import "Location.h"
 #import "AGStringUtilities.h"
 #import "AGCompassView.h"
@@ -187,5 +188,13 @@
     self.distanceLabel.text = [AGStringUtilities localizedDistanceFromMeters:distance];
 
 }
+
+- (void)showRestaurantOnMap {
+    
+    AGRestaurantMapViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"AGRestaurantMapViewController"];
+    vc.currentRestaurant = self.currentRestaurant;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

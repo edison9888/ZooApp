@@ -9,7 +9,6 @@
 #import "AGAnimalFilterViewController.h"
 #import "AnimalFilterTableCell.h"
 #import "AGAnimalListViewController.h"
-#import "AGAnimalManager.h"
 #import "AGConstants.h"
 
 @interface AGAnimalFilterViewController ()

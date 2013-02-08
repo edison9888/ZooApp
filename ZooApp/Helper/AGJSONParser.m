@@ -328,7 +328,7 @@ static AGJSONParser *instance = nil;
    // NSLog(@"[AGJSONParser] createAndAddServiceToCoreData");
     
     // create Location
-    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"type"] andIconPath:cServiceAnnotationIconPath];
+    Location *location = [self createAndAddLocationToCoreDataWithLatitude:[a objectForKey:@"latitude"] longitude:[a objectForKey:@"longitude"] area:[a objectForKey:@"area"] title:[a objectForKey:@"name"] subtitle:[a objectForKey:@"type"] andIconPath:cMedicareAnnotationIconPath];
     
    [AGCoreDataHelper saveManagedObjectContext:self.context];
     

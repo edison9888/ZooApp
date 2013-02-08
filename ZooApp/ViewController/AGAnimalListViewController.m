@@ -8,9 +8,7 @@
 
 #import "AGAnimalListViewController.h"
 #import "AGAnimalDetailViewController.h"
-#import "AGAnimal.h"
 #import "Animal.h"
-#import "AGAnimalManager.h"
 #import "AGAnimalListTableCell.h"
 #import "AGCoreDataHelper.h"
 #import "AGStringUtilities.h"

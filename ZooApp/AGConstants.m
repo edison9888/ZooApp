@@ -22,8 +22,10 @@ NSString *const cAreaFilterPongoland = @"Pongoland";
 NSString *const cAreaFilterAfrica = @"Afrika";
 NSString *const cAreaFilterSouthAmerica = @"Südamerika";
 
-NSString *const cAnimalAnnotationIconPath = @"Icon-72.png";
-NSString *const cEnclosureAnnotationIconPath = @"Icon-72.png";
-NSString *const cRestaurantAnnotationIconPath = @"Icon-72.png";
-NSString *const cServiceAnnotationIconPath = @"Icon-72.png";
+NSString *const cAnimalAnnotationIconPath = @"animal.png";
+NSString *const cEnclosureAnnotationIconPath = @"enclosure.png";
+NSString *const cRestaurantAnnotationIconPath = @"restaurant.png";
+NSString *const cToiletAnnotationIconPath = @"toilet.png";
+NSString *const cGiftshopAnnotationIconPath = @"giftshop.png";
+NSString *const cMedicareAnnotationIconPath = @"medicare.png";
 
